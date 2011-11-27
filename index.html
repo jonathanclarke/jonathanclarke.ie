@@ -19,11 +19,14 @@ title: beilabs.com
 <section id='musings'>
   <h1>My musings</h1>
   <ul>
-    {% for post in site.posts %}
+    {% for post in site.posts offset: 0 limit: 10 %}
     <li class='post'>
       <span>{{ post.date | date: "%B %e, %Y" }}</span> <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
     {% endfor %}
+    <li class='post'>
+      <span></span><a href='archive.html'>Read the full archive</a>
+    </li>
   </ul>
 </section>
 

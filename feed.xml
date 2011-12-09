@@ -1,0 +1,18 @@
+---
+layout: putsomerandomstringhere
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Beilabs.com - Jonathan Clarke's blog</title>
+    <description>Beilabs.com - Jonathan Clarke's blog</description>
+    <link>http://beilabs.com</link>
+    {% for post in site.posts %}
+      <item>
+	<title>{{ post.title }}</title>
+	<description>{{ post.content | xml_escape }}</description>
+	<link>http://beilabs.com{{ post.url }}</link>
+      </item>
+    {% endfor %}
+  </channel>
+</rss>

@@ -11,10 +11,6 @@ Deal Pinch made Techcrunch, CNN, LA Times and many more publications
 
 Application for Australian Permenant Residency is now underway
 
-Interviewed by Shoestring Launch Magazine
-
-Interviewed by Marie Claire Australia
-
 Launched Australian Art Review
 
 Launched Editorial Management System (major project)

@@ -63,6 +63,7 @@ label {
       margin-right: 20px;
       font-weight: normal; }
 
+
 h1 a {
   background-color: #f1006c;
   color: white;
@@ -71,6 +72,9 @@ h1 a:hover {
   background-color: white;
   color: #f1006c; }
 
+h2{
+  font-size:1.3em;
+}
 a {
   text-decoration: none;
   color: #f1006c; }
@@ -90,15 +94,19 @@ section.content ul li {
   list-style: disc;
   margin: 15px 0 15px 30px; }
 
-pre {
+p code {
+  float:left;
+  margin: 10px 0 20px 0;
   border: solid 1px black;
-  font-size: 1.3 em;
-  padding:20px;
+  padding:10px;
   background: #eee;
+  width:100%;
 }
 code {
-    font-size:1.0em;
+    font-size: 0.9em;
+    font-family: "Courier New" Courier monospace;
 }
+
 
 blockquote{
     margin: 1em 3em;

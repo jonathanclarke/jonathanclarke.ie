@@ -6,6 +6,21 @@
     <link>http://beilabs.com</link>
     
       <item>
+	<title>Evergreen - beautiful javascript unit testing</title>
+	<description>&lt;p&gt;&lt;img src=&quot;http://s3.amazonaws.com/blog.beilabs.com/images/jasmine-sample-tests.png&quot; title=&quot;Jasmine testing&quot; alt=&quot;Jasmine Javascript testing&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I've been coding quite a bit lately after work lately since I got back from Nepal.  While I was introduced to Jasmine a fair while ago I just recently discovered &lt;a href=&quot;https://github.com/jnicklas/evergreen/&quot; title=&quot;Evergreen gem&quot;&gt;evergreen&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Evergreen is a tool to run javascript unit tests for client side JavaScript. It combines a server which allows you to serve up and run your specs in a browser, as well as a runner which uses Capybara and any of its drivers to run your specs. Evergreen uses the Jasmine unit testing framework for JavaScript.  I'm a huge fan of automating my tests and you can see if your JS tests pass by running in the console:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;bundle exec rake spec:javascripts&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Handy stuff.  Now back to write some decent, tested Javascript for a change.&lt;/p&gt;
+</description>
+	<link>http://beilabs.com/2012/04/01/evergreen-and-beautiful-javascript-tests</link>
+      </item>
+    
+      <item>
 	<title>Holy smokes I'm hitched</title>
 	<description>&lt;p&gt;Fantastic news, I got married in March to a wonderful woman.&lt;/p&gt;
 

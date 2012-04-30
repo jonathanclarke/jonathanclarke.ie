@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Holy Smokes I'm Hitched
+title: Holy smokes I'm hitched
 ---
 
 Fantastic news, I got married in March to a wonderful woman.

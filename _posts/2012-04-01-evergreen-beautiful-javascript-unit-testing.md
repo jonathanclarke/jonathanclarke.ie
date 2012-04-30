@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Evergreen - beautiful javascript unit testing
+title: Evergreen - Beautiful Javascript unit testing
 ---
 
 ![Jasmine Javascript testing](http://s3.amazonaws.com/blog.beilabs.com/images/jasmine-sample-tests.png "Jasmine testing")

@@ -3,7 +3,7 @@ layout: post
 title: Evergreen - Beautiful Javascript unit testing
 ---
 
-![Jasmine Javascript testing](http://s3.amazonaws.com/blog.beilabs.com/images/jasmine-sample-tests.png "Jasmine testing")
+![Jasmine Javascript testing](http://s3.amazonaws.com/blog.beilabs.com/images/2012-04-01-jasmine-sample-tests.png "Jasmine testing")
 
 I've been coding quite a bit lately after work lately since I got back from Nepal.  While I was introduced to Jasmine a fair while ago I just recently discovered [evergreen](https://github.com/jnicklas/evergreen/ "Evergreen gem").
 

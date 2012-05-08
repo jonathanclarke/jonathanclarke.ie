@@ -6,6 +6,35 @@
     <link>http://beilabs.com</link>
     
       <item>
+	<title>RubyMotion - It's on my Christmas list</title>
+	<description>&lt;p&gt;&lt;img src=&quot;http://s3.amazonaws.com/blog.beilabs.com/images/2012-05-08-ruby-motion.png&quot; title=&quot;Welcome to Ruby Motion&quot; alt=&quot;Welcome to Ruby Motion&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://rubymotion.com/&quot;&gt;RubyMotion&lt;/a&gt; is a revolutionary toolchain for iOS.  It lets you quickly develop and test native iOS applications for iPhone or iPad, all using the awesome Ruby language you know and love.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Create a project.&lt;/li&gt;
+&lt;li&gt;Run your app in the simulator.&lt;/li&gt;
+&lt;li&gt;Deploy on your IOS device.&lt;/li&gt;
+&lt;li&gt;Create an App Store package.&lt;/li&gt;
+&lt;li&gt;Navigate and introspect the iOS API&lt;/li&gt;
+&lt;li&gt;Behavior-driven development framework&lt;/li&gt;
+&lt;li&gt;RubyMotion makes Ruby as fast as Objective-C&lt;/li&gt;
+&lt;li&gt;It's Ruby stupid&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;Seriously, what is not to like about this?  BTW, It was built by the original Mac Ruby author, &lt;a href=&quot;http://chopine.be/&quot;&gt;Laurent Sansonetti&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/HipByte/RubyMotionSamples&quot;&gt;RubyMotion code samples here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://rubymotion.com&quot;&gt;http://rubymotion.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+	<link>http://beilabs.com/2012/05/08/ruby-motion-is-on-my-christmas-list</link>
+      </item>
+    
+      <item>
 	<title>The importance of the zone in the workplace</title>
 	<description>&lt;p&gt;I love programming, it's rare that a day passes that I don't sit in front of a keyboard to write a few lines of code.  It's my job and my passion.  It requires an immense amount of concentration, often I find myself so involved in the problem in front of me that I block out all other distractions.  That is at least when I have a set of decent headphones.  Today I forgot mine at home and it has been hell!&lt;/p&gt;
 

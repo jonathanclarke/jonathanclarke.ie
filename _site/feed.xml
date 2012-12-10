@@ -335,5 +335,61 @@ Bootstrap is a toolkit from Twitter designed to kickstart development of webapps
 	<link>http://beilabs.com/2010/12/28/messing-around-with-the-ruby-imap-and-mail-libraries</link>
       </item>
     
+      <item>
+	<title>What killed Smalltalk could kill ruby</title>
+	<description>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;http://www.youtube.com/embed/YX3iRjKj7C0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+
+
+&lt;h2&gt;Overview of this presentation&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Smalltalk &amp;amp; Ruby are deeply interrelated.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Much of the same syntax between the two languages&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;From 1970s Smalltalk was the language to watch&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Smalltalk epitomized Object Orientated Design&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Described C++ as a mans language (need balls to code in it and make it work)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Describes Java as an estrogen type language (presuming he means only women code in it?)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Smalltalk had a productivity benefit of a factor of 5. Compared to a C application.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Refactoring in Smalltalk was a breeze&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;What killed Smalltalk? ( umm, at this stage I have no idea, he jumps to a new topic)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Definition of clean code - &quot;when you look at a routine and its pretty much what you expected&quot;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Best metric for clean code is 0 WTFs per minute&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;What killed Smalltalk is that it was just too easy to make a mess (Finally, 20 mins in!) Quote from Ward Cunningham&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;So easy to make an indirect and impenetrable system over time&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Companies developing in Smalltalk were screwed up at the time&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;You can make a mess in Ruby, simple, elegant, wonderful language; still easy to make a mess&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Projects in Ruby start well, but the framework is often violated over time; making a mess...&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Boyscout rule, leave the campground cleaner than when you entered it. (Actual quote - leave life better than you found it) - apply this to your source code. Would make code get better and better as time goes by. Most of the time, cleaning code is hard!&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Quote of the presentation - &quot;If you touch it, you will break it. If you break it, it becomes yours. The best policy is to walk away, run. the messes are hard to clean&quot;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Test Driven Development is the solution&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Rails and Ruby is great for Test Driven Development.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Other languages have TDD, was born in Smalltalk.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Talks about TDD methods; If you follow TDD, regularly write and run tests, then there is no fear to change code.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Nothing makes a system more maintainable than a suite of tests&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;He loves Rspec and Cucumber (Behaviour Driven Development BDD)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;TDD never really became a part of Smalltalks culture but is integral to the Ruby community&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;TDD will keep your code clean&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;There was an arrogance to the Smalltalk community ( I sometimes can see this in the Ruby community )&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Our tools are so good, our language is so good we don't need to follow the rules. Smalltalk people didn't want to do regular programming (Enterprise Applications, etc)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Your language may be powerful, but you must be careful with it. just because we can do a thing, it does not necessarily mean we must do that thing (Star Trek quote) Us vs them feeling in the Smalltalk community.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ruby community is not going to go down this path because:&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Discipline - TDD makes you feel good inside&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Professionalism - did the doctor wash their hands, did you write your tests?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Acceptance - we need to solve the dirty problems ( Need to adapt to the enterprises needs - do not solve only the problems you like.)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;We have a great tool in Ruby, we can kill it, let's not do that!&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;h2&gt;My view&lt;/h2&gt;
+
+&lt;p&gt;Great presentation style, he's quite funny. Very inspirational lecturer for developers confirming that TDD/BDD are the ways forward for software engineering.&lt;/p&gt;
+
+&lt;h2&gt;About the presenter&lt;/h2&gt;
+
+&lt;p&gt;Robert C. Martin has been a software professional since 1970. In the last 35 years, he has worked in various capacities on literally hundreds of software projects. He has authored &quot;landmark&quot; books on Agile Programming, Extreme Programming, UML, Object-Oriented Programming, and C++ Programming. He has published dozens of articles in various trade journals. Today, He is one of the software industry's leading authorities on Agile software development and is a regular speaker at international conferences and trade shows. He is a former editor of the C++ Report and currently writes a monthly Craftsman column for Software Development magazine.&lt;/p&gt;
+</description>
+	<link>http://beilabs.com/2010/04/09/what-killed-smalltalk-could-kill-ruby</link>
+      </item>
+    
   </channel>
 </rss>

@@ -6,7 +6,7 @@
 #wrapper {
   margin: auto;
   margin-top: 20px;
-  width: 800px; }
+  width: 650px; }
 
 header {
   margin: 0 0 40px 0; }
@@ -66,30 +66,38 @@ label {
 
 
 h1 a {
-  background-color: #f1006c;
+  background-color: #2A75A9;
   color: white;
   text-decoration: underline; }
 h1 a:hover {
   background-color: white;
-  color: #f1006c; }
+  color: #2A75A9; }
 
 h2{
   font-size:1.3em;
 }
 a {
   text-decoration: none;
-  color: #f1006c; }
+  color: #2A75A9; }
 
 ul li.post a {
   color: #eeeeee;
   padding: 2px;
-  background-color: #f1006c; }
+  background-color: #2A75A9; }
+
+ul li.post a.normal {
+  padding: 2px;
+  color: #2A75A9;
+  background-color: #fff;
+}
+
 ul li.post span {
   float: left;
   width: 185px;
   padding: 2px;
   color: #666666;
   text-decoration: underline; }
+
 
 section.content ul li {
   list-style: disc;

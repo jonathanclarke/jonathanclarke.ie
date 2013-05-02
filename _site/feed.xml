@@ -6,18 +6,93 @@
     <link>http://beilabs.com</link>
     
       <item>
+	<title>Redis Pub/Sub and Rails 4 Live Streaming</title>
+	<description>&lt;p&gt;So today I got to play a bit with the newly minded Rails 4 RC 1. A new feature is Live Streaming so I decided to see how it would work with redis publish / subscribe channels.&lt;/p&gt;
+
+&lt;p&gt;So lets create an infinite loop which is publishing on the redis queue &amp;#8220;namespaced:stream&amp;#8221;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;require &amp;#39;redis&amp;#39;
+require &amp;#39;json&amp;#39;
+
+$i = 1
+redis = Redis.new
+begin
+    data = {&amp;quot;time&amp;quot; =&amp;gt; &amp;quot;#{ Time.now }&amp;quot; }
+    redis.publish(&amp;quot;namespaced:stream&amp;quot;, data.to_json)
+    sleep 1
+    $i +=1
+end while $i &amp;gt; 0&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Lets have that running indefinitely, it is now publishing on the channel namespaced:stream.&lt;/p&gt;
+
+&lt;p&gt;Lets install the latest Ruby on Rails 4 and get a streaming controller up and running&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;class StreamsController &amp;lt; ActionController::Base
+    include ActionController::Live
+
+    def the_stream
+        response.headers[&amp;#39;Content-Type&amp;#39;] = &amp;#39;text/event-stream&amp;#39;
+        redis = Redis.new
+        redis.subscribe(&amp;#39;namespaced:stream&amp;#39;) do |on|
+            on.message do |event, data|
+                response.stream.write(&amp;quot;data:#{ data }\n\n&amp;quot;)
+            end
+        end
+        ensure
+            response.stream.close
+        end
+    end
+end&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Make sure you install the puma server and start it.&lt;/p&gt;
+
+&lt;p&gt;Now head to /streams/the_stream&lt;/p&gt;
+
+&lt;p&gt;Viola, pub/sub with live streaming through Rails 4 + Redis. You could hook up some javascript to access this data.&lt;/p&gt;
+
+&lt;p&gt;Stick this in item.js $(document).ready(initialize);&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;function initialize() {
+    var source = new EventSource(&amp;#39;/products/latest-product-events&amp;#39;);
+    source.addEventListener(&amp;#39;message&amp;#39;, function(e) {
+        console.log(&amp;quot;Received &amp;quot;+e.data);
+        updateItemsPage(e.data);
+    }, false);
+
+    source.addEventListener(&amp;#39;open&amp;#39;, function(e) {
+        console.log(&amp;quot;Connection was opened.&amp;quot;);
+    }, false);
+
+    source.addEventListener(&amp;#39;error&amp;#39;, function(e) {
+        if (e.readyState == EventSource.CLOSED) {
+            console.log(&amp;quot;Connection was closed.&amp;quot;);
+        }else{
+            console.log(&amp;quot;Something else&amp;quot;);
+        }
+    }, false);
+};
+
+function updateItemsPage(event) {
+    var item = $(&amp;#39;&amp;lt;li&amp;gt;&amp;#39;).text(event);
+    $(&amp;#39;#items&amp;#39;).prepend(item);
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So, why is this cool? Well, firstly it leverages an advanced key-value store, Redis. Next, Rails 4 Live streaming is is a huge advantage. It allows Rails apps to be competitive with Node.js. Unfortunately most Rails application servers are not able to stream, so throw thin + unicorn out. Puma is the way forward it would seem.&lt;/p&gt;</description>
+	<link>http://beilabs.com/2013/05/02/redis-pub-sub-and-rails-4-streaming.html</link>
+      </item>
+    
+      <item>
 	<title>Inbox Zero</title>
-	<description>&lt;p&gt;One of the tricks I learned today was to turn on keyboard shortcuts for Gmail and auto-advance(labs).  Auto advance automatically moves to the next message on the list after you have archived or deleted or actioned upon a message instead of returning directly to the inbox.&lt;/p&gt;
+	<description>&lt;p&gt;One of the tricks I learned today was to turn on keyboard shortcuts for Gmail and auto-advance(labs). Auto advance automatically moves to the next message on the list after you have archived or deleted or actioned upon a message instead of returning directly to the inbox.&lt;/p&gt;
 
-&lt;p&gt;Once keyboard shortcuts are turned on you can simply use '#' to delete a message and 'e' to archive a message.  Shortcut power for the win.&lt;/p&gt;
+&lt;p&gt;Once keyboard shortcuts are turned on you can simply use &amp;#8217;#&amp;#8217; to delete a message and &amp;#8216;e&amp;#8217; to archive a message. Shortcut power for the win.&lt;/p&gt;
 
-&lt;p&gt;My inbox has always been one large list of things to get around to.  Messages were never deleted or archived, they just went further down on the list.  I'll be either archiving or deleting messages as I check on them daily, if there is an action to be made then they will be starred for further use.&lt;/p&gt;
+&lt;p&gt;My inbox has always been one large list of things to get around to. Messages were never deleted or archived, they just went further down on the list. I&amp;#8217;ll be either archiving or deleting messages as I check on them daily, if there is an action to be made then they will be starred for further use.&lt;/p&gt;
 
-&lt;p&gt;I'm changing the way I work, the way I exercise, what I eat, the way I get to work.  Time to start on how I use my email.&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;m changing the way I work, the way I exercise, what I eat, the way I get to work. Time to start on how I use my email.&lt;/p&gt;
 
-&lt;p&gt;9GB to go.&lt;/p&gt;
-</description>
-	<link>http://beilabs.com/2013/01/24/inbox-zero</link>
+&lt;p&gt;9GB to go.&lt;/p&gt;</description>
+	<link>http://beilabs.com/2013/01/24/inbox-zero.html</link>
       </item>
     
       <item>
@@ -30,205 +105,240 @@
     ...
     error_page 404 /404.html;
     ...
-}
-&lt;/code&gt;&lt;/pre&gt;
+}&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;The error page it self doesn’t have to be anything special, just a clear message for the user to know that this page does not exist.&lt;/p&gt;
 
-&lt;p&gt;If you are using a reverse proxy you need to ensure that proxy_intercept_errors are on.  This directive decides if nginx will intercept responses with HTTP status codes of 400 and higher.  By default all responses will be sent as-is from the proxied server.&lt;/p&gt;
+&lt;p&gt;If you are using a reverse proxy you need to ensure that proxy_intercept_errors are on. This directive decides if nginx will intercept responses with HTTP status codes of 400 and higher. By default all responses will be sent as-is from the proxied server.&lt;/p&gt;
 
-&lt;p&gt;If you set this to on then nginx will intercept status codes that are explicitly handled by an error_page directive. Responses with status codes that do not match an error_page directive will be sent as-is from the proxied server.&lt;/p&gt;
-</description>
-	<link>http://beilabs.com/2013/01/23/nginx-error-pages</link>
+&lt;p&gt;If you set this to on then nginx will intercept status codes that are explicitly handled by an error_page directive. Responses with status codes that do not match an error_page directive will be sent as-is from the proxied server.&lt;/p&gt;</description>
+	<link>http://beilabs.com/2013/01/23/nginx-error-pages.html</link>
+      </item>
+    
+      <item>
+	<title>An Argument With An Idiot</title>
+	<description>&lt;p&gt;Argue with idiots, and you become an idiot.&lt;/p&gt;</description>
+	<link>http://beilabs.com/2012/12/12/an-argument-with-an-idiot.html</link>
       </item>
     
       <item>
 	<title>Working in cycles</title>
-	<description>&lt;p&gt;Lately I find that I'm working in cycles.  I get really excited about a project and will work 12 hours straight on it.  Other times, the same project just doesn't seem interesting.&lt;/p&gt;
+	<description>&lt;p&gt;Lately I find that I&amp;#8217;m working in cycles. I get really excited about a project and will work 12 hours straight on it. Other times, the same project just doesn&amp;#8217;t seem interesting.&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;You have a totally constrained problem, and all you have to do is solve it. Your program is supposed to do x. Instead it does y. Where does it go wrong? You know you’re going to win in the end. It’s as relaxing as painting a wall. - Paul Graham&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;I find programming incredibly soothing.  I'm not the only one.  I can see myself programming long after I've retired, be it on new languages or delving into the obsolete languages that Ruby / Java / C will be classified as then.&lt;/p&gt;
+&lt;p&gt;I find programming incredibly soothing. I&amp;#8217;m not the only one. I can see myself programming long after I&amp;#8217;ve retired, be it on new languages or delving into the obsolete languages that Ruby / Java / C will be classified as then.&lt;/p&gt;
 
-&lt;p&gt;I've been obsessed about learning, developing new skills, getting new qualifications.  Sometimes though you need to step back, take a break, get a hobby.  Getting away from the computer screen regularly is incredibly important.  Unfortunately it has been something that I haven't done much about for the past 10 years.&lt;/p&gt;
-</description>
-	<link>http://beilabs.com/2012/12/11/working-in-cycles</link>
+&lt;p&gt;I&amp;#8217;ve been obsessed about learning, developing new skills, getting new qualifications. Sometimes though you need to step back, take a break, get a hobby. Getting away from the computer screen regularly is incredibly important. Unfortunately it has been something that I haven&amp;#8217;t done much about for the past 10 years.&lt;/p&gt;</description>
+	<link>http://beilabs.com/2012/12/11/working-in-cycles.html</link>
       </item>
     
       <item>
 	<title>Death to a funk</title>
-	<description>&lt;p&gt;Those who know me understand that I've been in a funk the past few months.&lt;/p&gt;
+	<description>&lt;p&gt;Those who know me understand that I&amp;#8217;ve been in a funk the past few months.&lt;/p&gt;
 
-&lt;p&gt;After getting married in Nepal, my wife and I returned to Ireland to have one heck of a party.  1 month later my father died.&lt;/p&gt;
+&lt;p&gt;After getting married in Nepal, my wife and I returned to Ireland to have one heck of a party. 1 month later my father died.&lt;/p&gt;
 
-&lt;p&gt;It's been tremendously difficult coming to grips with his death.  Being away from my family in Ireland is probably prolonging the grief that I've been feeling the past 2 months.  Constant reminders exist though I'm grateful to have the memories.  He was an incredible man.&lt;/p&gt;
+&lt;p&gt;It&amp;#8217;s been tremendously difficult coming to grips with his death. Being away from my family in Ireland is probably prolonging the grief that I&amp;#8217;ve been feeling the past 2 months. Constant reminders exist though I&amp;#8217;m grateful to have the memories. He was an incredible man.&lt;/p&gt;
 
-&lt;p&gt;Throughout all of this my wife has been my rock.  She's been incredibly supportive and I am so thankful.&lt;/p&gt;
+&lt;p&gt;Throughout all of this my wife has been my rock. She&amp;#8217;s been incredibly supportive and I am so thankful.&lt;/p&gt;
 
-&lt;p&gt;I've been finding it very difficult to concentrate, constant fatigue is now common.&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;ve been finding it very difficult to concentrate, constant fatigue is now common.&lt;/p&gt;
 
-&lt;p&gt;I'm dreading the next couple of weeks, Christmas was always an important time in my family, a time for us all to gather in one place.&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;m dreading the next couple of weeks, Christmas was always an important time in my family, a time for us all to gather in one place.&lt;/p&gt;
 
-&lt;p&gt;We decided this year to take a break, leave Sydney for a couple of weeks.  Camping in Northern Queensland and travel down the coast.  I'm hoping that this break will improve my mood.  This funk needs to end.&lt;/p&gt;
-</description>
-	<link>http://beilabs.com/2012/12/10/death-to-a-funk</link>
+&lt;p&gt;We decided this year to take a break, leave Sydney for a couple of weeks. Camping in Northern Queensland and travel down the coast. I&amp;#8217;m hoping that this break will improve my mood. This funk needs to end.&lt;/p&gt;</description>
+	<link>http://beilabs.com/2012/12/10/death-to-a-funk.html</link>
       </item>
     
       <item>
 	<title>James Clarke, RIP</title>
 	<description>&lt;p&gt;CLARKE, James (Main Street, Kilcormac, Co. Offaly) Oct. 2, 2012, in the Midlands Regional Hospital, Tullamore, after a brief illness, bravely borne; sadly missed by his loving wife Helen, daughters Antoinette, Mary, Lorraine and partner Wil, grandson Sidney, son Jonathan and wife Kisu, brothers Hugh, Paddy and PJ, sisters-in-law, nieces, nephews, relatives and a large circle of friends. Reposing at his home today (Wednesday).&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://s3.amazonaws.com/blog.beilabs.com/images/2012-10-02-james-clarke.jpg&quot; title=&quot;James Clarke, RIP&quot; alt=&quot;James Clarke, RIP&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#39;James Clarke, RIP&#39; src=&#39;http://s3.amazonaws.com/blog.beilabs.com/images/2012-10-02-james-clarke.jpg&#39; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Dad, rest in peace.&lt;/p&gt;
-</description>
-	<link>http://beilabs.com/2012/10/02/james-clarke-rip</link>
+&lt;p&gt;Dad, rest in peace.&lt;/p&gt;</description>
+	<link>http://beilabs.com/2012/10/02/james-clarke-rip.html</link>
       </item>
     
       <item>
 	<title>Fuck you cancer!</title>
 	<description>&lt;p&gt;My dad was diagnosed with terminal lung cancer.&lt;/p&gt;
 
-&lt;p&gt;Treatment has been stopped, it has done no good.  In fact, it has actually cause more harm.&lt;/p&gt;
+&lt;p&gt;Treatment has been stopped, it has done no good. In fact, it has actually cause more harm.&lt;/p&gt;
 
-&lt;p&gt;I'm feeling completely helpless right now, not able to do a single thing to prevent this.  What's the point in being an identical match in everyway if I can't do anything!&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;m feeling completely helpless right now, not able to do a single thing to prevent this. What&amp;#8217;s the point in being an identical match in everyway if I can&amp;#8217;t do anything!&lt;/p&gt;
 
-&lt;p&gt;Fuck you cancer, this shouldn't be happening.  It's just not right!&lt;/p&gt;
-</description>
-	<link>http://beilabs.com/2012/09/06/because-fuck-you-cancer</link>
+&lt;p&gt;Fuck you cancer, this shouldn&amp;#8217;t be happening. It&amp;#8217;s just not right!&lt;/p&gt;</description>
+	<link>http://beilabs.com/2012/09/06/because-fuck-you-cancer.html</link>
       </item>
     
       <item>
 	<title>Entrepreneural video roundup - Hack Fwd</title>
-	<description>&lt;p&gt;Since I've moved out of the city I'm getting to a lot less meetups lately.  I have however been loading up a queue of videos to watch lately.  My sister works at &lt;a href=&quot;http://ideo.com&quot;&gt;IDEO&lt;/a&gt;, a fantastic design company and a number of years ago she turned me on to &lt;a href=&quot;http://hackfwd.com&quot;&gt;Hack Fwd&lt;/a&gt;. Here are some of the gems that have been coming out of there.&lt;/p&gt;
+	<description>&lt;p&gt;Since I&amp;#8217;ve moved out of the city I&amp;#8217;m getting to a lot less meetups lately. I have however been loading up a queue of videos to watch lately. My sister works at &lt;a href=&#39;http://ideo.com&#39;&gt;IDEO&lt;/a&gt;, a fantastic design company and a number of years ago she turned me on to &lt;a href=&#39;http://hackfwd.com&#39;&gt;Hack Fwd&lt;/a&gt;. Here are some of the gems that have been coming out of there.&lt;/p&gt;
 
-&lt;p&gt;Mike Butcher - &lt;a href=&quot;http://twitter.com/mikebutcher&quot;&gt;@mikebutcher&lt;/a&gt;
-Mike talks about how to approach media. &lt;br/&gt;
-http://passionmeetsmomentum.com/#how-to-deal-with-techcrunch-and-maybe-other-media&lt;/p&gt;
+&lt;p&gt;Mike Butcher - &lt;a href=&#39;http://twitter.com/mikebutcher&#39;&gt;@mikebutcher&lt;/a&gt; Mike talks about how to approach media. &lt;br /&gt;http://passionmeetsmomentum.com/#how-to-deal-with-techcrunch-and-maybe-other-media&lt;/p&gt;
 
-&lt;p&gt;Rob Fitzpatrick - &lt;a href=&quot;http://twitter.com/robfitz&quot;&gt;@robfitz&lt;/a&gt;
-Rob talks about how to do customer development properly
-http://passionmeetsmomentum.com/#how-to-do-and-what-to-expect-from-earlystage-customer-development-sales&lt;/p&gt;
+&lt;p&gt;Rob Fitzpatrick - &lt;a href=&#39;http://twitter.com/robfitz&#39;&gt;@robfitz&lt;/a&gt; Rob talks about how to do customer development properly http://passionmeetsmomentum.com/#how-to-do-and-what-to-expect-from-earlystage-customer-development-sales&lt;/p&gt;
 
-&lt;p&gt;Sebastian Deutsch - &lt;a href=&quot;http://twitter.com/sippndipp&quot;&gt;@sippndipp&lt;/a&gt;
-Sebastian gives some great tips about structuring your site correctly to achieve SEO.
-http://passionmeetsmomentum.com/#the-accidental-seo&lt;/p&gt;
+&lt;p&gt;Sebastian Deutsch - &lt;a href=&#39;http://twitter.com/sippndipp&#39;&gt;@sippndipp&lt;/a&gt; Sebastian gives some great tips about structuring your site correctly to achieve SEO. http://passionmeetsmomentum.com/#the-accidental-seo&lt;/p&gt;
 
-&lt;p&gt;Enjoy&lt;/p&gt;
-</description>
-	<link>http://beilabs.com/2012/05/25/videos-that-ive-been-watching-lately</link>
+&lt;p&gt;Enjoy&lt;/p&gt;</description>
+	<link>http://beilabs.com/2012/05/25/videos-that-ive-been-watching-lately.html</link>
       </item>
     
       <item>
 	<title>My daily commute - A train ride</title>
 	<description>&lt;p&gt;An hour and a half to get there. Often two hours to get home. Frodo never took this long to drop off that ring of his.&lt;/p&gt;
 
-&lt;p&gt;That's three hours every day.  Three hours on my self medicated coffee high to hack on my own code. Florence and the Crows blaring in my ear, sheeple glaring at the ferociousness of my typing, fingers contorted to the weirdest angles in an effort to reach the ultimate emacs key binding. Nirvana for some, hell for many.&lt;/p&gt;
+&lt;p&gt;That&amp;#8217;s three hours every day. Three hours on my self medicated coffee high to hack on my own code. Florence and the Crows blaring in my ear, sheeple glaring at the ferociousness of my typing, fingers contorted to the weirdest angles in an effort to reach the ultimate emacs key binding. Nirvana for some, hell for many.&lt;/p&gt;
 
 &lt;p&gt;Welcome to my office, a place to get shit done.&lt;/p&gt;
 
-&lt;p&gt;A pity when many don't brush their teeth properly or apply deodorant enough.&lt;/p&gt;
-</description>
-	<link>http://beilabs.com/2012/05/22/my-daily-commute-a-train-ride</link>
+&lt;p&gt;A pity when many don&amp;#8217;t brush their teeth properly or apply deodorant enough.&lt;/p&gt;</description>
+	<link>http://beilabs.com/2012/05/22/my-daily-commute-a-train-ride.html</link>
       </item>
     
       <item>
 	<title>RubyMotion - It's on my Christmas list</title>
-	<description>&lt;p&gt;&lt;img src=&quot;http://s3.amazonaws.com/blog.beilabs.com/images/2012-05-08-ruby-motion.png&quot; title=&quot;Welcome to Ruby Motion&quot; alt=&quot;Welcome to Ruby Motion&quot; /&gt;&lt;/p&gt;
+	<description>&lt;p&gt;&lt;img alt=&#39;Welcome to Ruby Motion&#39; src=&#39;http://s3.amazonaws.com/blog.beilabs.com/images/2012-05-08-ruby-motion.png&#39; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://rubymotion.com/&quot;&gt;RubyMotion&lt;/a&gt; is a revolutionary toolchain for iOS.  It lets you quickly develop and test native iOS applications for iPhone or iPad, all using the awesome Ruby language you know and love.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#39;http://rubymotion.com/&#39;&gt;RubyMotion&lt;/a&gt; is a revolutionary toolchain for iOS. It lets you quickly develop and test native iOS applications for iPhone or iPad, all using the awesome Ruby language you know and love.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Create a project.&lt;/li&gt;
+
 &lt;li&gt;Run your app in the simulator.&lt;/li&gt;
+
 &lt;li&gt;Deploy on your IOS device.&lt;/li&gt;
+
 &lt;li&gt;Create an App Store package.&lt;/li&gt;
+
 &lt;li&gt;Navigate and introspect the iOS API&lt;/li&gt;
+
 &lt;li&gt;Behavior-driven development framework&lt;/li&gt;
+
 &lt;li&gt;RubyMotion makes Ruby as fast as Objective-C&lt;/li&gt;
-&lt;li&gt;It's Ruby stupid&lt;/li&gt;
+
+&lt;li&gt;It&amp;#8217;s Ruby stupid&lt;/li&gt;
 &lt;/ul&gt;
 
-
-&lt;p&gt;Seriously, what is not to like about this?  BTW, It was built by the original Mac Ruby author, &lt;a href=&quot;http://chopine.be/&quot;&gt;Laurent Sansonetti&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Seriously, what is not to like about this? BTW, It was built by the original Mac Ruby author, &lt;a href=&#39;http://chopine.be/&#39;&gt;Laurent Sansonetti&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/HipByte/RubyMotionSamples&quot;&gt;RubyMotion code samples here&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://rubymotion.com&quot;&gt;http://rubymotion.com&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;&lt;a href=&#39;https://github.com/HipByte/RubyMotionSamples&#39;&gt;RubyMotion code samples here&lt;/a&gt;&lt;/li&gt;
 
-</description>
-	<link>http://beilabs.com/2012/05/08/ruby-motion-is-on-my-christmas-list</link>
+&lt;li&gt;&lt;a href=&#39;http://rubymotion.com&#39;&gt;http://rubymotion.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+	<link>http://beilabs.com/2012/05/08/ruby-motion-is-on-my-christmas-list.html</link>
+      </item>
+    
+      <item>
+	<title>Startups in Sydney - help is always around</title>
+	<description>&lt;p&gt;So today Forbes released their list of the top startup incubators that have been runnning in the US.&lt;/p&gt;
+
+&lt;p&gt;Topping the list was Y-Combinator having been around for quite some time with an incredible allumni. Many of the Australian crew seem to focus on 500 startups which was number 8 in the list.&lt;/p&gt;
+
+&lt;p&gt;It got me to thinking about the number of incubators/accellerators that have been launched in Australia over the past few years, there seems to be more and more every few months. Next up we&amp;#8217;ll be seeing incubators to make incubators, how very meta.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Startmate&lt;/li&gt;
+
+&lt;li&gt;Pushstart&lt;/li&gt;
+
+&lt;li&gt;Angel Cube Melbourne&lt;/li&gt;
+
+&lt;li&gt;BlueChilli&lt;/li&gt;
+
+&lt;li&gt;Founders Institute&lt;/li&gt;
+
+&lt;li&gt;iAccelerate/StartPad&lt;/li&gt;
+
+&lt;li&gt;Innovation SA&lt;/li&gt;
+
+&lt;li&gt;Startup Tasmania&lt;/li&gt;
+
+&lt;li&gt;Innovation Centre&lt;/li&gt;
+
+&lt;li&gt;Brisbane Technology Park&lt;/li&gt;
+
+&lt;li&gt;iLab&lt;/li&gt;
+
+&lt;li&gt;Gen Innovation Australia (GENIAUS)&lt;/li&gt;
+
+&lt;li&gt;York Butter Factory&lt;/li&gt;
+
+&lt;li&gt;Venture Incubator Space&lt;/li&gt;
+
+&lt;li&gt;Pollenizer&lt;/li&gt;
+&lt;/ul&gt;</description>
+	<link>http://beilabs.com/2012/05/02/startups-help-is-always-on-hand.html</link>
       </item>
     
       <item>
 	<title>The importance of the zone in the workplace</title>
-	<description>&lt;p&gt;I love programming, it's rare that a day passes that I don't sit in front of a keyboard to write a few lines of code.  It's my job and my passion.  It requires an immense amount of concentration, often I find myself so involved in the problem in front of me that I block out all other distractions.  That is at least when I have a set of decent headphones.  Today I forgot mine at home and it has been hell!&lt;/p&gt;
+	<description>&lt;p&gt;I love programming, it&amp;#8217;s rare that a day passes that I don&amp;#8217;t sit in front of a keyboard to write a few lines of code. It&amp;#8217;s my job and my passion. It requires an immense amount of concentration, often I find myself so involved in the problem in front of me that I block out all other distractions. That is at least when I have a set of decent headphones. Today I forgot mine at home and it has been hell!&lt;/p&gt;
 
-&lt;p&gt;My office has a variety of other departments, many are on the phone chasing new leads for the next event, others are chatting amongst themselves.  One thing is constant though, the radio.  I hate the radio with a passion.  Filled with advertising, playing music that I have heard day in day out, over and over again.  I've tried to ignore it but it's always cackling in the background playing the one and only station that it can get access to.&lt;/p&gt;
+&lt;p&gt;My office has a variety of other departments, many are on the phone chasing new leads for the next event, others are chatting amongst themselves. One thing is constant though, the radio. I hate the radio with a passion. Filled with advertising, playing music that I have heard day in day out, over and over again. I&amp;#8217;ve tried to ignore it but it&amp;#8217;s always cackling in the background playing the one and only station that it can get access to.&lt;/p&gt;
 
-&lt;p&gt;When I'm zoned in I really don't like to be disturbed, when I get sidetracked by a colleague then I lose my focus on the problem and it takes me some time to get back to where I was.  Lately I've been a fan of &lt;a href=&quot;http://di.fm/&quot; title=&quot;Digitally Imported&quot;&gt;Digitally Imported&lt;/a&gt;.  Streaming music that is just ideal for getting me to that point of utmost concentration.&lt;/p&gt;
+&lt;p&gt;When I&amp;#8217;m zoned in I really don&amp;#8217;t like to be disturbed, when I get sidetracked by a colleague then I lose my focus on the problem and it takes me some time to get back to where I was. Lately I&amp;#8217;ve been a fan of &lt;a href=&#39;http://di.fm/&#39; title=&#39;Digitally Imported&#39;&gt;Digitally Imported&lt;/a&gt;. Streaming music that is just ideal for getting me to that point of utmost concentration.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://s3.amazonaws.com/blog.beilabs.com/images/2012-04-02-the-importance-of-the-zone-in-the-workplace.jpg&quot; title=&quot;The importance of the zone in the workplace&quot; alt=&quot;The importance of the zone in the workplace&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#39;The importance of the zone in the workplace&#39; src=&#39;https://s3.amazonaws.com/blog.beilabs.com/images/2012-04-02-the-importance-of-the-zone-in-the-workplace.jpg&#39; /&gt;&lt;/p&gt;
 
-&lt;p&gt;It's hard to explain the zone, it's a place where I'm devoting 100% of my concentration to a problem.  I often find myself completely detached, fixated on the problem and its various solutions, typing furiously on the keyboard trying to get my thoughts out before they vanish.  It takes time to reach this place, concentration is vital.  Facebook, twitter and email clients are shut off so I'm not being constantly interrupted.  It's my form of meditation, it leaves me completely relaxed and focused.&lt;/p&gt;
+&lt;p&gt;It&amp;#8217;s hard to explain the zone, it&amp;#8217;s a place where I&amp;#8217;m devoting 100% of my concentration to a problem. I often find myself completely detached, fixated on the problem and its various solutions, typing furiously on the keyboard trying to get my thoughts out before they vanish. It takes time to reach this place, concentration is vital. Facebook, twitter and email clients are shut off so I&amp;#8217;m not being constantly interrupted. It&amp;#8217;s my form of meditation, it leaves me completely relaxed and focused.&lt;/p&gt;
 
-&lt;p&gt;I don't attempt to do this all day though, there is a time when exhaustion will set in.  Regular breaks and fresh air is vital.&lt;/p&gt;
+&lt;p&gt;I don&amp;#8217;t attempt to do this all day though, there is a time when exhaustion will set in. Regular breaks and fresh air is vital.&lt;/p&gt;
 
-&lt;p&gt;All that said, I really wish there was a new office rule; when I wear my headphones then simply fuck off; let me enjoy the zone for just a little bit longer.&lt;/p&gt;
-</description>
-	<link>http://beilabs.com/2012/05/01/headphones-and-the-zone</link>
+&lt;p&gt;All that said, I really wish there was a new office rule; when I wear my headphones then simply fuck off; let me enjoy the zone for just a little bit longer.&lt;/p&gt;</description>
+	<link>http://beilabs.com/2012/05/01/headphones-and-the-zone.html</link>
       </item>
     
       <item>
 	<title>30, am I past it?</title>
-	<description>&lt;p&gt;It's Anzac day.  It's also my birthday, Australia grinds to a halt.&lt;/p&gt;
+	<description>&lt;p&gt;It&amp;#8217;s Anzac day. It&amp;#8217;s also my birthday, Australia grinds to a halt.&lt;/p&gt;
 
-&lt;p&gt;Holy crap, I'm suddenly 30.  Well that came along fast.&lt;/p&gt;
+&lt;p&gt;Holy crap, I&amp;#8217;m suddenly 30. Well that came along fast.&lt;/p&gt;
 
-&lt;p&gt;My friends say it's all downhill for me from now.&lt;/p&gt;
+&lt;p&gt;My friends say it&amp;#8217;s all downhill for me from now.&lt;/p&gt;
 
 &lt;p&gt;Old man, past his prime, time to settle down.&lt;/p&gt;
 
 &lt;p&gt;Screw that.&lt;/p&gt;
 
-&lt;p&gt;It's only the beginning...time to play some two-up.&lt;/p&gt;
-</description>
-	<link>http://beilabs.com/2012/04/25/thirty-years-old-am-i-past-it</link>
+&lt;p&gt;It&amp;#8217;s only the beginning&amp;#8230;time to play some two-up.&lt;/p&gt;</description>
+	<link>http://beilabs.com/2012/04/25/thirty-years-old-am-i-past-it.html</link>
       </item>
     
       <item>
 	<title>Evergreen - Beautiful Javascript unit testing</title>
-	<description>&lt;p&gt;&lt;img src=&quot;http://s3.amazonaws.com/blog.beilabs.com/images/2012-04-01-jasmine-sample-tests.png&quot; title=&quot;Jasmine testing&quot; alt=&quot;Jasmine Javascript testing&quot; /&gt;&lt;/p&gt;
+	<description>&lt;p&gt;&lt;img alt=&#39;Jasmine Javascript testing&#39; src=&#39;http://s3.amazonaws.com/blog.beilabs.com/images/2012-04-01-jasmine-sample-tests.png&#39; /&gt;&lt;/p&gt;
 
-&lt;p&gt;I've been coding quite a bit lately after work lately since I got back from Nepal.  While I was introduced to Jasmine a fair while ago I just recently discovered &lt;a href=&quot;https://github.com/jnicklas/evergreen/&quot; title=&quot;Evergreen gem&quot;&gt;evergreen&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I&amp;#8217;ve been coding quite a bit lately after work lately since I got back from Nepal. While I was introduced to Jasmine a fair while ago I just recently discovered &lt;a href=&#39;https://github.com/jnicklas/evergreen/&#39; title=&#39;Evergreen gem&#39;&gt;evergreen&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Evergreen is a tool to run javascript unit tests for client side JavaScript. It combines a server which allows you to serve up and run your specs in a browser, as well as a runner which uses Capybara and any of its drivers to run your specs. Evergreen uses the Jasmine unit testing framework for JavaScript.  I'm a huge fan of automating my tests and you can see if your JS tests pass by running in the console:&lt;/p&gt;
+&lt;p&gt;Evergreen is a tool to run javascript unit tests for client side JavaScript. It combines a server which allows you to serve up and run your specs in a browser, as well as a runner which uses Capybara and any of its drivers to run your specs. Evergreen uses the Jasmine unit testing framework for JavaScript. I&amp;#8217;m a huge fan of automating my tests and you can see if your JS tests pass by running in the console:&lt;/p&gt;
 
 &lt;p&gt;&lt;code&gt;bundle exec rake spec:javascripts&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;Handy stuff.  Now back to write some decent, tested Javascript for a change.&lt;/p&gt;
-</description>
-	<link>http://beilabs.com/2012/04/01/evergreen-beautiful-javascript-unit-testing</link>
+&lt;p&gt;Handy stuff. Now back to write some decent, tested Javascript for a change.&lt;/p&gt;</description>
+	<link>http://beilabs.com/2012/04/01/evergreen-beautiful-javascript-unit-testing.html</link>
       </item>
     
       <item>
 	<title>Holy smokes I'm hitched</title>
 	<description>&lt;p&gt;Fantastic news, I got married in March to a wonderful woman.&lt;/p&gt;
 
-&lt;p&gt;She's incredible on many fronts. Not only can she take my organs and sell them on the black market if we ever end up in financial bother, she can also kick my ass in Words with Friends (Friends often turn to enemies when she plays)&lt;/p&gt;
+&lt;p&gt;She&amp;#8217;s incredible on many fronts. Not only can she take my organs and sell them on the black market if we ever end up in financial bother, she can also kick my ass in Words with Friends (Friends often turn to enemies when she plays)&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://a5.sphotos.ak.fbcdn.net/hphotos-ak-ash3/p480x480/563677_10151511808790341_513525340_24045851_1192947221_n.jpg&quot; title=&quot;Jonathan &amp;amp; Kisu in the Garden of Dreams, Kathmandu&quot; alt=&quot;Jonathan &amp;amp; Kisu in the Garden of Dreams&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#39;Jonathan &amp;amp; Kisu in the Garden of Dreams&#39; src=&#39;http://a5.sphotos.ak.fbcdn.net/hphotos-ak-ash3/p480x480/563677_10151511808790341_513525340_24045851_1192947221_n.jpg&#39; /&gt;&lt;/p&gt;
 
-&lt;p&gt;We had a wonderful traditional Newari ceremony at &lt;a href=&quot;http://www.newachen.com/&quot; title=&quot;Newa Chen&quot;&gt;Newa Chen&lt;/a&gt;, I really cannot recommend this place enough.  Fantastic lodgings, food, great service and they really rolled out the red carpet for each of our guests. If you're ever in Kathmandu, book rooms way in advance, totally worth it.&lt;/p&gt;
+&lt;p&gt;We had a wonderful traditional Newari ceremony at &lt;a href=&#39;http://www.newachen.com/&#39; title=&#39;Newa Chen&#39;&gt;Newa Chen&lt;/a&gt;, I really cannot recommend this place enough. Fantastic lodgings, food, great service and they really rolled out the red carpet for each of our guests. If you&amp;#8217;re ever in Kathmandu, book rooms way in advance, totally worth it.&lt;/p&gt;
 
-&lt;p&gt;We spent the rest of the 2 weeks filling out visa applications for our Australian permenant residency.  Stress levels were elevated, flights were delayed and nails we're bitten to nubs.&lt;/p&gt;
+&lt;p&gt;We spent the rest of the 2 weeks filling out visa applications for our Australian permenant residency. Stress levels were elevated, flights were delayed and nails we&amp;#8217;re bitten to nubs.&lt;/p&gt;
 
-&lt;p&gt;We received the good news though at the top of &lt;a href=&quot;http://www.raniban.com/&quot; title=&quot;Raniban Retreat&quot;&gt;Raniban Retreat&lt;/a&gt; while watching a spectacular sunrise over Pokhara.  We had the place all to ourselves, not a single other guest for miles around.  Jealous much?&lt;/p&gt;
+&lt;p&gt;We received the good news though at the top of &lt;a href=&#39;http://www.raniban.com/&#39; title=&#39;Raniban Retreat&#39;&gt;Raniban Retreat&lt;/a&gt; while watching a spectacular sunrise over Pokhara. We had the place all to ourselves, not a single other guest for miles around. Jealous much?&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://s3.amazonaws.com/blog.beilabs.com/images/2012-03-09-raniban-retreat.jpg&quot; title=&quot;Jonathan &amp;amp; Kisu at the Raniban Retreat&quot; alt=&quot;Jonathan &amp;amp; Kisu at the Raniban Retreat&quot; /&gt;&lt;/p&gt;
-</description>
-	<link>http://beilabs.com/2012/03/09/holy-smokes-im-hitched</link>
+&lt;p&gt;&lt;img alt=&#39;Jonathan &amp;amp; Kisu at the Raniban Retreat&#39; src=&#39;http://s3.amazonaws.com/blog.beilabs.com/images/2012-03-09-raniban-retreat.jpg&#39; /&gt;&lt;/p&gt;</description>
+	<link>http://beilabs.com/2012/03/09/holy-smokes-im-hitched.html</link>
       </item>
     
       <item>
@@ -251,109 +361,102 @@ http://passionmeetsmomentum.com/#the-accidental-seo&lt;/p&gt;
 
 &lt;p&gt;Launched Deal Pinch Mobile&lt;/p&gt;
 
-&lt;p&gt;2011 has been a busy year.  2012 will bring a wedding in Kathmandu, a trip to Ireland, Australian residency and hopefully even more startup success.  I'll also get to meet Sidney for the very first time high in the mountains!&lt;/p&gt;
-</description>
-	<link>http://beilabs.com/2011/12/31/taking-stock-of-2011</link>
+&lt;p&gt;2011 has been a busy year. 2012 will bring a wedding in Kathmandu, a trip to Ireland, Australian residency and hopefully even more startup success. I&amp;#8217;ll also get to meet Sidney for the very first time high in the mountains!&lt;/p&gt;</description>
+	<link>http://beilabs.com/2011/12/31/taking-stock-of-2011.html</link>
       </item>
     
       <item>
 	<title>Thoughts about mentors</title>
-	<description>&lt;p&gt;So you've got a mentor?  Couple of pointers and tips for you.&lt;/p&gt;
+	<description>&lt;p&gt;So you&amp;#8217;ve got a mentor? Couple of pointers and tips for you.&lt;/p&gt;
 
-&lt;p&gt;You're always going to get conflicting advice / opinions depending on who you speak to.&lt;/p&gt;
+&lt;p&gt;You&amp;#8217;re always going to get conflicting advice / opinions depending on who you speak to.&lt;/p&gt;
 
 &lt;p&gt;Despite their best intentions, some mentors can get it wrong. mentors are not always right!&lt;/p&gt;
 
-&lt;p&gt;An opinion is just that, an opinion.  It's not fact just because it comes out of a mentors mounth, research everything they say and don't take it as a concrete fact just because they believe it is!&lt;/p&gt;
+&lt;p&gt;An opinion is just that, an opinion. It&amp;#8217;s not fact just because it comes out of a mentors mounth, research everything they say and don&amp;#8217;t take it as a concrete fact just because they believe it is!&lt;/p&gt;
 
-&lt;p&gt;Choose a mentor that you can work with over a long period of time.  They're often like a co-founder, make sure you get along with them because a good one is worth their weight in gold!&lt;/p&gt;
+&lt;p&gt;Choose a mentor that you can work with over a long period of time. They&amp;#8217;re often like a co-founder, make sure you get along with them because a good one is worth their weight in gold!&lt;/p&gt;
 
-&lt;p&gt;Lastly, always know that it's your company! Decide the direction that you want to take it and make sure it is a direction that makes you happy!&lt;/p&gt;
-</description>
-	<link>http://beilabs.com/2011/12/12/thoughts-about-mentors</link>
+&lt;p&gt;Lastly, always know that it&amp;#8217;s your company! Decide the direction that you want to take it and make sure it is a direction that makes you happy!&lt;/p&gt;</description>
+	<link>http://beilabs.com/2011/12/12/thoughts-about-mentors.html</link>
       </item>
     
       <item>
 	<title>Ireland means business</title>
-	<description>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;http://www.youtube.com/embed/Gy6e31wI6Qg&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+	<description>&lt;pre class=&#39;markdown-html-error&#39; style=&#39;border: solid 3px red; background-color: pink&#39;&gt;REXML could not parse this XML/HTML: 
+&amp;lt;iframe width=&amp;quot;560&amp;quot; height=&amp;quot;315&amp;quot; src=&amp;quot;http://www.youtube.com/embed/Gy6e31wI6Qg&amp;quot; frameborder=&amp;quot;0&amp;quot; allowfullscreen&amp;gt;&amp;lt;/iframe&amp;gt;&lt;/pre&gt;
+&lt;p&gt;We&amp;#8217;ve come a long way since the last recession. While Ireland does not have the natural resources of countries like Australia or the US, we do have a large, skilled, educated workforce; this is Irelands greatest asset&lt;/p&gt;
 
-
-&lt;p&gt;We've come a long way since the last recession. While Ireland does not have the natural resources of countries like Australia or the US, we do have a large, skilled, educated workforce; this is Irelands greatest asset&lt;/p&gt;
-
-&lt;p&gt;I've always known that Ireland is an awesome country, now you do too.&lt;/p&gt;
-</description>
-	<link>http://beilabs.com/2011/12/09/ireland-by-the-numbers</link>
+&lt;p&gt;I&amp;#8217;ve always known that Ireland is an awesome country, now you do too.&lt;/p&gt;</description>
+	<link>http://beilabs.com/2011/12/09/ireland-by-the-numbers.html</link>
       </item>
     
       <item>
 	<title>Work hard. Cry less. And realize you’re part of history.</title>
-	<description>&lt;p&gt;Another interesting article from Michael Arrington today.  &lt;a href=&quot;http://uncrunched.com/2011/11/27/startups-are-hard-so-work-more-cry-less-and-quit-all-the-whining/&quot;&gt;Startups are hard. So work more, cry less, and quit all the whining&lt;/a&gt;.&lt;/p&gt;
+	<description>&lt;p&gt;Another interesting article from Michael Arrington today. &lt;a href=&#39;http://uncrunched.com/2011/11/27/startups-are-hard-so-work-more-cry-less-and-quit-all-the-whining/&#39;&gt;Startups are hard. So work more, cry less, and quit all the whining&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;The article gave a number of examples of people talking about how hard they work.  It's something that everyone does, they work hard, they tell people about it. Woe is my life.&lt;/p&gt;
+&lt;p&gt;The article gave a number of examples of people talking about how hard they work. It&amp;#8217;s something that everyone does, they work hard, they tell people about it. Woe is my life.&lt;/p&gt;
 
 &lt;p&gt;At the end of the article he writes:&lt;/p&gt;
 
-&lt;blockquote&gt;&lt;p&gt;&quot;Work hard. Cry less. And realize you’re part of history.&quot;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;#8220;Work hard. Cry less. And realize you’re part of history.&amp;#8221;&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;What a great phrase for any startup entrepreneur.&lt;/p&gt;
 
-&lt;p&gt;Startups are tough, if they weren't then everyone would be doing one.  Competition couldn't be higher, there is always someone ready to copy your latest feature or implement the idea you just had in the shower.&lt;/p&gt;
+&lt;p&gt;Startups are tough, if they weren&amp;#8217;t then everyone would be doing one. Competition couldn&amp;#8217;t be higher, there is always someone ready to copy your latest feature or implement the idea you just had in the shower.&lt;/p&gt;
 
-&lt;p&gt;Satisfaction is something that everyone craves in their profession.  Depression is something that effects everyone at some point in their lives.&lt;/p&gt;
+&lt;p&gt;Satisfaction is something that everyone craves in their profession. Depression is something that effects everyone at some point in their lives.&lt;/p&gt;
 
-&lt;p&gt;Write up a list of things that you want to achieve by the end of the day and do it.  If you don't get through them all then you need to take a long look at how you are estimating your time.  Being a better judge of how long something will take comes with experience, the more you get the easier it becomes.&lt;/p&gt;
+&lt;p&gt;Write up a list of things that you want to achieve by the end of the day and do it. If you don&amp;#8217;t get through them all then you need to take a long look at how you are estimating your time. Being a better judge of how long something will take comes with experience, the more you get the easier it becomes.&lt;/p&gt;
 
-&lt;p&gt;I often look back at my time in China working for a Chinese software company.  16 hour days were part of the norm.  There was such an abundance of talent, naturally once a developer burned out he was replaced with the next person in line, with another 10 people ready to take their place.  This was the type of place where even after a 16 hour shift you would be expected to be at your cubicle at 8.30am, checked in the system and ready for the days work.  While the pressure was similar to a startup environment it had none of the incentives.&lt;/p&gt;
+&lt;p&gt;I often look back at my time in China working for a Chinese software company. 16 hour days were part of the norm. There was such an abundance of talent, naturally once a developer burned out he was replaced with the next person in line, with another 10 people ready to take their place. This was the type of place where even after a 16 hour shift you would be expected to be at your cubicle at 8.30am, checked in the system and ready for the days work. While the pressure was similar to a startup environment it had none of the incentives.&lt;/p&gt;
 
-&lt;p&gt;This time last year I admit that I was depressed. I had thrown myself head first into a hobby &lt;a href=&quot;http://dealpinch.com&quot;&gt;startup&lt;/a&gt; which took up any free time I had on hand.  Often coding up ideas till 4 in the morning only to get up for work at 7am the next day.  As you can expect, burnout came and it came hard.  My relationship with my future wife deteriotated.  I'm glad to say she stuck around and for that I will always be thankful.&lt;/p&gt;
+&lt;p&gt;This time last year I admit that I was depressed. I had thrown myself head first into a hobby &lt;a href=&#39;http://dealpinch.com&#39;&gt;startup&lt;/a&gt; which took up any free time I had on hand. Often coding up ideas till 4 in the morning only to get up for work at 7am the next day. As you can expect, burnout came and it came hard. My relationship with my future wife deteriotated. I&amp;#8217;m glad to say she stuck around and for that I will always be thankful.&lt;/p&gt;
 
-&lt;p&gt;These days I work on projects in a much more methodical manner.  I question why a certain feature is needed much more often.  I take each day as it comes with a goal to be performed every single day.  Win small, win often and above all ship regularly.  Your health and satisfaction will improve.&lt;/p&gt;
+&lt;p&gt;These days I work on projects in a much more methodical manner. I question why a certain feature is needed much more often. I take each day as it comes with a goal to be performed every single day. Win small, win often and above all ship regularly. Your health and satisfaction will improve.&lt;/p&gt;
 
-&lt;p&gt;While being a part of history is great, make sure that enjoy your life.  You only get one.&lt;/p&gt;
-</description>
-	<link>http://beilabs.com/2011/11/28/work-hard-cry-less-be-part-of-history</link>
+&lt;p&gt;While being a part of history is great, make sure that enjoy your life. You only get one.&lt;/p&gt;</description>
+	<link>http://beilabs.com/2011/11/28/work-hard-cry-less-be-part-of-history.html</link>
       </item>
     
       <item>
 	<title>Bootstrap Xtra released</title>
-	<description>&lt;p&gt;Bootstrap Xtra extends Bootstrap
-Bootstrap is a toolkit from Twitter designed to kickstart development of webapps and sites.&lt;/p&gt;
+	<description>&lt;p&gt;Bootstrap Xtra extends Bootstrap Bootstrap is a toolkit from Twitter designed to kickstart development of webapps and sites.&lt;/p&gt;
 
 &lt;p&gt;It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation, and more.&lt;/p&gt;
 
 &lt;p&gt;Bootstrap Xtra inludes extra features that are not included in Bootstrap but may be useful for some people.&lt;/p&gt;
 
-&lt;p&gt;You can grab it here: &lt;a href=&quot;http://lightglitch.github.com/bootstrap-xtra/&quot;&gt;http://lightglitch.github.com/bootstrap-xtra/&lt;/a&gt;&lt;/p&gt;
-</description>
-	<link>http://beilabs.com/2011/11/27/bootstrap-xtra</link>
+&lt;p&gt;You can grab it here: &lt;a href=&#39;http://lightglitch.github.com/bootstrap-xtra/&#39;&gt;http://lightglitch.github.com/bootstrap-xtra/&lt;/a&gt;&lt;/p&gt;</description>
+	<link>http://beilabs.com/2011/11/27/bootstrap-xtra.html</link>
       </item>
     
       <item>
 	<title>Get 'er done...</title>
-	<description>&lt;p&gt;&quot;I had that idea years before they did it.&quot;&lt;/p&gt;
+	<description>&lt;p&gt;&amp;#8220;I had that idea years before they did it.&amp;#8221;&lt;/p&gt;
 
-&lt;p&gt;It's a common statement amongst developers.  The problem is that they either failed to execute or just never acted up on the idea in the first place.  Working alone can be a very daunting task.  A sole developer can cut a very lonely figure and often as a result failed startups are a dime a dozen.  My advice: just fucking do it.  Words to live by though often words words to regret.  Work on your idea one line of code at a time, one meeting at a time, one night at a time.&lt;/p&gt;
+&lt;p&gt;It&amp;#8217;s a common statement amongst developers. The problem is that they either failed to execute or just never acted up on the idea in the first place. Working alone can be a very daunting task. A sole developer can cut a very lonely figure and often as a result failed startups are a dime a dozen. My advice: just fucking do it. Words to live by though often words words to regret. Work on your idea one line of code at a time, one meeting at a time, one night at a time.&lt;/p&gt;
 
-&lt;p&gt;Missed opportunities happen all the time and will always continue to occur.  Get out and meet like minded people at networking events like Ruby Oceania and Silicon Beach in Sydney.  One of my resolutions this year is to be much more open for opportunities of any description.  Saying yes to new chances, meeting new people and working on new ideas.  Follow up with chance encounters, you never know what path it will lead you down.&lt;/p&gt;
+&lt;p&gt;Missed opportunities happen all the time and will always continue to occur. Get out and meet like minded people at networking events like Ruby Oceania and Silicon Beach in Sydney. One of my resolutions this year is to be much more open for opportunities of any description. Saying yes to new chances, meeting new people and working on new ideas. Follow up with chance encounters, you never know what path it will lead you down.&lt;/p&gt;
 
-&lt;p&gt;Make 2011 your year to shine because no-one else is ever going to make it for you.&lt;/p&gt;
-</description>
-	<link>http://beilabs.com/2011/01/03/get-er-done</link>
+&lt;p&gt;Make 2011 your year to shine because no-one else is ever going to make it for you.&lt;/p&gt;</description>
+	<link>http://beilabs.com/2011/01/03/get-er-done.html</link>
       </item>
     
       <item>
 	<title>Programming is difficult...</title>
-	<description>&lt;p&gt;&lt;a href=&quot;http://jamesjohnsona.tumblr.com/post/2088297700/programming-has-been-difficult&quot;&gt;James Johnson&lt;/a&gt; wrote earlier this month that &quot;Programming has been difficult...(But Rewarding).&lt;/p&gt;
+	<description>&lt;p&gt;&lt;a href=&#39;http://jamesjohnsona.tumblr.com/post/2088297700/programming-has-been-difficult&#39;&gt;James Johnson&lt;/a&gt; wrote earlier this month that &amp;#8220;Programming has been difficult&amp;#8230;(But Rewarding).&lt;/p&gt;
 
-&lt;p&gt;Mastering programming takes an enormous amount of time.  Like any discipline it requires dedication and hard work to become well regarded in the field.&lt;/p&gt;
+&lt;p&gt;Mastering programming takes an enormous amount of time. Like any discipline it requires dedication and hard work to become well regarded in the field.&lt;/p&gt;
 
-&lt;p&gt;Learn something new today, repeat what you learned and repeat it again.  Chances are that the next time you do it will be significantly faster than the first time.&lt;/p&gt;
+&lt;p&gt;Learn something new today, repeat what you learned and repeat it again. Chances are that the next time you do it will be significantly faster than the first time.&lt;/p&gt;
 
-&lt;p&gt;Always be willing to try new languages and approaches, it will serve you well.  Banging your head off a wall for hours just to get it to finally do what you want is the reward that all developers crave.&lt;/p&gt;
+&lt;p&gt;Always be willing to try new languages and approaches, it will serve you well. Banging your head off a wall for hours just to get it to finally do what you want is the reward that all developers crave.&lt;/p&gt;
 
-&lt;p&gt;Programming is difficult, depending on what you want to accomplish, but the rewards are so satisfying that I can't see myself in any other profession.&lt;/p&gt;
-</description>
-	<link>http://beilabs.com/2010/12/29/programming-is-difficult</link>
+&lt;p&gt;Programming is difficult, depending on what you want to accomplish, but the rewards are so satisfying that I can&amp;#8217;t see myself in any other profession.&lt;/p&gt;</description>
+	<link>http://beilabs.com/2010/12/29/programming-is-difficult.html</link>
       </item>
     
       <item>
@@ -361,180 +464,394 @@ Bootstrap is a toolkit from Twitter designed to kickstart development of webapps
 	<description>&lt;p&gt;So today I got to build a small little application that does the following:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;   It reads a specific email account through the IMAP protocol&lt;/li&gt;
-&lt;li&gt;   Imports the message and all of it's attachments&lt;/li&gt;
-&lt;li&gt;   Saves the message to a postgres database&lt;/li&gt;
-&lt;li&gt;   Marks the message as read&lt;/li&gt;
-&lt;li&gt;   Copies the message to the Complete folder&lt;/li&gt;
-&lt;li&gt;   Removes the message from the Inbox&lt;/li&gt;
+&lt;li&gt;It reads a specific email account through the IMAP protocol&lt;/li&gt;
+
+&lt;li&gt;Imports the message and all of it&amp;#8217;s attachments&lt;/li&gt;
+
+&lt;li&gt;Saves the message to a postgres database&lt;/li&gt;
+
+&lt;li&gt;Marks the message as read&lt;/li&gt;
+
+&lt;li&gt;Copies the message to the Complete folder&lt;/li&gt;
+
+&lt;li&gt;Removes the message from the Inbox&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;So why did I do this? Well, I really want a simple way to post messages from my phone to my blog. Gmail currently allows me to work on drafts while on the move and will push when I resume connectivity. Hopefully this will result in a vast increase in the number of posts I make in the future.&lt;/p&gt;
 
-&lt;p&gt;So why did I do this? Well, I really want a simple way to post messages from my phone to my blog.  Gmail currently allows me to work on drafts while on the move and will push when I resume connectivity.  Hopefully this will result in a vast increase in the number of posts I make in the future.&lt;/p&gt;
-
-&lt;p&gt;All of this was down to the Ruby IMAP library and Mikel Lindsaars awesome Mail library.  You can view the source code of this website at &lt;a href=&quot;https://github.com/beilabs/www.beilabs.com&quot;&gt;https://github.com/beilabs/www.beilabs.com&lt;/a&gt; *This blog is now replaced with a simplified Jekyll blog framework.&lt;/p&gt;
+&lt;p&gt;All of this was down to the Ruby IMAP library and Mikel Lindsaars awesome Mail library. You can view the source code of this website at &lt;a href=&#39;https://github.com/beilabs/www.beilabs.com&#39;&gt;https://github.com/beilabs/www.beilabs.com&lt;/a&gt; &lt;em&gt;This blog is now replaced with a simplified Jekyll blog framework.&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;There are still a number of things to do such as:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;   Read and process attachments&lt;/li&gt;
-&lt;li&gt;   Save to Amazon S3&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;Read and process attachments&lt;/li&gt;
 
-</description>
-	<link>http://beilabs.com/2010/12/28/messing-around-with-the-ruby-imap-and-mail-libraries</link>
+&lt;li&gt;Save to Amazon S3&lt;/li&gt;
+&lt;/ul&gt;</description>
+	<link>http://beilabs.com/2010/12/28/messing-around-with-the-ruby-imap-and-mail-libraries.html</link>
       </item>
     
       <item>
 	<title>Kids can change the world as entrepreneurs</title>
-	<description>&lt;iframe src=&quot;http://embed.ted.com/talks/cameron_herold_let_s_raise_kids_to_be_entrepreneurs.html&quot; width=&quot;560&quot; height=&quot;315&quot; frameborder=&quot;0&quot; scrolling=&quot;no&quot; webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;&lt;/iframe&gt;
-
-
-&lt;h2&gt;Presentation Overview:&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;I was raised to be an entrepreneur&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;We miss opportunities to find these kids with entrepreneurial traits&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;As kids we have passions (these are crushed early)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Promote kidspassions&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;No-one says &quot;Become an entrepreneur&quot;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Teach kids to open a business instead of accepting government handouts&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;We teach out kids to go after really good jobs&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Media says go for fame (become a model, singer, celebrity)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;MBA programs do not teach kids to be entrepreneurs&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Bipolar disorder is nicknamed the CEO disease&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Entrepreneurs cheat! We don't do accounting, we hire accounting.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;An entrepreneurs definition: &quot;A person who organizes operates and assumes the risk for a business venture&quot;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Hate the thought of having a job and love the thought of employing people.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Become an entrepreneur at a young age.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Buy low, sell hi. Don't sell to the poor people, sell to the rich kids.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Don't reveal your source&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Manual labor sucks but recurring revenue is great&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Make more money faster (10 dollars for 1 hour is better than 10 dollars for 5 hours)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Why not give your kids games to teach entrepreneur ship&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Ensure that your kids never waste a penny&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Allowances teach the wrong habbits, entrepreneurs will never get a regular paycheck&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Always negotiate with your kids&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;50% of money goes into a bank account (house account), 50% of money goes to whatever they want (toy account)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Get your kids a broker&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Don't always read stories to your kids, have them read stories to you (Get them to talk)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Show kids what a bad employee is like and what a good employee is like (Point out bad / good customer service)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Do not medicate your kids for ADD unless it is impossible to live with!&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-
-&lt;h2&gt;Teach your kids:&lt;/h2&gt;
+	<description>&lt;pre class=&#39;markdown-html-error&#39; style=&#39;border: solid 3px red; background-color: pink&#39;&gt;REXML could not parse this XML/HTML: 
+&amp;lt;iframe src=&amp;quot;http://embed.ted.com/talks/cameron_herold_let_s_raise_kids_to_be_entrepreneurs.html&amp;quot; width=&amp;quot;560&amp;quot; height=&amp;quot;315&amp;quot; frameborder=&amp;quot;0&amp;quot; scrolling=&amp;quot;no&amp;quot; webkitAllowFullScreen mozallowfullscreen allowFullScreen&amp;gt;&amp;lt;/iframe&amp;gt;&lt;/pre&gt;
+&lt;h2 id=&#39;presentation_overview&#39;&gt;Presentation Overview:&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Problem solving&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;To ask questions&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;To be creative&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;To lead others&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;To learn from mistakes&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;How to save money&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;To want to make Money&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;How to sell&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;To ask for help&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Public speaking&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;To never give up&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;To see solutions&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Rank entrepreneurship right up with Law and Medicine!&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;I was raised to be an entrepreneur&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;We miss opportunities to find these kids with entrepreneurial traits&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;As kids we have passions (these are crushed early)&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Promote kidspassions&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;No-one says &amp;#8220;Become an entrepreneur&amp;#8221;&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Teach kids to open a business instead of accepting government handouts&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;We teach out kids to go after really good jobs&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Media says go for fame (become a model, singer, celebrity)&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;MBA programs do not teach kids to be entrepreneurs&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Bipolar disorder is nicknamed the CEO disease&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Entrepreneurs cheat! We don&amp;#8217;t do accounting, we hire accounting.&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;An entrepreneurs definition: &amp;#8220;A person who organizes operates and assumes the risk for a business venture&amp;#8221;&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Hate the thought of having a job and love the thought of employing people.&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Become an entrepreneur at a young age.&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Buy low, sell hi. Don&amp;#8217;t sell to the poor people, sell to the rich kids.&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Don&amp;#8217;t reveal your source&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Manual labor sucks but recurring revenue is great&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Make more money faster (10 dollars for 1 hour is better than 10 dollars for 5 hours)&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Why not give your kids games to teach entrepreneur ship&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Ensure that your kids never waste a penny&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Allowances teach the wrong habbits, entrepreneurs will never get a regular paycheck&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Always negotiate with your kids&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;50% of money goes into a bank account (house account), 50% of money goes to whatever they want (toy account)&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Get your kids a broker&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Don&amp;#8217;t always read stories to your kids, have them read stories to you (Get them to talk)&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Show kids what a bad employee is like and what a good employee is like (Point out bad / good customer service)&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Do not medicate your kids for ADD unless it is impossible to live with!&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;h2 id=&#39;teach_your_kids&#39;&gt;Teach your kids:&lt;/h2&gt;
 
-&lt;h2&gt;My view&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Problem solving&lt;/p&gt;
+&lt;/li&gt;
 
-&lt;p&gt;Very inspiring stuff, When I do have kids I'll be instilling these values at a very early age. Love the idea of negotiating with my kid, everything is negotiable - it's something they should learn at a very early age.&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;To ask questions&lt;/p&gt;
+&lt;/li&gt;
 
-&lt;h2&gt;About the presenter&lt;/h2&gt;
+&lt;li&gt;
+&lt;p&gt;To be creative&lt;/p&gt;
+&lt;/li&gt;
 
-&lt;p&gt;Business Mentor. Business Coach. CEO Coach. Cameron Herold has taken 20 years experience operating some of the biggest business success stories in North America and turned it into a flourishing career as both a motivational speaker and management consultant. Cameron is a business coach and mentor to several small businesses, and a CEO coach to large corporations throughout Canada and the United States. There's no secret to his business success; Cameron loves helping entrepreneurs make their dreams come true.&lt;/p&gt;
-</description>
-	<link>http://beilabs.com/2010/04/14/kids-can-change-the-world-as-entrepreneurs</link>
+&lt;li&gt;
+&lt;p&gt;To lead others&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;To learn from mistakes&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;How to save money&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;To want to make Money&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;How to sell&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;To ask for help&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Public speaking&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;To never give up&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;To see solutions&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Rank entrepreneurship right up with Law and Medicine!&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#39;my_view&#39;&gt;My view&lt;/h2&gt;
+
+&lt;p&gt;Very inspiring stuff, When I do have kids I&amp;#8217;ll be instilling these values at a very early age. Love the idea of negotiating with my kid, everything is negotiable - it&amp;#8217;s something they should learn at a very early age.&lt;/p&gt;
+
+&lt;h2 id=&#39;about_the_presenter&#39;&gt;About the presenter&lt;/h2&gt;
+
+&lt;p&gt;Business Mentor. Business Coach. CEO Coach. Cameron Herold has taken 20 years experience operating some of the biggest business success stories in North America and turned it into a flourishing career as both a motivational speaker and management consultant. Cameron is a business coach and mentor to several small businesses, and a CEO coach to large corporations throughout Canada and the United States. There&amp;#8217;s no secret to his business success; Cameron loves helping entrepreneurs make their dreams come true.&lt;/p&gt;</description>
+	<link>http://beilabs.com/2010/04/14/kids-can-change-the-world-as-entrepreneurs.html</link>
       </item>
     
       <item>
 	<title>Two books to read</title>
-	<description>&lt;p&gt;Two books I'm really looking forward to reading over the next few weeks:&lt;/p&gt;
+	<description>&lt;p&gt;Two books I&amp;#8217;m really looking forward to reading over the next few weeks:&lt;/p&gt;
 
-&lt;h2&gt;The Fortune at the Bottom of the Pyramid: Eradicating Poverty Through Profits&lt;/h2&gt;
+&lt;h2 id=&#39;the_fortune_at_the_bottom_of_the_pyramid_eradicating_poverty_through_profits&#39;&gt;The Fortune at the Bottom of the Pyramid: Eradicating Poverty Through Profits&lt;/h2&gt;
 
-&lt;p&gt;The bottom of the (economic) pyramid consists of the 4 billion people living on less than $2 per day. For more than 50 years, the World Bank, donor nations, various aid agencies, national governments, and, lately, civil society organizations have all done their best, but they were unable to eradicate poverty. Aware of this frustrating fact, C.K. Prahalad begins his book: &quot;The Fortune at the Bottom of the Pyramid&quot; with a simple yet revolutionary proposition: If we stop thinking of the poor as victims or as a burden and start recognizing them as resilient and creative entrepreneurs and value-conscious consumers, a whole new world of opportunity will open up.&lt;/p&gt;
+&lt;p&gt;The bottom of the (economic) pyramid consists of the 4 billion people living on less than $2 per day. For more than 50 years, the World Bank, donor nations, various aid agencies, national governments, and, lately, civil society organizations have all done their best, but they were unable to eradicate poverty. Aware of this frustrating fact, C.K. Prahalad begins his book: &amp;#8220;The Fortune at the Bottom of the Pyramid&amp;#8221; with a simple yet revolutionary proposition: If we stop thinking of the poor as victims or as a burden and start recognizing them as resilient and creative entrepreneurs and value-conscious consumers, a whole new world of opportunity will open up.&lt;/p&gt;
 
-&lt;h2&gt;Rework&lt;/h2&gt;
+&lt;h2 id=&#39;rework&#39;&gt;Rework&lt;/h2&gt;
 
-&lt;p&gt;Expecting a lot from Rework, but I've been a fan of Signals Vs Noise for quite some time so I'm guessing a lot of SvN will be just regurgitated onto a page. &quot;Jason Fried and David Hansson follow their own advice in REWORK, laying bare the surprising philosophies at the core of 37signals' success and inspiring us to put them into practice.&lt;/p&gt;
+&lt;p&gt;Expecting a lot from Rework, but I&amp;#8217;ve been a fan of Signals Vs Noise for quite some time so I&amp;#8217;m guessing a lot of SvN will be just regurgitated onto a page. &amp;#8220;Jason Fried and David Hansson follow their own advice in REWORK, laying bare the surprising philosophies at the core of 37signals&amp;#8217; success and inspiring us to put them into practice.&lt;/p&gt;
 
-&lt;p&gt;Any other recommendations for me?&lt;/p&gt;
-</description>
-	<link>http://beilabs.com/2010/04/12/two-books-to-read</link>
+&lt;p&gt;Any other recommendations for me?&lt;/p&gt;</description>
+	<link>http://beilabs.com/2010/04/12/two-books-to-read.html</link>
       </item>
     
       <item>
 	<title>What killed Smalltalk could kill ruby</title>
-	<description>&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;http://www.youtube.com/embed/YX3iRjKj7C0&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
-
-
-&lt;h2&gt;Overview of this presentation&lt;/h2&gt;
+	<description>&lt;pre class=&#39;markdown-html-error&#39; style=&#39;border: solid 3px red; background-color: pink&#39;&gt;REXML could not parse this XML/HTML: 
+&amp;lt;iframe width=&amp;quot;560&amp;quot; height=&amp;quot;315&amp;quot; src=&amp;quot;http://www.youtube.com/embed/YX3iRjKj7C0&amp;quot; frameborder=&amp;quot;0&amp;quot; allowfullscreen&amp;gt;&amp;lt;/iframe&amp;gt;&lt;/pre&gt;
+&lt;h2 id=&#39;overview_of_this_presentation&#39;&gt;Overview of this presentation&lt;/h2&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Smalltalk &amp;amp; Ruby are deeply interrelated.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Much of the same syntax between the two languages&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;From 1970s Smalltalk was the language to watch&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Smalltalk epitomized Object Orientated Design&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Described C++ as a mans language (need balls to code in it and make it work)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Describes Java as an estrogen type language (presuming he means only women code in it?)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Smalltalk had a productivity benefit of a factor of 5. Compared to a C application.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Refactoring in Smalltalk was a breeze&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;What killed Smalltalk? ( umm, at this stage I have no idea, he jumps to a new topic)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Definition of clean code - &quot;when you look at a routine and its pretty much what you expected&quot;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Best metric for clean code is 0 WTFs per minute&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;What killed Smalltalk is that it was just too easy to make a mess (Finally, 20 mins in!) Quote from Ward Cunningham&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;So easy to make an indirect and impenetrable system over time&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Companies developing in Smalltalk were screwed up at the time&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;You can make a mess in Ruby, simple, elegant, wonderful language; still easy to make a mess&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Projects in Ruby start well, but the framework is often violated over time; making a mess...&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Boyscout rule, leave the campground cleaner than when you entered it. (Actual quote - leave life better than you found it) - apply this to your source code. Would make code get better and better as time goes by. Most of the time, cleaning code is hard!&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Quote of the presentation - &quot;If you touch it, you will break it. If you break it, it becomes yours. The best policy is to walk away, run. the messes are hard to clean&quot;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Test Driven Development is the solution&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Rails and Ruby is great for Test Driven Development.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Other languages have TDD, was born in Smalltalk.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Talks about TDD methods; If you follow TDD, regularly write and run tests, then there is no fear to change code.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Nothing makes a system more maintainable than a suite of tests&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;He loves Rspec and Cucumber (Behaviour Driven Development BDD)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;TDD never really became a part of Smalltalks culture but is integral to the Ruby community&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;TDD will keep your code clean&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;There was an arrogance to the Smalltalk community ( I sometimes can see this in the Ruby community )&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Our tools are so good, our language is so good we don't need to follow the rules. Smalltalk people didn't want to do regular programming (Enterprise Applications, etc)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Your language may be powerful, but you must be careful with it. just because we can do a thing, it does not necessarily mean we must do that thing (Star Trek quote) Us vs them feeling in the Smalltalk community.&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Ruby community is not going to go down this path because:&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Discipline - TDD makes you feel good inside&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Professionalism - did the doctor wash their hands, did you write your tests?&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Acceptance - we need to solve the dirty problems ( Need to adapt to the enterprises needs - do not solve only the problems you like.)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;We have a great tool in Ruby, we can kill it, let's not do that!&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Smalltalk &amp;amp; Ruby are deeply interrelated.&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Much of the same syntax between the two languages&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;From 1970s Smalltalk was the language to watch&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Smalltalk epitomized Object Orientated Design&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Described C++ as a mans language (need balls to code in it and make it work)&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Describes Java as an estrogen type language (presuming he means only women code in it?)&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Smalltalk had a productivity benefit of a factor of 5. Compared to a C application.&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Refactoring in Smalltalk was a breeze&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;What killed Smalltalk? ( umm, at this stage I have no idea, he jumps to a new topic)&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Definition of clean code - &amp;#8220;when you look at a routine and its pretty much what you expected&amp;#8221;&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Best metric for clean code is 0 WTFs per minute&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;What killed Smalltalk is that it was just too easy to make a mess (Finally, 20 mins in!) Quote from Ward Cunningham&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;So easy to make an indirect and impenetrable system over time&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Companies developing in Smalltalk were screwed up at the time&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;You can make a mess in Ruby, simple, elegant, wonderful language; still easy to make a mess&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Projects in Ruby start well, but the framework is often violated over time; making a mess&amp;#8230;&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Boyscout rule, leave the campground cleaner than when you entered it. (Actual quote - leave life better than you found it) - apply this to your source code. Would make code get better and better as time goes by. Most of the time, cleaning code is hard!&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Quote of the presentation - &amp;#8220;If you touch it, you will break it. If you break it, it becomes yours. The best policy is to walk away, run. the messes are hard to clean&amp;#8221;&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Test Driven Development is the solution&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Rails and Ruby is great for Test Driven Development.&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Other languages have TDD, was born in Smalltalk.&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Talks about TDD methods; If you follow TDD, regularly write and run tests, then there is no fear to change code.&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Nothing makes a system more maintainable than a suite of tests&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;He loves Rspec and Cucumber (Behaviour Driven Development BDD)&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;TDD never really became a part of Smalltalks culture but is integral to the Ruby community&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;TDD will keep your code clean&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;There was an arrogance to the Smalltalk community ( I sometimes can see this in the Ruby community )&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Our tools are so good, our language is so good we don&amp;#8217;t need to follow the rules. Smalltalk people didn&amp;#8217;t want to do regular programming (Enterprise Applications, etc)&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Your language may be powerful, but you must be careful with it. just because we can do a thing, it does not necessarily mean we must do that thing (Star Trek quote) Us vs them feeling in the Smalltalk community.&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Ruby community is not going to go down this path because:&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Discipline - TDD makes you feel good inside&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Professionalism - did the doctor wash their hands, did you write your tests?&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Acceptance - we need to solve the dirty problems ( Need to adapt to the enterprises needs - do not solve only the problems you like.)&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;We have a great tool in Ruby, we can kill it, let&amp;#8217;s not do that!&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;h2 id=&#39;my_view&#39;&gt;My view&lt;/h2&gt;
 
-&lt;h2&gt;My view&lt;/h2&gt;
+&lt;p&gt;Great presentation style, he&amp;#8217;s quite funny. Very inspirational lecturer for developers confirming that TDD/BDD are the ways forward for software engineering.&lt;/p&gt;
 
-&lt;p&gt;Great presentation style, he's quite funny. Very inspirational lecturer for developers confirming that TDD/BDD are the ways forward for software engineering.&lt;/p&gt;
+&lt;h2 id=&#39;about_the_presenter&#39;&gt;About the presenter&lt;/h2&gt;
 
-&lt;h2&gt;About the presenter&lt;/h2&gt;
-
-&lt;p&gt;Robert C. Martin has been a software professional since 1970. In the last 35 years, he has worked in various capacities on literally hundreds of software projects. He has authored &quot;landmark&quot; books on Agile Programming, Extreme Programming, UML, Object-Oriented Programming, and C++ Programming. He has published dozens of articles in various trade journals. Today, He is one of the software industry's leading authorities on Agile software development and is a regular speaker at international conferences and trade shows. He is a former editor of the C++ Report and currently writes a monthly Craftsman column for Software Development magazine.&lt;/p&gt;
-</description>
-	<link>http://beilabs.com/2010/04/09/what-killed-smalltalk-could-kill-ruby</link>
+&lt;p&gt;Robert C. Martin has been a software professional since 1970. In the last 35 years, he has worked in various capacities on literally hundreds of software projects. He has authored &amp;#8220;landmark&amp;#8221; books on Agile Programming, Extreme Programming, UML, Object-Oriented Programming, and C++ Programming. He has published dozens of articles in various trade journals. Today, He is one of the software industry&amp;#8217;s leading authorities on Agile software development and is a regular speaker at international conferences and trade shows. He is a former editor of the C++ Report and currently writes a monthly Craftsman column for Software Development magazine.&lt;/p&gt;</description>
+	<link>http://beilabs.com/2010/04/09/what-killed-smalltalk-could-kill-ruby.html</link>
       </item>
     
       <item>
 	<title>Thoughts on software engineering</title>
-	<description>&lt;p&gt;I'm a software engineer. I've been calling myself one since 2003, my first application was built on a ZX Spectrum Sinclair in the late 1980's. After working with a variety of frameworks over the past number of years I can realistically say that I have never been more excited about software design than I am now.&lt;/p&gt;
+	<description>&lt;p&gt;I&amp;#8217;m a software engineer. I&amp;#8217;ve been calling myself one since 2003, my first application was built on a ZX Spectrum Sinclair in the late 1980&amp;#8217;s. After working with a variety of frameworks over the past number of years I can realistically say that I have never been more excited about software design than I am now.&lt;/p&gt;
 
 &lt;p&gt;Historically, software engineering has been viewed as a black hole by many corporations. Software engineering projects can often take years to develop, they can arrive well over budget, become delayed due to a variety of reasons and ultimately may not achieve what the customer envisaged. This is a common theme amongst many initiatives and can be attributed to a variety of reasons, under-scoping the project, not following proper standards, bad project management to name but a few.&lt;/p&gt;
 
 &lt;p&gt;Software is the only profession that I can ever see myself working within. It is the one profession where I can learn something brand new every day and receive satisfaction from approaching a problem in a different way, but achieve much better results each time; very few professions allow for this to occur.&lt;/p&gt;
 
-&lt;p&gt;Software engineering currently impacts all aspects of modern life from banking to medicine to publishing. Whilst only having been around since the 1960's the fact that it has introduced engineering disciplines into the software development process speaks volumes.&lt;/p&gt;
+&lt;p&gt;Software engineering currently impacts all aspects of modern life from banking to medicine to publishing. Whilst only having been around since the 1960&amp;#8217;s the fact that it has introduced engineering disciplines into the software development process speaks volumes.&lt;/p&gt;
 
 &lt;p&gt;Software, by nature, is intangible; by intangible we mean that it is quite easy to observe the progress of a building or aeroplane whilst it is being built however it is difficult to gauge the same level of progress within a software engineering project.&lt;/p&gt;
 
@@ -556,17 +873,16 @@ Bootstrap is a toolkit from Twitter designed to kickstart development of webapps
 
 &lt;p&gt;Tools: Wasserman mentions that we need tools to enhance software development. Such tools are constantly being developed. Plugins are constantly making life much more easier for developers, with the advent of meta-meta-meta programming we now have scripts that create code which creates code for a developer. Such tools allow for rapid development, ensuring that the wheel is not constantly being created.&lt;/p&gt;
 
-&lt;p&gt;Someone once said that with great power, comes great responsibility however the software profession is not regulated as much as the medical profession even though much of what an engineer can design can be directly used within medical practice. As a result, there are some bodies that exist who define what a practising engineer ought to know, based on their education and work experience. The Software Engineering Body of Knowledge (SWEBOK) is a product of the Software Engineering Coordinating Committee and is sponsored by the IEEE Computer Society and a number of other partners. Many claim that the document may not accurately reflect the community's view of software engineering and recognize the effort to try to define the profession. (ACM 2000). The body of knowledge just represents best known practice, it is not the perfect solution for everybody.&lt;/p&gt;
+&lt;p&gt;Someone once said that with great power, comes great responsibility however the software profession is not regulated as much as the medical profession even though much of what an engineer can design can be directly used within medical practice. As a result, there are some bodies that exist who define what a practising engineer ought to know, based on their education and work experience. The Software Engineering Body of Knowledge (SWEBOK) is a product of the Software Engineering Coordinating Committee and is sponsored by the IEEE Computer Society and a number of other partners. Many claim that the document may not accurately reflect the community&amp;#8217;s view of software engineering and recognize the effort to try to define the profession. (ACM 2000). The body of knowledge just represents best known practice, it is not the perfect solution for everybody.&lt;/p&gt;
 
 &lt;p&gt;IEEE-CS and ACM 2004 implemented a joint initiative which guides insitutions of higher education on how to design curricula for undergraduate programmes in software engineering. The core body of knowledge is known as Software Engineering Education Knowledge (SEEK). This knowledge mainly includes relevant content from appropriate disciplines such as mathematics computer science, economics, engineering and software engineering etc.&lt;/p&gt;
 
-&lt;p&gt;There is no single right way to approach a software project. Each one is different, relying on the customers input, the development's team experience, etc. Overall, there is no substitute for experience and any tools or qualifications which extend the knowledge and ability of a software engineer can only be regarded as a boon. Too many software projects have become victim to feature creep, design bloat, excessive miscommunication and overdue deadlines. By equiping engineers with best practices and coding guidelines, an engineer can provide best value to the customer as well relatively straightforward hangovers between fellow software engineers. So what is the current state of software engineering? Well, the future is bright, software development on the whole is on the increase, new social mediums are allowing for bootstrapped startups to realize exceptional new ideas and develop them in rapid time.&lt;/p&gt;
+&lt;p&gt;There is no single right way to approach a software project. Each one is different, relying on the customers input, the development&amp;#8217;s team experience, etc. Overall, there is no substitute for experience and any tools or qualifications which extend the knowledge and ability of a software engineer can only be regarded as a boon. Too many software projects have become victim to feature creep, design bloat, excessive miscommunication and overdue deadlines. By equiping engineers with best practices and coding guidelines, an engineer can provide best value to the customer as well relatively straightforward hangovers between fellow software engineers. So what is the current state of software engineering? Well, the future is bright, software development on the whole is on the increase, new social mediums are allowing for bootstrapped startups to realize exceptional new ideas and develop them in rapid time.&lt;/p&gt;
 
 &lt;p&gt;Regulation will eventually come about within the software industry. Corporations tired of excessive bloat within their processes will ultimately combine together and enforce strict codes of conduct, in-depth peer reviews, and ultimately I thoroughly believe there will be a register of a Software Engineers performance throughout their career on various projects; a rate my software engineer if you will.&lt;/p&gt;
 
-&lt;p&gt;In this time of doom and gloom, software departments will be feeling the pressure to cut costs; cutting costs does not mean cutting quality, through new approaches and modern techniques software can be made rapidly and of high quality. Through enforcing and adhering to a code of ethics/standards, projects can avoid the bloat. The future is bright, the future is and will always remain within software engineering.&lt;/p&gt;
-</description>
-	<link>http://beilabs.com/2010/04/04/thoughts-on-software-engineering</link>
+&lt;p&gt;In this time of doom and gloom, software departments will be feeling the pressure to cut costs; cutting costs does not mean cutting quality, through new approaches and modern techniques software can be made rapidly and of high quality. Through enforcing and adhering to a code of ethics/standards, projects can avoid the bloat. The future is bright, the future is and will always remain within software engineering.&lt;/p&gt;</description>
+	<link>http://beilabs.com/2010/04/04/thoughts-on-software-engineering.html</link>
       </item>
     
   </channel>

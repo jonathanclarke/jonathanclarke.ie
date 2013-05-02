@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="Your Name" />
+    <title>Redis Pub/Sub and Rails 4 Live Streaming</title>
+    <meta content='Jonathan Clarke's blog' name='description'>
+    <meta content='ruby, developer, backend, scalable, development, architecture, testing, test driven, sydney, australia, ireland, jonathan, jonathan clarke, beilabs, givefoo' name='keywords'>
+    <meta content='Jonathan Clarke' name='author'>
+    <meta content='index, follow' name='robots'>
+    <link href="/public/stylesheets/reset.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/beilabs">
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-410168-5']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id='wrapper'>
+      <header>
+        <h1>
+	  <a href="/">Jonathan Clarke</a> - <a href="http://twitter.com/beilabs">@beilabs</a>
+	  <br/>
+	  software engineer, Irish, entrepreneur...
+	</h1>
+      </header>
+      <div id='content'>
+  <section class='content'>
+    <h2>
+      <a href="/2013/05/02/redis-pub-sub-and-rails-4-streaming.html">Redis Pub/Sub and Rails 4 Live Streaming</a>
+    </h2>
+    <p>So today I got to play a bit with the newly minded Rails 4 RC 1. A new feature is Live Streaming so I decided to see how it would work with redis publish / subscribe channels.</p>
+
+<p>So lets create an infinite loop which is publishing on the redis queue &#8220;namespaced:stream&#8221;</p>
+
+<pre><code>require &#39;redis&#39;
+require &#39;json&#39;
+
+$i = 1
+redis = Redis.new
+begin
+    data = {&quot;time&quot; =&gt; &quot;#{ Time.now }&quot; }
+    redis.publish(&quot;namespaced:stream&quot;, data.to_json)
+    sleep 1
+    $i +=1
+end while $i &gt; 0</code></pre>
+
+<p>Lets have that running indefinitely, it is now publishing on the channel namespaced:stream.</p>
+
+<p>Lets install the latest Ruby on Rails 4 and get a streaming controller up and running</p>
+
+<pre><code>class StreamsController &lt; ActionController::Base
+    include ActionController::Live
+
+    def the_stream
+        response.headers[&#39;Content-Type&#39;] = &#39;text/event-stream&#39;
+        redis = Redis.new
+        redis.subscribe(&#39;namespaced:stream&#39;) do |on|
+            on.message do |event, data|
+                response.stream.write(&quot;data:#{ data }\n\n&quot;)
+            end
+        end
+        ensure
+            response.stream.close
+        end
+    end
+end</code></pre>
+
+<p>Make sure you install the puma server and start it.</p>
+
+<p>Now head to /streams/the_stream</p>
+
+<p>Viola, pub/sub with live streaming through Rails 4 + Redis. You could hook up some javascript to access this data.</p>
+
+<p>Stick this in item.js $(document).ready(initialize);</p>
+
+<pre><code>function initialize() {
+    var source = new EventSource(&#39;/products/latest-product-events&#39;);
+    source.addEventListener(&#39;message&#39;, function(e) {
+        console.log(&quot;Received &quot;+e.data);
+        updateItemsPage(e.data);
+    }, false);
+
+    source.addEventListener(&#39;open&#39;, function(e) {
+        console.log(&quot;Connection was opened.&quot;);
+    }, false);
+
+    source.addEventListener(&#39;error&#39;, function(e) {
+        if (e.readyState == EventSource.CLOSED) {
+            console.log(&quot;Connection was closed.&quot;);
+        }else{
+            console.log(&quot;Something else&quot;);
+        }
+    }, false);
+};
+
+function updateItemsPage(event) {
+    var item = $(&#39;&lt;li&gt;&#39;).text(event);
+    $(&#39;#items&#39;).prepend(item);
+}</code></pre>
+
+<p>So, why is this cool? Well, firstly it leverages an advanced key-value store, Redis. Next, Rails 4 Live streaming is is a huge advantage. It allows Rails apps to be competitive with Node.js. Unfortunately most Rails application servers are not able to stream, so throw thin + unicorn out. Puma is the way forward it would seem.</p>
+
+    <p id="twitter"><a href="http://twitter.com/beilabs">Jonathan Clarke &dash; @beilabs</a></code>
+
+  </section>
+  <section class='comments'>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'beilabs'; // required: replace example with your forum shortname
+
+      // The following are highly recommended additional parameters. Remove the slashes in front to use.
+      // var disqus_identifier = 'unique_dynamic_id_1234';
+      // var disqus_url = 'http://example.com/permalink-to-page.html';
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  </section>
+</div>
+
+    </div>
+  </body>
+</html>
+

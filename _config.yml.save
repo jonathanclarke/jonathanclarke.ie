@@ -1,0 +1,5 @@
+auto: true
+markdown: rdiscount
+cpermalink: /:year/:month/:day/:title
+rdiscount
+  extensions: [smart]

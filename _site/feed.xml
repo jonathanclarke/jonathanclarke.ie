@@ -6,6 +6,22 @@
     <link>http://beilabs.com</link>
     
       <item>
+	<title>Installing Android On Ubuntu</title>
+	<description>&lt;pre&gt;&lt;code&gt;    sudo apt-get install openjdk-6-jre openjdk-6-jdk icedtea6-plugin&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Download the Android SDK http://developer.android.com/sdk/index.html&lt;/p&gt;
+
+&lt;p&gt;Place the folder adt-bundle-linux in a secure place&lt;/p&gt;
+
+&lt;p&gt;Launch Eclipse&lt;/p&gt;
+
+&lt;p&gt;Start the Android SDK Manager&lt;/p&gt;
+
+&lt;p&gt;Install the latest ADT Plugins Android SDK Tools Android SDK Platform-TOOLS Android 4.2 (API 17) Android 4.0.3 (API 15) Android 2.3.3 (API 10)&lt;/p&gt;</description>
+	<link>http://beilabs.com/2013/05/09/installing-android-on-ubuntu.html</link>
+      </item>
+    
+      <item>
 	<title>Redis Pub/Sub and Rails 4 Live Streaming</title>
 	<description>&lt;p&gt;So today I got to play a bit with the newly minded Rails 4 RC 1. A new feature is Live Streaming so I decided to see how it would work with redis publish / subscribe channels.&lt;/p&gt;
 

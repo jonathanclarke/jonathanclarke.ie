@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="Your Name" />
+    <title>Nginx error pages</title>
+    <meta content='Jonathan Clarke's blog' name='description'>
+    <meta content='ruby, developer, backend, scalable, development, architecture, testing, test driven, sydney, australia, ireland, jonathan, jonathan clarke, beilabs, givefoo' name='keywords'>
+    <meta content='Jonathan Clarke' name='author'>
+    <meta content='index, follow' name='robots'>
+    <link href="/public/stylesheets/reset.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/beilabs">
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-410168-5']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id='wrapper'>
+      <header>
+        <h1>
+	  <a href="/">Jonathan Clarke</a> - <a href="http://twitter.com/beilabs">@beilabs</a>
+	  <br/>
+	  software engineer, Irish, entrepreneur...
+	</h1>
+      </header>
+      <div id='content'>
+  <section class='content'>
+    <h2>
+      <a href="/2013/01/23/nginx-error-pages.html">Nginx error pages</a>
+    </h2>
+    <p>A quick how-to on creating a custom 404 error page on a Nginx server.</p>
+
+<p>To display a single page for a site, add the below to your config file. Below config assumes /404.html is in the root of the current site.</p>
+
+<pre><code>server {
+    ...
+    error_page 404 /404.html;
+    ...
+}</code></pre>
+
+<p>The error page it self doesn’t have to be anything special, just a clear message for the user to know that this page does not exist.</p>
+
+<p>If you are using a reverse proxy you need to ensure that proxy_intercept_errors are on. This directive decides if nginx will intercept responses with HTTP status codes of 400 and higher. By default all responses will be sent as-is from the proxied server.</p>
+
+<p>If you set this to on then nginx will intercept status codes that are explicitly handled by an error_page directive. Responses with status codes that do not match an error_page directive will be sent as-is from the proxied server.</p>
+
+    <p id="twitter"><a href="http://twitter.com/beilabs">Jonathan Clarke &dash; @beilabs</a></code>
+
+  </section>
+  <section class='comments'>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'beilabs'; // required: replace example with your forum shortname
+
+      // The following are highly recommended additional parameters. Remove the slashes in front to use.
+      // var disqus_identifier = 'unique_dynamic_id_1234';
+      // var disqus_url = 'http://example.com/permalink-to-page.html';
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  </section>
+</div>
+
+    </div>
+  </body>
+</html>
+

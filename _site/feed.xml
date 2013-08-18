@@ -6,37 +6,13 @@
     <link>http://beilabs.com</link>
     
       <item>
-	<title>Installing Android On Ubuntu</title>
-	<description>&lt;pre&gt;&lt;code&gt;    sudo apt-get install openjdk-6-jre openjdk-6-jdk icedtea6-plugin
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Download the Android SDK
-http://developer.android.com/sdk/index.html&lt;/p&gt;
-
-&lt;p&gt;Place the folder adt-bundle-linux in a secure place&lt;/p&gt;
-
-&lt;p&gt;Launch Eclipse&lt;/p&gt;
-
-&lt;p&gt;Start the Android SDK Manager&lt;/p&gt;
-
-&lt;p&gt;Install the latest ADT Plugins
-  Android SDK Tools
-  Android SDK Platform-TOOLS
-  Android 4.2   (API 17)
-  Android 4.0.3 (API 15)
-  Android 2.3.3 (API 10)&lt;/p&gt;
-</description>
-	<link>http://beilabs.com/2013/05/09/installing-android-on-ubuntu</link>
-      </item>
-    
-      <item>
 	<title>Redis Pub/Sub and Rails 4 Live Streaming</title>
 	<description>&lt;p&gt;So today I got to play a bit with the newly minded Rails 4 RC 1. A new feature is Live Streaming so I decided to see how it would work with redis publish / subscribe channels.&lt;/p&gt;
 
 &lt;p&gt;So lets create an infinite loop which is publishing on the redis queue &amp;ldquo;namespaced:stream&amp;rdquo;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;require 'redis'
-require 'json'
+&lt;pre&gt;&lt;code&gt;require &#39;redis&#39;
+require &#39;json&#39;
 
 $i = 1
 redis = Redis.new
@@ -56,9 +32,9 @@ end while $i &amp;gt; 0
     include ActionController::Live
 
     def the_stream
-        response.headers['Content-Type'] = 'text/event-stream'
+        response.headers[&#39;Content-Type&#39;] = &#39;text/event-stream&#39;
         redis = Redis.new
-        redis.subscribe('namespaced:stream') do |on|
+        redis.subscribe(&#39;namespaced:stream&#39;) do |on|
             on.message do |event, data|
                 response.stream.write(&quot;data:#{ data }\n\n&quot;)
             end
@@ -80,17 +56,17 @@ end
     $(document).ready(initialize);&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;function initialize() {
-    var source = new EventSource('/products/latest-product-events');
-    source.addEventListener('message', function(e) {
+    var source = new EventSource(&#39;/products/latest-product-events&#39;);
+    source.addEventListener(&#39;message&#39;, function(e) {
         console.log(&quot;Received &quot;+e.data);
         updateItemsPage(e.data);
     }, false);
 
-    source.addEventListener('open', function(e) {
+    source.addEventListener(&#39;open&#39;, function(e) {
         console.log(&quot;Connection was opened.&quot;);
     }, false);
 
-    source.addEventListener('error', function(e) {
+    source.addEventListener(&#39;error&#39;, function(e) {
         if (e.readyState == EventSource.CLOSED) {
             console.log(&quot;Connection was closed.&quot;);
         }else{
@@ -100,8 +76,8 @@ end
 };
 
 function updateItemsPage(event) {
-    var item = $('&amp;lt;li&amp;gt;').text(event);
-    $('#items').prepend(item);
+    var item = $(&#39;&amp;lt;li&amp;gt;&#39;).text(event);
+    $(&#39;#items&#39;).prepend(item);
 }
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -605,7 +581,7 @@ Bootstrap is a toolkit from Twitter designed to kickstart development of webapps
 
 &lt;h2&gt;Rework&lt;/h2&gt;
 
-&lt;p&gt;Expecting a lot from Rework, but I&amp;rsquo;ve been a fan of Signals Vs Noise for quite some time so I&amp;rsquo;m guessing a lot of SvN will be just regurgitated onto a page. &amp;ldquo;Jason Fried and David Hansson follow their own advice in REWORK, laying bare the surprising philosophies at the core of 37signals' success and inspiring us to put them into practice.&lt;/p&gt;
+&lt;p&gt;Expecting a lot from Rework, but I&amp;rsquo;ve been a fan of Signals Vs Noise for quite some time so I&amp;rsquo;m guessing a lot of SvN will be just regurgitated onto a page. &amp;ldquo;Jason Fried and David Hansson follow their own advice in REWORK, laying bare the surprising philosophies at the core of 37signals&#39; success and inspiring us to put them into practice.&lt;/p&gt;
 
 &lt;p&gt;Any other recommendations for me?&lt;/p&gt;
 </description>

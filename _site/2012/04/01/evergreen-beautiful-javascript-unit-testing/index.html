@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="author" content="Your Name" />
+    <title>Evergreen - Beautiful Javascript unit testing</title>
+    <meta content='Jonathan Clarke's blog' name='description'>
+    <meta content='ruby, developer, backend, scalable, development, architecture, testing, test driven, sydney, australia, ireland, jonathan, jonathan clarke, beilabs, givefoo' name='keywords'>
+    <meta content='Jonathan Clarke' name='author'>
+    <meta content='index, follow' name='robots'>
+    <link href="/public/stylesheets/reset.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/beilabs">
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-410168-5']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id='wrapper'>
+      <header>
+        <h1>
+	  <a href="/">Jonathan Clarke</a> - <a href="http://twitter.com/beilabs">@beilabs</a>
+	  <br/>
+	  software engineer, Irish, entrepreneur...
+	</h1>
+      </header>
+      <div id='content'>
+  <section class='content'>
+    <h2>
+      <a href="/2012/04/01/evergreen-beautiful-javascript-unit-testing">Evergreen - Beautiful Javascript unit testing</a>
+    </h2>
+    <p><img src="http://s3.amazonaws.com/blog.beilabs.com/images/2012-04-01-jasmine-sample-tests.png" title="Jasmine testing" alt="Jasmine Javascript testing" /></p>
+
+<p>I&rsquo;ve been coding quite a bit lately after work lately since I got back from Nepal.  While I was introduced to Jasmine a fair while ago I just recently discovered <a href="https://github.com/jnicklas/evergreen/" title="Evergreen gem">evergreen</a>.</p>
+
+<p>Evergreen is a tool to run javascript unit tests for client side JavaScript. It combines a server which allows you to serve up and run your specs in a browser, as well as a runner which uses Capybara and any of its drivers to run your specs. Evergreen uses the Jasmine unit testing framework for JavaScript.  I&rsquo;m a huge fan of automating my tests and you can see if your JS tests pass by running in the console:</p>
+
+<p><code>bundle exec rake spec:javascripts</code></p>
+
+<p>Handy stuff.  Now back to write some decent, tested Javascript for a change.</p>
+
+
+    <p id="twitter"><a href="http://twitter.com/beilabs">Jonathan Clarke &dash; @beilabs</a></code>
+
+  </section>
+  <section class='comments'>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = 'beilabs'; // required: replace example with your forum shortname
+
+      // The following are highly recommended additional parameters. Remove the slashes in front to use.
+      // var disqus_identifier = 'unique_dynamic_id_1234';
+      // var disqus_url = 'http://example.com/permalink-to-page.html';
+
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  </section>
+</div>
+
+    </div>
+  </body>
+</html>
+

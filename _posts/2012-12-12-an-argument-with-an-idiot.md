@@ -1,1 +1,0 @@
-Argue with idiots, and you become an idiot. 

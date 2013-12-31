@@ -124,13 +124,6 @@ function updateItemsPage(event) {
       </item>
     
       <item>
-	<title>An Argument With An Idiot</title>
-	<description>&lt;p&gt;Argue with idiots, and you become an idiot.&lt;/p&gt;
-</description>
-	<link>http://beilabs.com/2012/12/12/an-argument-with-an-idiot</link>
-      </item>
-    
-      <item>
 	<title>Working in cycles</title>
 	<description>&lt;p&gt;Lately I find that I&amp;rsquo;m working in cycles.  I get really excited about a project and will work 12 hours straight on it.  Other times, the same project just doesn&amp;rsquo;t seem interesting.&lt;/p&gt;
 

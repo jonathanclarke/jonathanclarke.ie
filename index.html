@@ -2,88 +2,13 @@
 layout: layout
 title: beilabs.com
 ---
-
-<section id='musings'>
-  <h1>My musings</h1>
-  <ul>
-    {% for post in site.posts offset: 0 limit: 10 %}
-    <li class='post'>
-      <span>{{ post.date | date: "%B %e, %Y" }}</span> <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-    {% endfor %}
-    <li class='post normal'>
-      <span></span><a class="normal" href='archive.html'>Read the full archive</a>
-    </li>
-  </ul>
-</section>
-
-<section>
-  <h2>My stuff on the web</h2>
-  <ul class='block'>
-    <li><a href="http://beilabs.com/posts">Blog</a></li>
-    <li><a href="http://www.twitter.com/beilabs">Twitter</a></li>
-    <li><a href="http://www.github.com/beilabs">GitHub</a></li>
-    <li><a href="http://au.linkedin.com/in/jonathanclarkeireland">Linked-in</a></li>
-    <li><a href="http://www.facebook.com/clarke.jonathan">Facebook</a></li>
-  </ul>
-</section>
-
-
-<section id='get_in_touch'>
-  <h1>Get in touch</h1>
-  <ul>
-    <li><a href="mailto:jonathan@beilabs.com">jonathan@beilabs.com</a></li>
-    <li><a href="skype://jonathan-beilabs">skype://jonathan-beilabs</a></li>
-  </ul>
-</section>
-
-<section>
-  <h1>Startup Experience:</h1>
-  <ul>
-    <li><a href="http://givefoo.com">Give Foo</a>&nbsp;-&nbsp;<span>Founder</span></li>
-    <li><a href="http://dealpinch.com">Deal Pinch</a>&nbsp;-&nbsp;<span>Co-Founder - Closed 2012</span></li>
-  </ul>
-</section>
-
-<section>
-  <h1>I have been working for:</h1>
-  <ul class='block'>
-    <li><a href="http://www.westwick-farrow.com.au">Westwick-Farrow (Current)</a></li>
-    <li><a href="http://www.arvato.ie">Arvato Finance</a></li>
-    <li><a href="http://www.dhc.com.cn">Dalian Hi-Think</a></li>
-    <li><a href="http://sitel.com">Client Logic (Sitel)</a></li>
-    <li><a href="htt://www.eurolanguagescollege.ie">Euro Languages College</a></li>
-  </ul>
-</section>
-
-<section>
-  <h1>I'm a member of these amazing groups</h1>
-  <ul class='block'>
-    <li><a href="http://groups.google.com/group/ruby_ireland">Ruby Ireland</a></li>
-    <li><a href="http://groups.google.com/group/rails-oceania">Ruby on Rails Oceania</a></li>
-    <li><a href="http://groups.google.com/group/leanstartupcirclesydney">Lean Startup Circle</a></li>
-    <li><a href="http://groups.google.com/group/silicon-beach-australia">Silicon Beach</a></li>
-  </ul>
-</section>
-
-<section>
-  <h1>I love to use these tools</h1>
-  <ul class='block'>
-    <li><a href="http://www.whatwg.org">HTML5</a></li>
-    <li><a href="http://www.ruby.org">Ruby</a></li>
-    <li><a href="http://www.rubyonrails.com">Rails</a></li>
-    <li><a href="http://www.sinatrarb.com">Sinatra</a></li>
-    <li><a href="http://www.jquery.com">JQuery</a></li>
-    <li><a href="http://www.spec.info">RSpec</a></li>
-    <li><a href="http://www.cukes.info">Cucumber</a></li>
-    <li><a href="http://haml-lang.com">Sass/Haml</a></li>
-    <li><a href="http://www.gnu.org/software/emacs/">GNU Emacs</a></li>
-  </ul>
-</section>
-
-<section>
-  <h1>Where am I?</h1>
-  <p>
-    Sydney, Australia
-  </p>
-</section>
+ 
+<div class="row">
+  <div class="col-lg-8">
+    <ul>
+      {% for post in site.posts offset: 0 limit: 50 %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

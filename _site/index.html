@@ -9,12 +9,17 @@
     <meta content='ruby, developer, backend, scalable, development, architecture, testing, test driven, sydney, australia, ireland, jonathan, jonathan clarke, beilabs, givefoo' name='keywords'>
     <meta content='Jonathan Clarke' name='author'>
     <meta content='index, follow' name='robots'>
-    <link href="/public/stylesheets/reset.css" media="screen" rel="stylesheet" type="text/css" />
-    <link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
 
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="http://feeds.feedburner.com/beilabs">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/public/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/public/css/blog_post.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
     <script type="text/javascript">
-
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-410168-5']);
       _gaq.push(['_trackPageview']);
@@ -27,136 +32,109 @@
     </script>
   </head>
   <body>
-    <div id='wrapper'>
-      <header>
-        <h1>
-	  <a href="/">Jonathan Clarke</a> - <a href="http://twitter.com/beilabs">@beilabs</a>
-	  <br/>
-	  software engineer, Irish, entrepreneur...
-	</h1>
-      </header>
-      <section id='musings'>
-  <h1>My musings</h1>
-  <ul>
-    
-    <li class='post'>
-      <span>May  2, 2013</span> <a href="/2013/05/02/redis-pub-sub-and-rails-4-streaming">Redis Pub/Sub and Rails 4 Live Streaming</a>
-    </li>
-    
-    <li class='post'>
-      <span>January 24, 2013</span> <a href="/2013/01/24/inbox-zero">Inbox Zero</a>
-    </li>
-    
-    <li class='post'>
-      <span>January 23, 2013</span> <a href="/2013/01/23/nginx-error-pages">Nginx error pages</a>
-    </li>
-    
-    <li class='post'>
-      <span>December 11, 2012</span> <a href="/2012/12/11/working-in-cycles">Working in cycles</a>
-    </li>
-    
-    <li class='post'>
-      <span>December 10, 2012</span> <a href="/2012/12/10/death-to-a-funk">Death to a funk</a>
-    </li>
-    
-    <li class='post'>
-      <span>October  2, 2012</span> <a href="/2012/10/02/james-clarke-rip">James Clarke, RIP</a>
-    </li>
-    
-    <li class='post'>
-      <span>September  6, 2012</span> <a href="/2012/09/06/because-fuck-you-cancer">Fuck you cancer!</a>
-    </li>
-    
-    <li class='post'>
-      <span>May 25, 2012</span> <a href="/2012/05/25/videos-that-ive-been-watching-lately">Entrepreneural video roundup - Hack Fwd</a>
-    </li>
-    
-    <li class='post'>
-      <span>May 22, 2012</span> <a href="/2012/05/22/my-daily-commute-a-train-ride">My daily commute - A train ride</a>
-    </li>
-    
-    <li class='post'>
-      <span>May  8, 2012</span> <a href="/2012/05/08/ruby-motion-is-on-my-christmas-list">RubyMotion - It's on my Christmas list</a>
-    </li>
-    
-    <li class='post normal'>
-      <span></span><a class="normal" href='archive.html'>Read the full archive</a>
-    </li>
-  </ul>
-</section>
+   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Beilabs</a>
+        </div>
 
-<section>
-  <h2>My stuff on the web</h2>
-  <ul class='block'>
-    <li><a href="http://beilabs.com/posts">Blog</a></li>
-    <li><a href="http://www.twitter.com/beilabs">Twitter</a></li>
-    <li><a href="http://www.github.com/beilabs">GitHub</a></li>
-    <li><a href="http://au.linkedin.com/in/jonathanclarkeireland">Linked-in</a></li>
-    <li><a href="http://www.facebook.com/clarke.jonathan">Facebook</a></li>
-  </ul>
-</section>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="mailto:jonathan@beilabs.com">Get in touch</a></li>
+            <li><a href="http://twitter.com/beilabs">@beilabs</a></li>
+            <li><a href="http://au.linkedin.com/in/jonathanclarkeireland">LinkedIn</a></li>
+            <li><a href="http://www.github.com/beilabs">Github</a></li>
+            <!-- <li><a href="#services">Services</a></li> -->
+            <!-- <li><a href="#contact">Contact</a></li> -->
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav>
 
+    <div class="container">
 
-<section id='get_in_touch'>
-  <h1>Get in touch</h1>
-  <ul>
-    <li><a href="mailto:jonathan@beilabs.com">jonathan@beilabs.com</a></li>
-    <li><a href="skype://jonathan-beilabs">skype://jonathan-beilabs</a></li>
-  </ul>
-</section>
+      <div class="row">
+  <div class="col-lg-8">
+    <ul>
+      
+        <li><a href="/2013/05/02/redis-pub-sub-and-rails-4-streaming">Redis Pub/Sub and Rails 4 Live Streaming</a></li>
+      
+        <li><a href="/2013/01/24/inbox-zero">Inbox Zero</a></li>
+      
+        <li><a href="/2013/01/23/nginx-error-pages">Nginx error pages</a></li>
+      
+        <li><a href="/2012/12/11/working-in-cycles">Working in cycles</a></li>
+      
+        <li><a href="/2012/12/10/death-to-a-funk">Death to a funk</a></li>
+      
+        <li><a href="/2012/10/02/james-clarke-rip">James Clarke, RIP</a></li>
+      
+        <li><a href="/2012/09/06/because-fuck-you-cancer">Fuck you cancer!</a></li>
+      
+        <li><a href="/2012/05/25/videos-that-ive-been-watching-lately">Entrepreneural video roundup - Hack Fwd</a></li>
+      
+        <li><a href="/2012/05/22/my-daily-commute-a-train-ride">My daily commute - A train ride</a></li>
+      
+        <li><a href="/2012/05/08/ruby-motion-is-on-my-christmas-list">RubyMotion - It's on my Christmas list</a></li>
+      
+        <li><a href="/2012/05/02/startups-help-is-always-on-hand">Startups in Sydney - help is always around</a></li>
+      
+        <li><a href="/2012/05/01/headphones-and-the-zone">The importance of the zone in the workplace</a></li>
+      
+        <li><a href="/2012/04/25/thirty-years-old-am-i-past-it">30, am I past it?</a></li>
+      
+        <li><a href="/2012/04/01/evergreen-beautiful-javascript-unit-testing">Evergreen - Beautiful Javascript unit testing</a></li>
+      
+        <li><a href="/2012/03/09/holy-smokes-im-hitched">Holy smokes I'm hitched</a></li>
+      
+        <li><a href="/2011/12/31/taking-stock-of-2011">Taking stock of 2012</a></li>
+      
+        <li><a href="/2011/12/12/thoughts-about-mentors">Thoughts about mentors</a></li>
+      
+        <li><a href="/2011/12/09/ireland-by-the-numbers">Ireland means business</a></li>
+      
+        <li><a href="/2011/11/28/work-hard-cry-less-be-part-of-history">Work hard. Cry less. And realize you’re part of history.</a></li>
+      
+        <li><a href="/2011/11/27/bootstrap-xtra">Bootstrap Xtra released</a></li>
+      
+        <li><a href="/2011/01/03/get-er-done">Get 'er done...</a></li>
+      
+        <li><a href="/2010/12/29/programming-is-difficult">Programming is difficult...</a></li>
+      
+        <li><a href="/2010/12/28/messing-around-with-the-ruby-imap-and-mail-libraries">Messing around with the Ruby IMAP and Mail libraries</a></li>
+      
+        <li><a href="/2010/04/14/kids-can-change-the-world-as-entrepreneurs">Kids can change the world as entrepreneurs</a></li>
+      
+        <li><a href="/2010/04/12/two-books-to-read">Two books to read</a></li>
+      
+        <li><a href="/2010/04/09/what-killed-smalltalk-could-kill-ruby">What killed Smalltalk could kill ruby</a></li>
+      
+        <li><a href="/2010/04/04/thoughts-on-software-engineering">Thoughts on software engineering</a></li>
+      
+    </ul>
+  </div>
+</div>
 
-<section>
-  <h1>Startup Experience:</h1>
-  <ul>
-    <li><a href="http://givefoo.com">Give Foo</a>&nbsp;-&nbsp;<span>Founder</span></li>
-    <li><a href="http://dealpinch.com">Deal Pinch</a>&nbsp;-&nbsp;<span>Co-Founder - Closed 2012</span></li>
-  </ul>
-</section>
-
-<section>
-  <h1>I have been working for:</h1>
-  <ul class='block'>
-    <li><a href="http://www.westwick-farrow.com.au">Westwick-Farrow (Current)</a></li>
-    <li><a href="http://www.arvato.ie">Arvato Finance</a></li>
-    <li><a href="http://www.dhc.com.cn">Dalian Hi-Think</a></li>
-    <li><a href="http://sitel.com">Client Logic (Sitel)</a></li>
-    <li><a href="htt://www.eurolanguagescollege.ie">Euro Languages College</a></li>
-  </ul>
-</section>
-
-<section>
-  <h1>I'm a member of these amazing groups</h1>
-  <ul class='block'>
-    <li><a href="http://groups.google.com/group/ruby_ireland">Ruby Ireland</a></li>
-    <li><a href="http://groups.google.com/group/rails-oceania">Ruby on Rails Oceania</a></li>
-    <li><a href="http://groups.google.com/group/leanstartupcirclesydney">Lean Startup Circle</a></li>
-    <li><a href="http://groups.google.com/group/silicon-beach-australia">Silicon Beach</a></li>
-  </ul>
-</section>
-
-<section>
-  <h1>I love to use these tools</h1>
-  <ul class='block'>
-    <li><a href="http://www.whatwg.org">HTML5</a></li>
-    <li><a href="http://www.ruby.org">Ruby</a></li>
-    <li><a href="http://www.rubyonrails.com">Rails</a></li>
-    <li><a href="http://www.sinatrarb.com">Sinatra</a></li>
-    <li><a href="http://www.jquery.com">JQuery</a></li>
-    <li><a href="http://www.spec.info">RSpec</a></li>
-    <li><a href="http://www.cukes.info">Cucumber</a></li>
-    <li><a href="http://haml-lang.com">Sass/Haml</a></li>
-    <li><a href="http://www.gnu.org/software/emacs/">GNU Emacs</a></li>
-  </ul>
-</section>
-
-<section>
-  <h1>Where am I?</h1>
-  <p>
-    Sydney, Australia
-  </p>
-</section>
-
+      <hr>
     </div>
+        
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="/public/js/bootstrap.min.js"></script>
+    <script src="/js/lunr.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/mustache.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/date.format.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/URI.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/js/jquery.lunr.search.js" type="text/javascript" charset="utf-8"></script>
+
+
   </body>
 </html>
 

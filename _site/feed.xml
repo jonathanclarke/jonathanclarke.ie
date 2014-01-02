@@ -6,6 +6,21 @@
     <link>http://beilabs.com</link>
     
       <item>
+	<title>A death while abroad</title>
+	<description>&lt;p&gt;My wife and I have been living in Australia now for over five years.  &amp;lsquo;An amazing experience&amp;rsquo; we&amp;rsquo;d reply when asked about living here.  However, it is definitely not without its downsides.&lt;/p&gt;
+
+&lt;p&gt;A close family member passed away hours ago.  Fucking cancer!  A horrible disease and one which has now claimed too many people I&amp;rsquo;ve been close to.&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s hard, especially at this time of the year.  My father passed away only 15 months ago, I find each day thinking about him.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ve been checking flights for the past few hours.  The cheapest flight was going to cost double the regular fare and would take over 30 - 40 hours to get to Ireland.  I&amp;rsquo;d likely miss the funeral.  I despise being away from my family during these difficult times.&lt;/p&gt;
+
+&lt;p&gt;What a way to start 2014!  Goodbye Paddy, you&amp;rsquo;re already missed by so many!&lt;/p&gt;
+</description>
+	<link>http://beilabs.com/2014/01/02/death-while-abroad</link>
+      </item>
+    
+      <item>
 	<title>Redis Pub/Sub and Rails 4 Live Streaming</title>
 	<description>&lt;p&gt;So today I got to play a bit with the newly minded Rails 4 RC 1. A new feature is Live Streaming so I decided to see how it would work with redis publish / subscribe channels.&lt;/p&gt;
 

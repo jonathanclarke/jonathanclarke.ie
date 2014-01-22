@@ -7,7 +7,7 @@ I'm sad to write that this is my last day at ABC.  I started in ABC only last ye
 
 I will miss the drive and energy of my team.  They've been firing on all cylinders and running lean from the get go.  Continuous deployments, regular sprints and a drive to be the best in the market.
 
-They also had a blockbuster year at through their ABC shop website, the new upgrades and strategies will pay off for years to come I hope. 
+They also had a blockbuster year at ABC shop, the new upgrades and strategies will pay off for years to come I hope. 
 
 Regular lunch outings with my lunch posse, while it put inches on my waistline it was great to have a regular group to chat to over spicy food.  
 

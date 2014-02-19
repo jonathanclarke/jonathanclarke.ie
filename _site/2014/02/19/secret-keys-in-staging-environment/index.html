@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="author" content="Your Name" />
-    <title>Fuck you cancer!</title>
+    <title>Ruby 4 secret_key_base</title>
     <meta content='Jonathan Clarke's blog' name='description'>
     <meta content='ruby, developer, backend, scalable, development, architecture, testing, test driven, sydney, australia, ireland, jonathan, jonathan clarke, beilabs, givefoo' name='keywords'>
     <meta content='Jonathan Clarke' name='author'>
@@ -65,15 +65,23 @@
       <div id='content'>
   <section class='content'>
     <h2>
-      <a href="/2012/09/06/because-fuck-you-cancer">Fuck you cancer!</a>
+      <a href="/2014/02/19/secret-keys-in-staging-environment">Ruby 4 secret_key_base</a>
     </h2>
-    <p>My dad was diagnosed with terminal lung cancer.</p>
+    Something that caught be out week was the introduction of the secret_key base in Rails 4. 
 
-<p>Treatment has been stopped, it has done no good.  In fact, it has actually cause more harm.</p>
-
-<p>I&rsquo;m feeling completely helpless right now, not able to do a single thing to prevent this.  What&rsquo;s the point in being an identical match in everyway if I can&rsquo;t do anything!</p>
-
-<p>Fuck you cancer, this shouldn&rsquo;t be happening.  It&rsquo;s just not right!</p>
+When adding a new environment make sure to add the secret_key_base for your environment in config/secrets.yml.  
+<pre>
+  <code class="ruby">
+    development:
+      secret_key_base: YOUR_DEVELOPMENT_KEY_HERE
+    test:
+      secret_key_base: YOUR_TEST_KEY_HERE
+    staging:
+      secret_key_base: YOUR_STAGING_KEY_HERE
+    production:
+      secret_key_base: YOUR_PRODUCTION_KEY_HERE
+  </code>
+</pre>
 
 
     <p id="twitter"><a href="http://twitter.com/beilabs">Jonathan Clarke &dash; @beilabs</a></code>

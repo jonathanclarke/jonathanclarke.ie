@@ -6,6 +6,27 @@
     <link>http://beilabs.com</link>
     
       <item>
+	<title>Ruby 4 secret_key_base</title>
+	<description>Something that caught be out week was the introduction of the secret_key base in Rails 4. 
+
+When adding a new environment make sure to add the secret_key_base for your environment in config/secrets.yml.  
+&lt;pre&gt;
+  &lt;code class=&quot;ruby&quot;&gt;
+    development:
+      secret_key_base: YOUR_DEVELOPMENT_KEY_HERE
+    test:
+      secret_key_base: YOUR_TEST_KEY_HERE
+    staging:
+      secret_key_base: YOUR_STAGING_KEY_HERE
+    production:
+      secret_key_base: YOUR_PRODUCTION_KEY_HERE
+  &lt;/code&gt;
+&lt;/pre&gt;
+</description>
+	<link>http://beilabs.com/2014/02/19/secret-keys-in-staging-environment</link>
+      </item>
+    
+      <item>
 	<title>Media Landscape talk</title>
 	<description>&lt;p&gt;So last month I participated in a great session at Fishburners discussing the media landscape &amp;amp; tracking influencers.&lt;/p&gt;
 

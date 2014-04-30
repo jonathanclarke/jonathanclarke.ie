@@ -6,6 +6,29 @@
     <link>http://beilabs.com</link>
     
       <item>
+	<title>Getting a phone network in Nepal</title>
+	<description>&lt;p&gt;I&amp;rsquo;ve arrived in Nepal, I&amp;rsquo;m going to be here for the next 3 months.  While here, I&amp;rsquo;m going to be staying with my wifes family in Kathmandu.  I quickly realised that the Internet connection at the house simply was not sufficient.  128kbp or 256kbp, slow as a wet wick.  This is through the Nepal Telecom.&lt;/p&gt;
+
+&lt;p&gt;You have two options for a 3G network at the roof of the world.  NTC or NCELL.  I&amp;rsquo;m told the NTC network coverage is as good as Vodafone in Sydney, pretty abysmal.&lt;/p&gt;
+
+&lt;p&gt;Today, with the aid of my trusty uncle, I ventured off to find the local NTC store.  Ushered in the door by a burly security guard we quickly established what was needed.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;1 Passport photo,  they use them for everything here. We had to go to an office down the road to obtain these.&lt;/li&gt;
+&lt;li&gt;A copy of your passport&lt;/li&gt;
+&lt;li&gt;Your grandfathers name.  It seems that as part of the verification purpose to set up an account they do need to know your grandpaps full name.&lt;/li&gt;
+&lt;li&gt;Left and right thumbprint&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;I expect in the years to come I&amp;rsquo;ll also need to deed over my first borns soul.&lt;/p&gt;
+
+&lt;p&gt;Anyhow, I paid 10GB for about 3k rupees, the equivilant of $30 AUD. It runs out in 30 days.  I never thought I&amp;rsquo;d come across a network as shady as Telstra.&lt;/p&gt;
+</description>
+	<link>http://beilabs.com/2014/04/29/getting-a-phone-network-in-nepal</link>
+      </item>
+    
+      <item>
 	<title>Ruby 4 secret_key_base</title>
 	<description>Something that caught be out week was the introduction of the secret_key base in Rails 4. 
 

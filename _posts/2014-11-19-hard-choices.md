@@ -2,8 +2,8 @@
 layout: post
 title:  "Hard Choices"
 date:   2014-11-19 
-categories: startup, pasatrade
-tag: startup, pasatrade
+categories: startup pasatrade
+tags: startup pasatrade
 image: /public/article_images/2014-11-19-hard-choices/code.png
 excerpt: Hybrid vs Native, decisions, decisions  
 ---

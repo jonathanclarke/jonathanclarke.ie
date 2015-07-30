@@ -1,9 +1,10 @@
 # Build settings
 markdown: redcarpet
 highlighter: pygments
-gems:
-  - jemoji
-  
+
+gems: ['kramdown', 'jemoji']
+exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor', 'Procfile', 'Rakefile']
+
 # Site settings
 title: "Jonathan Clarke"
 description: > # this means to ignore newlines until "email:"
@@ -11,13 +12,13 @@ description: > # this means to ignore newlines until "email:"
 
 email: jonathan@beilabs.com
 #blog logo
-logo: "/assets/images/jc_logo.png"
+logo: "/public/images/jc_logo.png"
 # blog cover
-cover: "/assets/images/typewriter.jpg"
+cover: "/public/images/typewriter.jpg"
 
 name: 'Jonathan Clarke'
 author: 'Jonathan Clarke'
-author_image: "/assets/images/author.jpg"
+author_image: "/public/images/author.jpg"
 
 paginate:	10
 

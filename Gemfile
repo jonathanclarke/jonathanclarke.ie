@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'jekyll'
+gem 'jekyll', '~> 2.5.3'
+gem 'jemoji'
 gem 'rack-jekyll'
-gem 'RedCloth'
 gem 'thin'
-gem 'rdiscount'

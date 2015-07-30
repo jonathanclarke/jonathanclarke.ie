@@ -1,48 +1,79 @@
-## Jekyll Base ##
-This is a base that will ge you started with jekyll create by Daniel McGraw (@danielmcgraw).
+mediator
+========
 
-### Usage ###
-Check out my [post series](http://danielmcgraw.com/2011/04/14/The-Ultimate-To-Getting-Started-With-Jekyll-Part-1/) on how to use Jekyll Base to create your own Jekyll powered blog.
+A medium inspired Jekyll blog theme. The basic idea came from the Ghost theme
+[Readium 2.0](http://www.svenread.com/readium-ghost-theme/). I use mediator on my own blog [The Base](http://blog.base68.com).
 
-### Structure ###
-<pre>
-.  
-|-- .gitignore  
-|-- README  
-|-- _config.yml  
-|-- _layouts  
-|   |-- layout.html  
-|   `-- post.html  
-|-- _posts  
-|   `-- 1985-10-26-Test-Post.md  
-`-- index.html  
-</pre>
+Screenshots
+--------
+![screenshot](/assets/images/screenshot1.jpg)
+![screenshot](/assets/images/screenshot2.jpg)
+![screenshot](/assets/images/screenshot3.jpg)
 
-Lets take a look at what each of these do.
+Features
+-------
+* Fully Responsive layout
+* Use header images in articles, if you want to (add tag "image" and url to the image in the front matter section of a post)
+* Minimal design
+* Featured article support
+* FontAwesome implemented for easy use of icons fonts
+* Free & Open Source Font usage
 
-### .gitignore ###
-This file is not manditory for a proper Jekyll install, but is useful if you are like me and use a mac (ignore the DS_Store) or emacs (ignore the autosave files). If you have any other files or folders that need ignoring toss them in here.
+Getting Started
+---
+- [Fork this repository](https://github.com/dirkfabisch/mediator)
+- Clone it: `git clone https://github.com/YOUR-USER/mediator`
+- Install the [GitHub Pages gem](https://github.com/github/pages-gem) (includes Jekyll): `bundle install`
+- Install the [Bourbon gem](https://github.com/thoughtbot/bourbon) `gem install bourbon`
+- Run the jekyll server: `jekyll serve`
 
-### README ###
-This file is not manditory for a proper Jekyll install, but is recomended by GitHub for all repositories. Toss a simple description of your site and its make up in here if you would like.
+You should have a server up and running locally at <http://localhost:4000>.
 
-### _config.yml ###
-This is where you will be putting your Jekyll configuration options. If this file is omitted Jekyll will use its defualts to build your site. You can find the configuration options and default configuration [here](https://github.com/mojombo/jekyll/wiki/configuration).
+Configuration
+-----
 
-### _layouts ###
-This folder is where you will be putting all your layout templates. I have added layout.html and post.html so you can get an idea of how they are strutured and used. 
+The main settings happen in side of the _config.yml file:
 
-#### layout.html ####
-This is the base template for our site. There are no naming conventions, but if you choose to change this file's name make sure you update all the layout references in your file's YAML Front Matter blocks.
+### Site
 
-#### post.html ####
-This is the bast template for each of our posts. Again there are no naming conventions, but make sure you update the required files YAML Front Matter blocks if you do change its name. To learn more about the use of YAML Front Matter check out [this page](https://github.com/mojombo/jekyll/wiki/yaml-front-matter).
+Main settings for the site
 
-### _posts ###
-This is your posts folder. You will be putting your blog posts in here. Notice the naming convention that is used. You will want to name your files with the the publish date preceeding the posts title all seperated by dashes (Year-Month-Day-Title-Of-The-Post.md). The post date that you see is pulled straight from this filename so make sure you lable your files right.
- 
-#### 1985-10-26-Test-Post.md ####
-This is a simple blog post. Notice that we are using markdown. To learn more about markdown check out the [markdown syntax documentation](http://daringfireball.net/projects/markdown/syntax). Also notice that there is YAML Front Matter in this file specifying the layout it will use and the title of the post. Layout is one of a couple predefined global variables. You can also specify custom variables in the YAML Front Matter. To learn more about the use of YAML Front Matter check out [this page](https://github.com/mojombo/jekyll/wiki/yaml-front-matter).
+* **title**: name of your site
+* **description**: description of your site
+* **logo**: small logo for the site (300x * 300x)
+* **cover**: large background image on the index page
 
-### index.html ###
-This is used to render your sites index. It is essntially a post loop wrapped in your base layout.
+* **name**: name site owner
+* **email**: mail address of the site owner
+* **author**: author name
+* **author_image**: small image of author (300x * 300px)
+
+
+### Social
+
+The template allows to add all major social plattforms to your site.
+Fill the the form for each plattform. If you leave the share_* entries empty, the sharing buttons below a post are not shown.  If you leave the **url** and **desc** empty the icons are not shown on the index page, but the share icons on the article pages remains untouched (Thanks to [Phil](https://github.com/philsturgeon))
+
+* **icon**:	name of social plattform (must match a name of [font-awsome](http://fortawesome.github.io/Font-Awesome/) icon set )
+* **url**:	url of your account
+* **desc**: slogan of the plattform
+* **share_url**: share url
+* **share_title**: first part of url for the title
+* **share_link**: second part of the share url for the link to the post
+
+The Liquid template engine will magical combine the different parts to a share url.
+
+```
+http://twitter.com/share?text=post_title&amp;url=post_url
+````
+
+See [_config.yml](https://github.com/dirkfabisch/mediator/blob/master/_config.yml) for more examples.
+
+Licensing
+---------
+
+[MIT](https://github.com/dirkfabisch/madiator/blob/master/LICENSE) with no added caveats, so feel free to use this on your site without linking back to me or using a disclaimer or anything silly like that.
+
+Contact
+-------
+I'd love to hear from you at [@dirkfabisch](https://twitter.com/dirkfabisch). Feel free to open issues if you run into trouble or have suggestions. Pull Requests always welcome.

@@ -1,4 +1,48 @@
-markdown: rdiscount
-permalink: /:year/:month/:day/:title
-rdiscount:
-  extensions: [smart]
+# Build settings
+markdown: redcarpet
+highlighter: pygments
+gems:
+  - jemoji
+  
+# Site settings
+title: "Jonathan Clarke"
+description: > # this means to ignore newlines until "email:"
+   @beilabs
+
+email: jonathan@beilabs.com
+#blog logo
+logo: "/assets/images/jc_logo.png"
+# blog cover
+cover: "/assets/images/typewriter.jpg"
+
+name: 'Jonathan Clarke'
+author: 'Jonathan Clarke'
+author_image: "/assets/images/author.jpg"
+
+paginate:	10
+
+url: "http://beilabs.com"
+baseurl: ""
+
+# social icons and sharing options
+social:
+  - icon:	twitter
+    url:	https://twitter.com/beilabs
+    desc: Follow me on twitter
+    share_url: http://twitter.com/share
+    share_title: ?text=
+    share_link: "&amp;url="
+
+  - icon:	github
+    url:	https://github.com/beilabs
+    desc:	Fork me on github
+    share_url:
+    share_title:
+    share_link:
+
+  - icon:	linkedin
+    url:	https://au.linkedin.com/in/jonathanclarkeireireland
+    desc:	Connect with me on linkedin
+    share_url:
+    share_title:
+    share_link:

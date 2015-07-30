@@ -20,6 +20,11 @@
               on
               <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time>
               <!-- , tagged on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}} -->
+
+              {% for tag in page.categories %}
+              &nbsp;
+              <a href="{{ site.url }}/categories/index.html#{{ tag | cgi_encode }}" title="Other posts from the {{ tag }} category"><i class="fa fa-tags"></i> {{ tag }}</a>
+              {% endfor %}
             </div>
             <div style="text-align:center">
               <a href="#topofpage" class="topofpage"><i class="fa fa-angle-down"></i></a>

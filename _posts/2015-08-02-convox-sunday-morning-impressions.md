@@ -2,7 +2,7 @@
 layout: post
 title:  "Convox - Sunday morning impressions"
 date:   2015-08-02 
-categories: devops
+categories: devops docker convox
 tags: devops docker convox
 image: /public/article_images/2015-08-02-convox-sunday-morning-impressions/code.png
 excerpt: Sunday morning browsing Hacker News brought me to Convox.  Shiney! Lets dive in.

@@ -4,7 +4,7 @@ title:  "Bandas in Nepal"
 date:   2015-08-19 
 categories: nepal
 tags: nepal
-image: /public/article_images/2015-08-02-convox-sunday-morning-impressions/code.png
+image: /public/article_images/2015-09-16-nepal-bandha/2015-09-16-nepal-bandha.png
 excerpt: Strikes in Nepal are crippling the country.
 ---
 

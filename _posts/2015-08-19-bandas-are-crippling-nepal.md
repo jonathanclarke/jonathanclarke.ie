@@ -56,7 +56,12 @@ Bandhs are widely criticized and denounced by people from all walks of life in N
     <tr>
         <td>2014-2015</td>
         <td>22</td>
-        <td>1851</td>
+        <td>185</td>
+    </tr>
+    <tr>
+        <td><strong>Total<strong></td>
+        <td>407</td>
+        <td>847</td>
     </tr>
 </table>
 

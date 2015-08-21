@@ -4,7 +4,7 @@ title:  "Bandas in Nepal"
 date:   2015-08-19 
 categories: nepal
 tags: nepal
-image: /public/article_images/2015-09-16-nepal-bandha/2015-09-16-nepal-bandha.png
+image: http://www.beilabs.com/public/article_images/2015-09-16-nepal-bandha/2015-09-16-nepal-bandha.png
 excerpt: Bandh usually translates directly to 'general strike'. Bandh is originally a Hindi word meaning 'closed', is a form of protest used by political activists in some countries in South Asia like India and Nepal. During a Bandh, a major political party or a large chunk of a community declares a general strike, usually lasting one day.
 ---
 

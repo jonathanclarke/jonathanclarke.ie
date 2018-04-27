@@ -1,49 +1,41 @@
-# Build settings
-markdown: redcarpet
-highlighter: pygments
-
-gems: ['kramdown', 'jemoji']
-exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor', 'Procfile', 'Rakefile']
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: "Jonathan Clarke"
-description: > # this means to ignore newlines until "email:"
-   @beilabs
-
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Jonathan Clarke  
 email: jonathan@beilabs.com
-#blog logo
-logo: "/public/images/jc_logo.png"
-# blog cover
-cover: "/public/images/sky.png"
+description: >- # this means to ignore newlines until "baseurl:"
+  Software: surely not the final frontier. These are the voyages of Jonathan Clarke. His many year mission: to explore strange new code. To seek out new bugs and complex algorithms. To boldly go where many great developers have gone before!
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "http://www.beilabs.com" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: beilabs
+github_username:  jonathanclarke
 
-name: 'Jonathan Clarke'
-author: 'Jonathan Clarke'
-author_image: "/public/images/author.jpg"
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
 
-paginate:	10
-
-url: "http://www.beilabs.com"
-baseurl: ""
-
-# social icons and sharing options
-social:
-  - icon:	twitter
-    url:	https://twitter.com/beilabs
-    desc: Follow me on twitter
-    share_url: http://twitter.com/share
-    share_title: ?text=
-    share_link: "&amp;url="
-
-  - icon:	github
-    url:	https://github.com/beilabs
-    desc:	Fork me on github
-    share_url:
-    share_title:
-    share_link:
-
-  - icon:	linkedin
-    url:	https://au.linkedin.com/in/jonathanclarkeireireland
-    desc:	Connect with me on linkedin
-    share_url:
-    share_title:
-    share_link:
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/

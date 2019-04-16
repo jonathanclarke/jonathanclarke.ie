@@ -1,0 +1,12 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '.'
+images:
+  - 'gcr.io/$PROJECT_ID/blog-beilabs-com:$COMMIT_SHA'
+  - 'gcr.io/$PROJECT_ID/blog-beilabs-com:latest'
+tags:
+  - "cloudbuild"
+
+

@@ -2,6 +2,9 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'build'
+      - '--tag=gcr.io/$PROJECT_ID/blog-beilabs-com:$COMMIT_SHA'
+      - '--tag=gcr.io/$PROJECT_ID/blog-beilabs-com:latest'
+      - '--file=Dockerfile'      
       - '.'
 images:
   - 'gcr.io/$PROJECT_ID/blog-beilabs-com:$COMMIT_SHA'

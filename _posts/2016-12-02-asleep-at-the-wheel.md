@@ -2,8 +2,6 @@
 layout: post
 title:  Asleep at the wheel
 date:   2016-12-02
-categories: startups, nepal, consulting
-tags: startups, nepal, consulting
 ---
 
 I feel like I have been asleep at the wheel, the past months have been a blur.

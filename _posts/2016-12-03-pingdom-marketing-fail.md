@@ -7,7 +7,7 @@ So a customer of mine had signed up with Pingdom as part of one of their project
 
 Today, they received an email which gave them a special offer as they were sad to see them leave.
 
-![Pingdom Email](http://www.beilabs.com/public/article_images/2016-pingdom-1.png "Pingdom Email")
+![Pingdom Email](https://www.beilabs.com/public/article_images/2016-pingdom-1.png "Pingdom Email")
 
 
 This linked through to a video in which two people, Charles and Amanda, attempted to lure them in with their special offer.

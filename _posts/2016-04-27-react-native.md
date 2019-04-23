@@ -2,9 +2,7 @@
 layout: post
 title:  React Native
 date:   2016-05-27
-categories: react-native
-tags: react-native
-image: http://www.beilabs.com/public/article_images/2016-05-27-react-native/react-native.png
+image: https://www.beilabs.com/public/article_images/2016-05-27-react-native/react-native.png
 excerpt: The past month or so I've been reading up on React Native.  React Native was open sourced about 2 years ago. React Native is an open source framework by Facebook which allows you to write Android and IOS applications using HTML like code (known as JSX) and JavaScript.
 ---
 

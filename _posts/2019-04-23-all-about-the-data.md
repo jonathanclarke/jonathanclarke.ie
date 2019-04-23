@@ -22,4 +22,4 @@ Each algorithm is different in terms of what data and what problem setting it wo
 
 The algorithms and methods in machine learning are only one part of a greater process to solve a particular problem and it is good to keep the big picture in mind at all times.  Many people spend a lot of time building complex machine learning solutions only to find out they don't solve the right problem.
 
-When going deep into the technical aspects of machine learning it is easy to lose sight of the ultimate goals.x
+When going deep into the technical aspects of machine learning it is easy to lose sight of the ultimate goals.

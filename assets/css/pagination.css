@@ -1,0 +1,9 @@
+ul.pager{text-align: center;}
+
+ul.pager li{
+    list-style: none;
+    display: inline-block;
+}
+ul.pager li a{
+    color: rgb(42, 122, 226);
+}

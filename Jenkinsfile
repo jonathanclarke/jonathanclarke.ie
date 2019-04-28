@@ -11,6 +11,7 @@ pipeline {
                             sh 'gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS'
                             sh 'gcloud auth list'
                             sh 'gcloud config set project banba-group'
+			    sh 'export APP=blog.beilabs.com'
                             sh 'ruby ./bin/check_build.rb'
 			}
                     }

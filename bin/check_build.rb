@@ -1,44 +1,69 @@
 `rm builds.log`
-`gcloud builds list --limit=1000 --page-size=1000 >> builds.log`
+`rm builds-app.log`
+app = ENV['APP']
+commit = ENV['GIT_COMMIT']
+branch = ENV['GIT_BRANCH'].gsub('origin/', '')
+sha = commit[commit.length-8, commit.length]
+
+puts "app: #{ app }"
+puts "commit: #{ commit }"
+cmd_str = "gcloud builds list --limit=10000 --page-size=10000 >> builds.log"
+`#{ cmd_str }`
+
 
 contents = File.read('./builds.log')
-commit = ENV['GIT_COMMIT']
-sha = commit[commit.length-8, commit.length]
+contents.split("\n").each do |line|
+  if line.include? "#{ app }@#{ branch }"     
+    `echo "#{ line }" >> builds-app.log`
+  end
+end
+`cat builds-app.log`
+
 puts "Looking for COMMIT #{ sha } in Google Cloud Build"
 puts "Building image."
+build_id = nil
+branch_found = false
 complete_build = false
 result = false
-while complete_build == false
+
+while branch_found == false
+  contents = File.read('./builds-app.log')
   lines = contents.split("\n")
-  lines[1..3].each do |line|
+  lines[0...3].each do |line|
     record = line.split(" ")
-     
     record_result =  `gcloud builds describe #{ record[0] }`
+    puts "checking #{ line }"
     if record_result.include?(sha)
-      if record_result.include? "SUCCESS"
-        puts "\n#{ commit } was a SUCCESS"
-        result = 0
-        complete_build = true
-        exit(result)
-      elsif line.include? "FAILURE"
-        puts "\n#{ commit } was a FAILURE"
-        result = 1
-        complete_build = true
-        exit(result)
-      else
-        complete_build = false
-      end
+      puts "Found the build"
+      puts record_result
+      build_id = record[0]
+      branch_found = true
+      break
     end
   end
-    
-  unless complete_build == true
-    `gcloud builds list >> builds.log`
-    contents = File.read('./builds.log')
-  end
-  
-  if complete_build == true
-    break
+end
+
+puts "Now we know the build id: #{ build_id } let's keep asking google if it's passed"
+
+while complete_build == false
+  record_result =  `gcloud builds describe #{ build_id }`
+  if record_result.include?(sha)    
+    if record_result.include? "SUCCESS"
+      puts "\n#{ commit } was a SUCCESS"
+      result = 0
+      complete_build = true
+      exit(result)
+    elsif record_result.include? "FAILURE"
+      puts "\n#{ commit } was a FAILURE"
+      result = 1
+      complete_build = true
+      exit(result)
+    else
+      print "."
+      complete_build = false
+    end
   end
 end
 
 exit(result)
+

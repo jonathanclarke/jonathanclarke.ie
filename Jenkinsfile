@@ -5,7 +5,7 @@ pipeline {
             steps {
 		script {
                     echo 'CloudBuild'
-                    if (env.GIT_BRANCH == 'origin/master' ) {
+                    if (env.GIT_BRANCH == 'master' ) {
 			withCredentials([[$class: 'FileBinding', credentialsId: 'banba-group-google-json', variable: 'GOOGLE_APPLICATION_CREDENTIALS']]) {
                             sh 'echo "${GOOGLE_APPLICATION_CREDENTIALS}"' // returns ****
                             sh 'gcloud auth activate-service-account --key-file $GOOGLE_APPLICATION_CREDENTIALS'
@@ -22,7 +22,7 @@ pipeline {
         stage('K8 Deploy') {
             steps {
                 script{
-                    if (env.GIT_BRANCH == 'origin/master') {
+                    if (env.GIT_BRANCH == 'master') {
                         echo 'Deploying master branch to K8 cluster'
 			withCredentials([[$class: 'FileBinding', credentialsId: 'banba-group-google-json', variable: 'GOOGLE_APPLICATION_CREDENTIALS']]) {
                             sh 'echo "${GOOGLE_APPLICATION_CREDENTIALS}"' // returns ****

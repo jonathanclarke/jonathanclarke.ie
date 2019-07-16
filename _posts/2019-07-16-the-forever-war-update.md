@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Ferever war - update
+title: The Forever war - update
 ---
 
 ***The Forever War by Joe Halderman***

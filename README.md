@@ -1,6 +1,6 @@
 # blog.beilabs.com
 Hosts the source code for the jekyll blog
-Automatically builds the master branch and deploys to kubernetes when pushed
+Automatically builds the master branch and deploys to our kubernetes cluster when pushed
 
 ## Docker commands
 docker build -t blog .

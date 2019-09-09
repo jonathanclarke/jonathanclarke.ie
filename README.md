@@ -9,3 +9,6 @@ curl http://172.17.0.1/
 
 ## Github
 https://github.com/jonathanclarke/blog.beilabs.com
+
+## Docker Hub
+https://cloud.docker.com/repository/docker/vayu/blog.beilabs.com

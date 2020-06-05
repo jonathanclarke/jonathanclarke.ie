@@ -12,3 +12,6 @@ https://github.com/jonathanclarke/blog.beilabs.com
 
 ## Docker Hub
 https://cloud.docker.com/repository/docker/vayu/blog.beilabs.com
+
+## Buildkite
+https://buildkite.com/banba-group/www-dot-beilabs-dot-com

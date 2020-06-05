@@ -1,26 +1,26 @@
 `rm builds.log`
 `rm builds-app.log`
 app = ENV['APP']
-commit = ENV['GIT_COMMIT']
-branch = ENV['GIT_BRANCH'].gsub('origin/', '')
-sha = commit[commit.length-8, commit.length]
-
+commit = ENV['BUILDKITE_COMMIT']
+branch = ENV['BUILDKITE_BRANCH'].gsub('origin/', '')
+#sha = commit[commit.length-8, commit.length]
+sha = commit
 puts "app: #{ app }"
 puts "commit: #{ commit }"
-cmd_str = "gcloud builds list --limit=10000 --page-size=10000 >> builds.log"
+cmd_str = "gcloud builds list >> builds.log"
 `#{ cmd_str }`
 
 
 contents = File.read('./builds.log')
 contents.split("\n").each do |line|
-  if line.include? "#{ app }@#{ branch }"
+  if line.include? sha
     `echo "#{ line }" >> builds-app.log`
   end
 end
-`cat builds-app.log`
 
 puts "Looking for COMMIT #{ sha } in Google Cloud Build"
 puts "Building image."
+
 build_id = nil
 branch_found = false
 complete_build = false

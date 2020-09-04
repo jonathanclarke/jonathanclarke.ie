@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How to update Node Selector field for Kubernetes PODs in real time
+excerpt: "So given the fact that we might want to use a really expensive node pool, you might need a GPU, you might need to use additional mememory and you've already deployed your deployments.  Our recent case was to change a nginx ingress controller from a pre-emptible node (one that lives for less than 24 hours over to a stable node pool pool which has a much longer lifespan). "
 ---
 
 

@@ -15,8 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Jonathan Clarke  
 email: jonathan@beilabs.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Software: surely not the final frontier. These are the voyages of Jonathan Clarke. His many year mission: to explore strange new code. To seek out new bugs and complex algorithms. To boldly go where many great developers have gone before!
+description: 60% water, gifted napper
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://www.beilabs.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: beilabs

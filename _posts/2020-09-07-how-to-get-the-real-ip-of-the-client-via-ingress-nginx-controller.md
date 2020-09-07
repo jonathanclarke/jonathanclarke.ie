@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Sending the clients real IP address via ingress-nginx on GCP
+title: How to get the real ip of the client via ingress nginx controller on GCP
 ---
 
 I'm writing this down here so that someone else can be spared the agony of solving this one. 

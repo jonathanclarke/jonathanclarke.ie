@@ -40,6 +40,8 @@ spec:
             periodSeconds: 100          
           ports:
           - containerPort: 80
+      nodeSelector:
+        pool: preemptible            
 ---
 apiVersion: "autoscaling/v1"
 kind: "HorizontalPodAutoscaler"

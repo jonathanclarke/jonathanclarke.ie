@@ -3,3 +3,45 @@
 ---
 
 @import "minima";
+.footer-col-2{ width: calc(25% - (30px / 2)); }
+.footer-col-3{ width: calc(40% - (30px / 2)); }
+a, a:visited{ color: #ff572f; }
+a:hover{ color: #ff572f; }
+.pager li a{ color: #ff572f; }
+article header h1.post-title{ font-size: 36px; line-height: 1.25;}
+code{
+
+}
+
+pre {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-left: 3px solid #f36d33;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 1em 1.5em;
+    display: block;
+    word-wrap: break-word;
+}
+
+table td{ 
+    background-color: #f0f0f0;
+    border: 1px solid #dedede;
+    border-bottom-color: rgb(222, 222, 222);
+    border-bottom-color: #c9c9c9;
+}
+hr{
+    margin: 20px 0 20px 0;
+/* -moz-transform: rotate(1deg); */
+/* -webkit-transform: rotate(1deg); */
+/* -o-transform: rotate(1deg); */
+/* -ms-transform: rotate(1deg); */
+/* transform: rotate(1deg); */
+border: 1px dashed #ff572f;
+}

@@ -1,5 +1,5 @@
 #!/bin/bash
-status_code=$(curl --write-out %{http_code} --silent --output /dev/null https://www.beilabs.com)
+status_code=$(curl --write-out %{http_code} --silent --output /dev/null https://www.jonathanclarke.ie)
 
 if [[ "$status_code" -ne 200 ]] ; then
   echo $status_code

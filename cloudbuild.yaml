@@ -2,13 +2,13 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'build'
-      - '--tag=gcr.io/$PROJECT_ID/blog-beilabs-com:$COMMIT_SHA'
-      - '--tag=gcr.io/$PROJECT_ID/blog-beilabs-com:latest'
+      - '--tag=gcr.io/$PROJECT_ID/jonathanclarke-ie:$COMMIT_SHA'
+      - '--tag=gcr.io/$PROJECT_ID/jonathanclarke-ie:latest'
       - '--file=Dockerfile'      
       - '.'
 images:
-  - 'gcr.io/$PROJECT_ID/blog-beilabs-com:$COMMIT_SHA'
-  - 'gcr.io/$PROJECT_ID/blog-beilabs-com:latest'
+  - 'gcr.io/$PROJECT_ID/jonathanclarke-ie:$COMMIT_SHA'
+  - 'gcr.io/$PROJECT_ID/jonathanclarke-ie:latest'
 tags:
   - "cloudbuild"
 

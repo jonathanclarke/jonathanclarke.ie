@@ -1,5 +1,5 @@
-# blog.beilabs.com
-Hosts the source code for the jekyll blog
+# jonathanclarke.ie
+Hosts the source code for the domain jonathanclarke.ie
 Automatically builds the master branch and deploys to our kubernetes cluster when pushed
 
 ## Docker commands
@@ -8,13 +8,4 @@ docker run -d -p 80:80 blog
 curl http://172.17.0.1/
 
 ## Github
-https://github.com/jonathanclarke/blog.beilabs.com
-
-## Docker Hub
-https://cloud.docker.com/repository/docker/vayu/blog.beilabs.com
-
-## Buildkite
-https://buildkite.com/banba-group/www-dot-beilabs-dot-com
-
-## Cloudbuild
-https://console.cloud.google.com/cloud-build/triggers/edit/84307036-79e1-4006-accc-ead575ffd96a?project=banba-group
+https://github.com/jonathanclarke/jonathanclarke.ie

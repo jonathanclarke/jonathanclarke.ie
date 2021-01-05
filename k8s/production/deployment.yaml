@@ -2,10 +2,10 @@
 apiVersion: "apps/v1"
 kind: "Deployment"
 metadata:
-  name: "blog-beilabs-com"
-  namespace: "blog-beilabs-com"
+  name: "jonathanclarke-ie"
+  namespace: "jonathanclarke-ie"
   labels:
-    app: "blog-beilabs-com"
+    app: "jonathanclarke-ie"
 spec:
   strategy:
     type: RollingUpdate
@@ -16,14 +16,14 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: "blog-beilabs-com"
+      app: "jonathanclarke-ie"
   template:
     metadata:
       labels:
-        app: "blog-beilabs-com"
+        app: "jonathanclarke-ie"
     spec:
       containers:
-        - name: "blog-beilabs-com"
+        - name: "jonathanclarke-ie"
           image:  "${DOCKER_IMAGE}"
           imagePullPolicy: "Always"
           readinessProbe:
@@ -46,14 +46,14 @@ spec:
 apiVersion: "autoscaling/v1"
 kind: "HorizontalPodAutoscaler"
 metadata:
-  name: "blog-beilabs-com-hpa"
-  namespace: "blog-beilabs-com"
+  name: "jonathanclarke-ie-hpa"
+  namespace: "jonathanclarke-ie"
   labels:
-    app: "blog-beilabs-com"
+    app: "jonathanclarke-ie"
 spec:
   scaleTargetRef:
     kind: "Deployment"
-    name: "blog-beilabs-com"
+    name: "jonathanclarke-ie"
     apiVersion: "apps/v1"
   minReplicas: 3
   maxReplicas: 6
@@ -61,8 +61,8 @@ spec:
 apiVersion: v1
 kind: LimitRange
 metadata:
-  name: blog-beilabs-com-limit-range
-  namespace: "blog-beilabs-com"
+  name: jonathanclarke-ie-limit-range
+  namespace: "jonathanclarke-ie"
 spec:
   limits:
   - default:

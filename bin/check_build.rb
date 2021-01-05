@@ -1,3 +1,4 @@
+sleep 30
 `rm builds.log`
 `rm builds-app.log`
 app = ENV['APP']

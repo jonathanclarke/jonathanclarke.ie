@@ -9,9 +9,6 @@ a, a:visited{ color: #ff572f; }
 a:hover{ color: #ff572f; }
 .pager li a{ color: #ff572f; }
 article header h1.post-title{ font-size: 36px; line-height: 1.25;}
-code{
-
-}
 
 pre {
     background: #f4f4f4;
@@ -28,6 +25,7 @@ pre {
     padding: 1em 1.5em;
     display: block;
     word-wrap: break-word;
+    white-space: pre-wrap;
 }
 
 table td{ 

@@ -10,6 +10,6 @@ images:
   - 'gcr.io/$PROJECT_ID/jonathanclarke-ie:$COMMIT_SHA'
   - 'gcr.io/$PROJECT_ID/jonathanclarke-ie:latest'
 tags:
-  - "cloudbuild"
+  - '$COMMIT_SHA'
 
 

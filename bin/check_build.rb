@@ -1,23 +1,23 @@
-sleep 30
 `rm builds.log`
 `rm builds-app.log`
 app = ENV['APP']
 commit = ENV['BUILDKITE_COMMIT']
-branch = ENV['BUILDKITE_BRANCH'].gsub('origin/', '')
+branch = ENV['BUILDKITE_BRANCH']
 #sha = commit[commit.length-8, commit.length]
 sha = commit
 puts "app: #{ app }"
 puts "commit: #{ commit }"
-cmd_str = "gcloud builds list >> builds.log"
+cmd_str = "gcloud builds list --filter='tags='#{ commit }'' >> builds.log"
 `#{ cmd_str }`
 
 
 contents = File.read('./builds.log')
-contents.split("\n").each do |line|
-  if line.include? sha
-    `echo "#{ line }" >> builds-app.log`
-  end
+puts "CONTENTS #{ contents }"
+if contents.split("\n").count == 2
+  puts "Found"
+  `echo "#{ contents.split("\n").last }" >> builds-app.log`  
 end
+
 
 puts "Looking for COMMIT #{ sha } in Google Cloud Build"
 puts "Building image."
@@ -26,7 +26,6 @@ build_id = nil
 branch_found = false
 complete_build = false
 result = false
-
 contents = File.read('./builds-app.log')
 lines = contents.split("\n")
 lines[0...3].each do |line|

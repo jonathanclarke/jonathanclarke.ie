@@ -53,6 +53,6 @@ In the long term I firmly belive lawyers are going to have a field day.  The fir
 
 It is always exciting to have new tools and techniques released that can improve the life of the ecosystem at large.  To even contemplate building these models, it's well outside the reach of any small business from a cost and data generation perspective.  I do worry if GitHub have thought of the long term impact, could FOSS and private businesses abandon GitHub knowing that their publicly available code is being used for a financial benefit for likes of Microsoft, OpenAI and others.  By using the data in such a manner seems to go against the heart of the concept of Open Source.
 
-Please keep in mind that OpenAI has been pledged over 1 billion USD directly from Microsoft, and has the backing of the titans of the software world such as Elon Musk, Sam Altman and Peter Thiel.  This is definitely a for profit play build on the backs of open source developers, developers who never had the option of opting out.
+Please keep in mind that OpenAI has been pledged over 1 billion USD directly from Microsoft, and has the backing of the titans of the software world such as Elon Musk, Sam Altman and Peter Thiel.  This is definitely a for profit play built on the backs of open source developers, developers who never had the option of opting out.
 
 Andreesen Horowitz famously stated that 'Software is Eating the World', we should question if software is in fact cannibalistic?

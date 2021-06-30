@@ -55,4 +55,4 @@ It is always exciting to have new tools and techniques released that can improve
 
 Please keep in mind that OpenAI has been pledged over 1 billion USD directly from Microsoft, and has the backing of the titans of the software world such as Elon Musk, Sam Altman and Peter Thiel.  This is definitely a for profit play build on the backs of open source developers, developers who never had the option of opting out.
 
-Andreesen Horowitz famously stated that 'Software is Eating the World', we should question if software is in factgit sta cannibalistic?
+Andreesen Horowitz famously stated that 'Software is Eating the World', we should question if software is in fact cannibalistic?

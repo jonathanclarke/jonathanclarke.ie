@@ -29,7 +29,9 @@ end
 # Performance-booster for watching directories on Windows
 
 gem 'puma'
-gem 'rack-jekyll'
+
+
+gem 'rack-jekyll', git: 'https://github.com/adaoraul/rack-jekyll'
 gem 'rake'
 gem 'rack-ssl-enforcer'
 gem 'jekyll-paginate-v2'

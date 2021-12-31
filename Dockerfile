@@ -1,4 +1,4 @@
-FROM ruby:2.7.2
+FROM ruby:3.0.0
 ENV app /app
     
 RUN mkdir $app

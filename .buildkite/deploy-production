@@ -12,4 +12,4 @@ fi
 manifest="$(mktemp)"
 echo '--- :kubernetes: Shipping'
 gcloud config set project banba-group
-gcloud run deploy jonathanclarke-ie --image gcr.io/banba-group/jonathanclarke-ie:759cc3b3456cf1aff191466e6e287c86a6cca04d --region us-central1
+gcloud run deploy jonathanclarke-ie --image $DOCKER_IMAGE--region us-central1 --platform managed

@@ -12,7 +12,7 @@ fi
 manifest="$(mktemp)"
 echo '--- :kubernetes: Shipping'
 gcloud config set project banba-group
-gcloud container clusters get-credentials production --zone us-central1-a
+gcloud container clusters get-credentials production --zone us-central1
 envsubst < k8s/production/deployment.yaml > "${manifest}"
 kubectl apply -f "${manifest}"
 

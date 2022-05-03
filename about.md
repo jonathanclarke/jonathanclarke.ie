@@ -4,7 +4,9 @@ title: About
 permalink: /about/
 ---
 
-Co-Founder / CTO at [conxjobs.com](https://conxjobs.com)
+Director of Engineering at [houzz.com](https://houzz.com)
+
+Former Co-Founder / CTO at [conxjobs.com](https://conx.co), acquired by Houzz Inc.
 
 Current Location: Kathmandu, Nepal
 
@@ -14,8 +16,7 @@ Ranting over on twitter: [@_JonathanClarke](https://www.twitter.com/_JonathanCla
 
 For some reason I have a LinkedIn account: [@jonathanclarkeireland](https://www.linkedin.com/in/jonathanclarkeireireland/)
 
-You can find the source code for this blog at:
-[https://github.com/jonathanclarke/jonathanclarke.ie](https://github.com/jonathanclarke/jonathanclarke.ie)
+You can find the source code for this blog at: [https://github.com/jonathanclarke/jonathanclarke.ie](https://github.com/jonathanclarke/jonathanclarke.ie)
 
 # Interests
 

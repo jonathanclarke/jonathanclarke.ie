@@ -14,8 +14,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Jonathan Clarke  
-email: clarke.jonathan at gmail.com
-description: Co-Founder / CTO at conxjobs.com
+email: hi@jonathanclarke.ie
+description: Director of Engineering @ Houzz.com
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://www.jonathanclarke.ie" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: _JonathanClarke

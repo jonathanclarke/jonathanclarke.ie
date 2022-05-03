@@ -18,7 +18,7 @@ email: hi@jonathanclarke.ie
 description: Director of Engineering @ Houzz.com
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://www.jonathanclarke.ie" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: _JonathanClarke
+twitter_username: sean_o_cleirigh
 github_username:  jonathanclarke
 
 # Build settings

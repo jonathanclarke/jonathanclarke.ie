@@ -1,14 +1,11 @@
----
-# Only the main Sass file needs front matter (the dashes are enough)
----
 
-@import "minima";
 .footer-col-2{ width: calc(25% - (30px / 2)); }
 .footer-col-3{ width: calc(40% - (30px / 2)); }
 a, a:visited{ color: #ff572f; }
 a:hover{ color: #ff572f; }
 .pager li a{ color: #ff572f; }
-article header h1.post-title{ font-size: 36px; line-height: 1.25;}
+article header h1.post-title{ font-size: 36px; line-height: 1.25;  color: #ff572f;}
+
 
 pre {
     background: #f4f4f4;
@@ -36,10 +33,10 @@ table td{
 }
 hr{
     margin: 20px 0 20px 0;
-/* -moz-transform: rotate(1deg); */
-/* -webkit-transform: rotate(1deg); */
-/* -o-transform: rotate(1deg); */
-/* -ms-transform: rotate(1deg); */
-/* transform: rotate(1deg); */
-border: 1px dashed #ff572f;
+    /* -moz-transform: rotate(1deg); */
+    /* -webkit-transform: rotate(1deg); */
+    /* -o-transform: rotate(1deg); */
+    /* -ms-transform: rotate(1deg); */
+    /* transform: rotate(1deg); */
+    border: 1px dashed #ff572f;
 }

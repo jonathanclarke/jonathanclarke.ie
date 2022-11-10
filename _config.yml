@@ -14,13 +14,29 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Jonathan Clarke  
-email: hi@jonathanclarke.ie
-description: Director of Engineering @ Houzz.com
+author:
+  name: "Jonathan Clarke"
+  email: hi@jonathanclarke.ie
+description: Maker of bits and bytes, perpetually hungry, lover of cheese. I 💗 momos • Maker of code for the construction industry. Mostly I tak tak at the 'puter. Director of Engineering @Houzz. Co-founder & CTO @ conx.co
+
+show_excerpts: false # set to true to show excerpts on the homepage
+  
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://www.jonathanclarke.ie" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: sean_o_cleirigh
-github_username:  jonathanclarke
-mastodon_username: jonathanclarke
+
+minima:
+  social_links:
+    twitter: sean_o_cleirigh
+    github: jonathanclarke
+    linkedin: jonathanclarkeireland
+    mastodon:
+     - username: jonathanclarke
+       instance: mastodon.ie
+
+       
+# twitter_username: sean_o_cleirigh
+# github_username:  jonathanclarke
+# mastodon_username: jonathanclarke
 
 # Build settings
 markdown: kramdown

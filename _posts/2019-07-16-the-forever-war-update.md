@@ -1,9 +1,8 @@
 ---
 layout: post
 title: The Forever war - update
+excerpt: "Slow to start into this one but 40% of the way through it really picked up for me and finished it off in a few days."
 ---
-
-***The Forever War by Joe Halderman***
 
 Slow to start into this one but 40% of the way through it really picked up for me and finished it off in a few days.
 

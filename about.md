@@ -12,7 +12,7 @@ Current Location: Kathmandu, Nepal
 
 Writing code on github: [@jonathanclarke](https://www.github.com/jonathanclarke)
 
-Being quiet over on mastadon: [@jonathanclarke](https://mastodon.ie/@jonathanclarke)
+Being quiet over on mastodon: [@jonathanclarke](https://mastodon.ie/@jonathanclarke)
 
 Ranting over on twitter: [@_JonathanClarke](https://www.twitter.com/sean_o_cleirigh)
 

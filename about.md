@@ -12,7 +12,9 @@ Current Location: Kathmandu, Nepal
 
 Writing code on github: [@jonathanclarke](https://www.github.com/jonathanclarke)
 
-Ranting over on twitter: [@_JonathanClarke](https://www.twitter.com/_JonathanClarke)
+Being quiet over on mastadon: [@jonathanclarke](https://mastodon.ie/@jonathanclarke)
+
+Ranting over on twitter: [@_JonathanClarke](https://www.twitter.com/sean_o_cleirigh)
 
 For some reason I have a LinkedIn account: [@jonathanclarkeireland](https://www.linkedin.com/in/jonathanclarkeireireland/)
 

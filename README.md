@@ -1,7 +1,7 @@
 # jonathanclarke.ie
 Hosts the source code for the domain jonathanclarke.ie
 
-Automatically builds the master branch and deploys to our netlify worspace
+Automatically builds the master branch and deploys to our netlify workspace
  
 ## Docker commands
   docker build -t blog .

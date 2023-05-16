@@ -14,8 +14,6 @@ Writing code on github: [@jonathanclarke](https://www.github.com/jonathanclarke)
 
 Being quiet over on mastodon: [@jonathanclarke](https://mastodon.ie/@jonathanclarke)
 
-Ranting over on twitter: [@_JonathanClarke](https://www.twitter.com/sean_o_cleirigh)
-
 For some reason I have a LinkedIn account: [@jonathanclarkeireland](https://www.linkedin.com/in/jonathanclarkeireireland/)
 
 You can find the source code for this blog at: [https://github.com/jonathanclarke/jonathanclarke.ie](https://github.com/jonathanclarke/jonathanclarke.ie)

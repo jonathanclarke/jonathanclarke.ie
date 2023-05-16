@@ -26,7 +26,6 @@ url: "https://www.jonathanclarke.ie" # the base hostname & protocol for your sit
 
 minima:
   social_links:
-    twitter: sean_o_cleirigh
     github: jonathanclarke
     linkedin: jonathanclarkeireland
     mastodon:

@@ -89,13 +89,13 @@ GEM
     webrick (1.7.0)
 
 PLATFORMS
-  arm64-darwin-21
-  x86_64-linux
+  ruby
 
 DEPENDENCIES
   jekyll (~> 4.2.1)
   jekyll-feed (~> 0.6)
   jekyll-paginate-v2
+  jekyll-seo-tag
   minima!
   puma
   rack-jekyll!

@@ -17,7 +17,7 @@ title: Jonathan Clarke
 author:
   name: "Jonathan Clarke"
   email: hi@jonathanclarke.ie
-description: Maker of bits and bytes, perpetually hungry, lover of cheese. I 💗 momos • Maker of code for the construction industry. Mostly I tak tak at the 'puter. Director of Engineering @Houzz. Co-founder & CTO @ conx.co
+description: Director of Engineering - Houzz.com
 
 show_excerpts: false # set to true to show excerpts on the homepage
   
@@ -112,3 +112,8 @@ pagination:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+
+url: "https://www.jonathanclarke.ie" # the base hostname & protocol for your site
+plugins:
+  - jekyll-sitemap

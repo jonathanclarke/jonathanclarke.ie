@@ -112,8 +112,3 @@ pagination:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
-
-url: "https://www.jonathanclarke.ie" # the base hostname & protocol for your site
-plugins:
-  - jekyll-sitemap

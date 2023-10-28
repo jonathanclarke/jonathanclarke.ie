@@ -26,12 +26,12 @@ baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://www.jonathanclarke.ie" # the base hostname & protocol for your site, e.g. http://example.com
 
 minima:
-  social_links:
-    github: jonathanclarke
-    linkedin: jonathanclarkeireland
-    mastodon:
-     - username: jonathanclarke
-       instance: mastodon.ie
+  # social_links:
+  #   - { platform: "github", user_url: "https://github.com/jonathanclarke" }
+  # linkedin: jonathanclarkeireland
+  # mastodon:
+  #  - username: jonathanclarke
+  #    instance: mastodon.ie
 
        
 # twitter_username: sean_o_cleirigh

@@ -1,4 +1,4 @@
-ruby '3.0.0'
+ruby '3.2.0'
 source 'https://rubygems.org'
 
 # Hello! This is where you manage which Jekyll version is used to run.
@@ -9,7 +9,7 @@ source 'https://rubygems.org'
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem 'jekyll', '~> 4.2.1'
+gem 'jekyll'
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem 'minima', git: 'https://github.com/jekyll/minima'
@@ -20,7 +20,7 @@ gem 'minima', git: 'https://github.com/jekyll/minima'
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem 'jekyll-feed', '~> 0.6'
+  gem 'jekyll-feed'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

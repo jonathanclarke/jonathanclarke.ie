@@ -14,6 +14,6 @@ In all honesty, I miss the old days when I could spontaneously jot down my thoug
 
 Facing health issues amidst a demanding work environment made me reevaluate my priorities. It taught me the significance of slowing down when needed and the importance of listening to one's body and mind. While recovery and regaining my strength have been a journey, it has given me time to reflect on what truly matters.
 
-That said, I'm making a commitment to reconnect with this space. While I might have ever been in recent years a frequent writer, this is a place where I want to explore, learn and hopefully teach others. 
+That said, I'm making a commitment to reconnect with this space. While I might have never been in recent years a frequent writer, this is a place where I want to explore, learn and hopefully teach others. 
 
 Thank you for sticking around, for your understanding, and for your well wishes. I am grateful for the support I've received from many of you. Here's to more stories in the future, hopefully with a healthier and more balanced me at the helm!

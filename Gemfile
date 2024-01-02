@@ -1,4 +1,4 @@
-ruby '3.2.0'
+ruby '3.3.0'
 source 'https://rubygems.org'
 
 # Hello! This is where you manage which Jekyll version is used to run.
@@ -9,7 +9,7 @@ source 'https://rubygems.org'
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem 'jekyll'
+gem 'jekyll', '4.3.3'
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem 'minima', git: 'https://github.com/jekyll/minima'

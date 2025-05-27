@@ -14,3 +14,4 @@ This year and every single year I'm determined to incorporate reading into my da
 [2022](/reading/2022) (18),
 [2021](/reading/2021) (14)
 
+My wishlist is more than a collection of books - it's a roadmap to becoming wiser, braver, and more impactful every day. Explore my journey: [/wishlist](/wishlist).

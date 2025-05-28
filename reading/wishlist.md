@@ -58,3 +58,4 @@ permalink: /reading/wishlist
 
 - [History Upside Down – David Meir-Levi](https://www.goodreads.com/book/show/366226.History_Upside_Down)
 
+- [Dove – Robin Lee Graham](https://www.goodreads.com/book/show/152923.Dove)

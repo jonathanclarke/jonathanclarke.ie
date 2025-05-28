@@ -4,8 +4,6 @@ title: My reading wishlist
 permalink: /reading/wishlist
 ---
 
-## Wishlist
-
 - [The Stolen Queen - Fiona Davis](https://www.goodreads.com/book/show/211025454-the-stolen-queen)
 
 - [Everything Is Tuberculosis by John Green](https://www.goodreads.com/book/show/220341389-everything-is-tuberculosis)

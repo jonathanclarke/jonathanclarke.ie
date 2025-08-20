@@ -24,24 +24,6 @@ My wishlist is a curated mix of books - some recommended by friends, others disc
 
 - [The Mom Test - Rob Fitzpatrick](https://www.goodreads.com/book/show/52283963-the-mom-test)
 
-- [I'm Glady My Mom Died - Jennette McCurdy](https://en.wikipedia.org/wiki/I%27m_Glad_My_Mom_Died)
-
-- [The Promise of a Pencil – Adam Braun](https://www.goodreads.com/book/show/19598139-the-promise-of-a-pencil)
-
-- [The Bookseller of Kabul – Åsne Seierstad](https://www.goodreads.com/book/show/9838.The_Bookseller_of_Kabul)
-
-- [Andrew Carnegie – David Nasaw](https://www.goodreads.com/book/show/5486.Andrew_Carnegie)
-
-- [Banker to the Poor – Muhammad Yunus](https://www.goodreads.com/book/show/125301.Banker_to_the_Poor)
-
-- [Gambling Man – Lionel Barber](https://www.goodreads.com/book/show/206318702-gambling-man)
-
-- [Astonish Me – Maggie Shipstead](https://www.goodreads.com/book/show/18736672-astonish-me)
-
-- [Meditations – Marcus Aurelius](https://en.wikipedia.org/wiki/Meditations)
-
-- [History Upside Down – David Meir-Levi](https://www.goodreads.com/book/show/366226.History_Upside_Down)
-
 - [The Promise of a Pencil – Adam Braun](https://www.goodreads.com/book/show/19598139-the-promise-of-a-pencil)
 
 - [The Bookseller of Kabul – Åsne Seierstad](https://www.goodreads.com/book/show/9838.The_Bookseller_of_Kabul)

@@ -10,8 +10,6 @@ My wishlist is a curated mix of books - some recommended by friends, others disc
 
 - [Last Arguments of Kings - The First Law #3 - Joe Abercrombie](https://www.goodreads.com/book/show/944076.Last_Argument_of_Kings)
 
-- [A Knight of the Seven Kingdoms](https://www.amazon.com/Knight-Seven-Kingdoms-Song-Fire/dp/1101965886)
-
 - [The Stolen Queen - Fiona Davis](https://www.goodreads.com/book/show/211025454-the-stolen-queen)
 
 - [Everything Is Tuberculosis by John Green](https://www.goodreads.com/book/show/220341389-everything-is-tuberculosis)
@@ -23,8 +21,6 @@ My wishlist is a curated mix of books - some recommended by friends, others disc
 - [Crossroads of Twilight  - Book 10 of The Wheel of Time - Robert Jordan](https://en.wikipedia.org/wiki/Crossroads_of_Twilight)
 
 - [Cibola Burn - James S. A. Corey](https://en.wikipedia.org/wiki/Cibola_Burn)
-
-- [The Mom Test - Rob Fitzpatrick](https://www.goodreads.com/book/show/52283963-the-mom-test)
 
 - [The Bookseller of Kabul – Åsne Seierstad](https://www.goodreads.com/book/show/9838.The_Bookseller_of_Kabul)
 

@@ -19,7 +19,7 @@ author:
   email: hi@jonathanclarke.ie
 description: Writing ugly code, creating beautiful businesses.
 
-paginate: 5
+paginate: 4
 show_excerpts: true # set to true to show excerpts on the homepage
   
 baseurl: "/" # the subpath of your site, e.g. /blog

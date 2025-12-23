@@ -47,3 +47,23 @@ My wishlist is a curated mix of books - some recommended by friends, others disc
 - [The Dying Earth – Jack Vance](https://en.wikipedia.org/wiki/The_Dying_Earth)
 
 - [Blindsight – Peter Watts](https://en.wikipedia.org/wiki/Blindsight_(Watts_novel))
+
+- [The Science of Selling - David Hoffeld]()
+
+- [Influence - Robert Cialdini]()
+
+- [Happiness Advantage - Shawn Anchor]()
+
+- [Gap Selling]()
+
+- [The Art of closing the sale - Brian Tracy]()
+
+- [Million Dollar Habits - Brian Tracy]()
+
+- [How to win friends and influence people - Dale Carnegie]()
+
+- [Selling to VITO]()
+
+- [Demand Side Selling]()
+
+- [Never Split the Difference]()

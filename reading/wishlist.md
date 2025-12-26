@@ -67,3 +67,7 @@ My wishlist is a curated mix of books - some recommended by friends, others disc
 - [Demand Side Selling]()
 
 - [Never Split the Difference]()
+
+- [Hope is not a Strategy - Rick Page]()
+
+- [The Devils - Joe Abercrombie](https://en.wikipedia.org/wiki/The_Devils_(Abercrombie_novel))

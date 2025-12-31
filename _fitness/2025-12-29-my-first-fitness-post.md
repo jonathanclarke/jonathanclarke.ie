@@ -2,7 +2,7 @@
 layout: fitness_post
 title: Day 1 of 300 - My First Fitness Post
 excerpt: "Day 1 of 300"
-date: 2025-12-26
+date: 2025-12-29
 ---
 
 Following on from [Project 300](/2025/12/26/300-days.html); I've taken the first step, getting off my ass and onto the exercise bike. 

@@ -2,7 +2,7 @@
 layout: fitness_post
 title: Day 3 of 300 - Happy new year
 excerpt: "Day 3 of 300 - The gym is empty, perfect time for a quick run"
-date: 2025-12-10
+date: 2025-12-31
 ---
 
 I dropped my daughters off for a swimming lesson this morning: 30 minutes in the pool for each of them for a total of $15. What a bargain. I’m really looking forward to them getting comfortable in the water, especially for safety’s sake.

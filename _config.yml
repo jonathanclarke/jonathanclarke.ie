@@ -19,7 +19,7 @@ author:
   email: hi@jonathanclarke.ie
 description: Writing ugly code, creating beautiful businesses.
 
-paginate: 4
+
 show_excerpts: true # set to true to show excerpts on the homepage
   
 baseurl: "/" # the subpath of your site, e.g. /blog
@@ -43,8 +43,16 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-paginate
+  - jekyll-paginate-v2
   - jekyll-seo-tag
+
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: '/page/:num/'
+  sort_field: 'date'
+  sort_reverse: true
+
 
 collections:
   fitness:

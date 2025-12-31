@@ -7,10 +7,10 @@ layout: base
   <!--   <h1 class="page-heading">{{ page.title }}</h1> -->
   <!-- {%- endif -%} -->
 
-  {{ content }}
+  {{ content | markdownify }}
 
 
-  {% assign posts = site.fitness %}
+  {% assign posts = paginator.posts | sort: 'date' | reverse %}
 
 
   {%- if posts.size > 0 -%}
@@ -33,6 +33,20 @@ layout: base
       </li>
       {%- endfor -%}
     </ul>
+
+    <div class="pagination">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+      {% else %}
+        <span class="previous">Previous</span>
+      {% endif %}
+      <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+      {% else %}
+        <span class="next ">Next</span>
+      {% endif %}
+    </div>
 
   {%- endif -%}
 

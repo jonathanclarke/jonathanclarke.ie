@@ -50,6 +50,11 @@ collections:
   fitness:
     output: true
     permalink: /fitness/:year/:month/:day/:title.html
+
+feed:
+  author: Jonathan Clarke
+  collections:
+    - fitness
     
 ############################################################
 

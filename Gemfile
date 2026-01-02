@@ -21,6 +21,7 @@ gem 'minima', git: 'https://github.com/jekyll/minima'
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem 'jekyll-feed'
+  gem 'dotenv'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -36,5 +37,10 @@ gem 'rake'
 gem 'rack-ssl-enforcer'
 gem 'jekyll-paginate-v2'
 gem 'webrick'
+gem 'rss'
 gem 'jekyll-seo-tag'
 # gem 'jekyll-sitemap'
+group :development do
+  gem 'mastodon-api'
+  gem 'openssl', '4.0.0'
+end

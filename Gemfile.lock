@@ -22,8 +22,11 @@ GEM
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
     bigdecimal (3.1.8)
+    buftok (0.3.0)
     colorator (1.1.0)
     concurrent-ruby (1.3.4)
+    domain_name (0.6.20240107)
+    dotenv (3.2.0)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
@@ -33,7 +36,15 @@ GEM
     google-protobuf (4.28.3)
       bigdecimal
       rake (>= 13)
-    http_parser.rb (0.8.0)
+    http (3.3.0)
+      addressable (~> 2.3)
+      http-cookie (~> 1.0)
+      http-form_data (~> 2.0)
+      http_parser.rb (~> 0.6.0)
+    http-cookie (1.1.0)
+      domain_name (~> 0.5)
+    http-form_data (2.3.0)
+    http_parser.rb (0.6.0)
     i18n (1.14.6)
       concurrent-ruby (~> 1.0)
     jekyll (4.3.3)
@@ -70,8 +81,18 @@ GEM
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
+    mastodon-api (2.0.0)
+      addressable (~> 2.6)
+      buftok (~> 0)
+      http (~> 3.3)
+      oj (~> 3.7)
     mercenary (0.4.0)
     nio4r (2.7.4)
+    oj (3.16.13)
+      bigdecimal (>= 3.0)
+      ostruct (>= 0.2)
+    openssl (4.0.0)
+    ostruct (0.6.3)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (6.0.1)
@@ -85,6 +106,8 @@ GEM
       ffi (~> 1.0)
     rexml (3.3.9)
     rouge (4.5.1)
+    rss (0.3.2)
+      rexml
     safe_yaml (1.0.5)
     sass-embedded (1.80.7)
       google-protobuf (~> 4.28)
@@ -98,15 +121,19 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  dotenv
   jekyll (= 4.3.3)
   jekyll-feed
   jekyll-paginate-v2
   jekyll-seo-tag
+  mastodon-api
   minima!
+  openssl (= 4.0.0)
   puma
   rack-jekyll!
   rack-ssl-enforcer
   rake
+  rss
   webrick
 
 RUBY VERSION

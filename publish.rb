@@ -60,11 +60,19 @@ if winner
 
   # Compose the message
   link = item.link.respond_to?(:href) ? item.link.href : item.link
-  message = "#{item.title.content}\n#{link}"
+  message = "#{item.title.content}\n\n#{link}"
+
+  puts "Generated message:\n#{message}"
+  print "Enter hashtags (e.g., #ruby #programming, leave blank to skip): "
+  hashtags = STDIN.gets.chomp.strip
+
+  unless hashtags.empty?
+    message << "\n\n#{hashtags}"
+  end
 
   # Publish to Mastodon
   begin
-    puts "message: #{message}"
+    puts "Final message to be published:\n#{message}"
     client.create_status(message)
     puts "Successfully published to @jonathanclarke on mastodon.ie"
   rescue Mastodon::Error => e

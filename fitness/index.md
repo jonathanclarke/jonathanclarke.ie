@@ -5,7 +5,7 @@ list_title: "Fitness Posts"
 pagination:
   enabled: true
   collection: 'fitness'
-  per_page: 5
+  per_page: 10
   permalink: '/fitness/page/:num/'
   sort_field: 'date'
   sort_reverse: true

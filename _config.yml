@@ -19,6 +19,10 @@ author:
   email: hi@jonathanclarke.ie
 description: Writing ugly code, creating beautiful businesses.
 
+# Default image for Open Graph (social media previews)
+# This will be used if a post doesn't specify its own image
+image: https://www.jonathanclarke.ie/public/images/jc_logo.png
+
 
 show_excerpts: true # set to true to show excerpts on the homepage
   

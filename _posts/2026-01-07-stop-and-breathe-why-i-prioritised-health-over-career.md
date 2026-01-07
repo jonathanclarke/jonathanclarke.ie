@@ -3,6 +3,7 @@ layout: post
 title: "Stop and Breathe: Why I Prioritised Health Over Career"
 excerpt: "No more OKRs, just elevation gains. I've pressed pause on my career to trek Pikey Peak, Everest Base Camp, and finally use the amazing backyard I've neglected."
 date:   "2026-01-07"
+image: https://www.jonathanclarke.ie/public/images/jc_logo.png
 ---
 
 On January 1, 2026, I officially left my position as Director of Engineering at [Houzz](https://www.houzz.com).  This came four and a half years after a successfull acquisition of [ConX](https://www.conx.co)

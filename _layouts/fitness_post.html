@@ -10,7 +10,13 @@
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
         <h1 class="post-title"><a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a></h1>
+	{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+	<span class="post-meta">{{ page.date | date: date_format }}</span>
+
         {{ content }}
+
+	<hr />
+	<p>Feel free to <a href="https://jonathanclarke.kit.com/6648f82fe2">subscribe</a> to my newsletter, chat to me on <a href="https://mastodon.ie/@jonathanclarke">mastodon</a> or <a href="https://www.jonathanclarke.ie/feed.xml">follow my blog</a> in your favourite RSS reader.</p>
       </div>
     </main>
 

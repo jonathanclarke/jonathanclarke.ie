@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Stop and Breathe: Why I Prioritised Health Over Career"
-excerpt: "No more OKRs, just elevation gains. I've pressed pause on my career to trek Pikey Peak, Everest Base Camp, and finally use the backyard I’ve neglected."
+excerpt: "No more OKRs, just elevation gains. I've pressed pause on my career to trek Pikey Peak, Everest Base Camp, and finally use the amazing backyard I've neglected."
 date:   "2026-01-07"
 ---
 

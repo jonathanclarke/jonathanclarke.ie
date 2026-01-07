@@ -7,7 +7,7 @@ date:   "2026-01-07"
 
 On January 1, 2026, I officially left my position as Director of Engineering at [Houzz](https://www.houzz.com).  This came four and a half years after a successfull acquisition of [ConX](https://www.conx.co)
 
-Why? Well, I want to focus on my health and fitness. I've been quite unwell the past few months—a bad dose of influenza coupled with bronchitis; it wasn't a good time. It felt like I was sick for the past few years continuously. My stress levels were sky-high, my sleep patterns disturbed, and frankly, I was perpetually exhausted.
+Why? Well, I want to focus on my health and fitness. I've been quite unwell the past few months - a bad dose of influenza coupled with bronchitis; it wasn't a good time. It felt like I was sick for the past few years continuously. My stress levels were sky-high, my sleep patterns disturbed, and frankly, I was perpetually exhausted.
 
 So what next? I don't know. Initially, before I handed in my notice, I had some vague idea of trekking, working out, and reading over the next 12 months. This has recently been expanded out with some specificity.
 
@@ -25,7 +25,7 @@ To do that, I’m finally using the backyard I’ve neglected. Here is the plan.
 
 Sometime this month, we’re starting with Australian Camp. For those who don’t know, this is a beautiful spot near Pokhara, sitting at around 2,000 meters. It’s not "Australia Base Camp" (though the confusion happens), and it’s certainly not Everest. But right now, for the unfit version of me, it’s exactly what I need.
 
-This is the soft launch. It’s about getting the legs moving again, breathing clean air, and remembering what it feels like to walk on something other than flat pavement. It’s low stakes, high reward—panoramic views of the Annapurna range without the oxygen deprivation. I'll be with my wife and kids, and I'm really looking forward to it.
+This is the soft launch. It’s about getting the legs moving again, breathing clean air, and remembering what it feels like to walk on something other than flat pavement. It’s low stakes, high reward - panoramic views of the Annapurna range without the oxygen deprivation. I'll be with my wife and kids, and I'm really looking forward to it.
 
 Once the legs remember how to work, I’m heading to Pikey Peak.
 

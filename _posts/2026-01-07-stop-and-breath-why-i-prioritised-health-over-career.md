@@ -41,4 +41,4 @@ Leaving any role after such a long time is scary; the anxiety of all of this has
 
 I’m taking this time to be a better father, a better husband, and eventually, a better person. But for now, I’m just a guy trying to get up a hill with a book in my bag.
 
-See you on the trails.
+See you on the trails.  You can follow my fitness journey at [/fitness](/fitness)

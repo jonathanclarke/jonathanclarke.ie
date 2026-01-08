@@ -5,11 +5,6 @@ excerpt: "Day 9 of 300 - After a scare with a tight quad yesterday, today was th
 date: 2026-01-08
 ---
 
-
-In engineering, when a system throws a fault code—like the tight right quad I experienced yesterday - you don't just ignore it. You take it offline, run diagnostics, and perform repairs. Yesterday’s 95 bpm "medical ride" was the repair.
-
-Today was the re-commissioning test. You don't assume a system is fixed just because it seems okay while idling; you have to put it under load to see if it holds.
-
 ### Part 1: The Load Test (Morning Run)
 
 Yesterday I took a bit of a break, no run, no energy but I did get the hour of cycling done.   This morning I took the myself for a 5km trial using the "Week 2" C25K protocol (1 minute Run / 1 minute 30 seconds Walk). I needed to see if the stress of running would trigger that tightness above the knee again.

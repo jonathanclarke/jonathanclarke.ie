@@ -71,3 +71,9 @@ My wishlist is a curated mix of books - some recommended by friends, others disc
 - [Hope is not a Strategy - Rick Page]()
 
 - [The Devils - Joe Abercrombie](https://en.wikipedia.org/wiki/The_Devils_(Abercrombie_novel))
+
+- [The Broken Shore - Peter Temple ]
+
+- [Touching the void - Joe Simpson]
+
+- [Berlin Noir - Philip Kerr]

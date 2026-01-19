@@ -1,7 +1,7 @@
 ---
 layout: fitness_post
-title: Day 12, 13, 14 of 300 - Treking to Australia Camp"
-excerpt: "Day 12, 13, 14 of 300 - "
+title: "Day 12, 13, 14 of 300 - Treking to Australia Camp"
+excerpt: "Day 12, 13, 14 of 300 - This week, "Project 300" moved from the treadmill to the Himalayas.  A 3-day trek to introduce my kids to the mountains."
 date: 2026-01-15
 ---
 

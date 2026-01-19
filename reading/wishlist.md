@@ -6,6 +6,14 @@ permalink: /reading/wishlist
 
 My wishlist is a curated mix of books - some recommended by friends, others discovered through podcasts, blogs, or favorite authors. A few continue stories I’ve already begun, while others open doors to entirely new topics. Each one is an invitation to learn, feel, and explore something new.
 
+- [The Devils - Joe Abercrombie](https://en.wikipedia.org/wiki/The_Devils_(Abercrombie_novel))
+
+- [The Broken Shore - Peter Temple](https://en.wikipedia.org/wiki/The_Broken_Shore_(novel))
+
+- [Touching the void - Joe Simpson](https://en.wikipedia.org/wiki/Touching_the_Void_(book))
+
+- [Berlin Noir - Philip Kerr](https://berniegunther.com/book/berlin_noir/)
+
 - [Before They Are Hanged - The First Law #2 - Joe Abercrombie](https://www.goodreads.com/book/show/902715.Before_They_Are_Hanged)
 
 - [Last Arguments of Kings - The First Law #3 - Joe Abercrombie](https://www.goodreads.com/book/show/944076.Last_Argument_of_Kings)
@@ -70,10 +78,3 @@ My wishlist is a curated mix of books - some recommended by friends, others disc
 
 - [Hope is not a Strategy - Rick Page]()
 
-- [The Devils - Joe Abercrombie](https://en.wikipedia.org/wiki/The_Devils_(Abercrombie_novel))
-
-- [The Broken Shore - Peter Temple](https://en.wikipedia.org/wiki/The_Broken_Shore_(novel))
-
-- [Touching the void - Joe Simpson](https://en.wikipedia.org/wiki/Touching_the_Void_(book))
-
-- [Berlin Noir - Philip Kerr](https://berniegunther.com/book/berlin_noir/)

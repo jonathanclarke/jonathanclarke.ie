@@ -1,6 +1,6 @@
 ---
 layout: fitness_post
-title: Day 15 of 300 - Oh Joy - a Stairmaster"
+title: "Day 15 of 300 - Oh Joy - a Stairmaster"
 excerpt: "Day 15 of 300 - I returned from the mountains with a new mindset: I need to get much fitter and I also need to lose weight dramatically.  Today, I tightened the recovery window for my run and introduced myself to the StairMaster."
 date: 2026-01-19
 ---

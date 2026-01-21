@@ -2,7 +2,7 @@
 layout: fitness_post
 title: "Day 16 of 300 - For the want of a watch"
 excerpt: "Day 16 of 300 - I forgot my watch today, so I ran based on feel rather than chasing numbers. Interestingly, the data suggests I run better when I'm not watching the clock."
-date: 2026-01-19
+date: 2026-01-20
 ---
 
 I forgot my watch today, so I ran based on feel rather than chasing numbers. Interestingly, the data suggests I run better when I'm not watching the clock.

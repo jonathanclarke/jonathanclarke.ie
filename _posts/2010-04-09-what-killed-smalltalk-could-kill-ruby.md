@@ -5,7 +5,8 @@ title: What killed Smalltalk could kill ruby
 
 <iframe width="560" height="315" src="http://www.youtube.com/embed/YX3iRjKj7C0" frameborder="0" allowfullscreen></iframe>
 
-##Overview of this presentation
+## Overview of this presentation
+
 * Smalltalk & Ruby are deeply interrelated.
 
 * Much of the same syntax between the two languages
@@ -74,9 +75,11 @@ title: What killed Smalltalk could kill ruby
 
 * We have a great tool in Ruby, we can kill it, let's not do that!
 
-##My view
+## My view
+
 Great presentation style, he's quite funny. Very inspirational lecturer for developers confirming that TDD/BDD are the ways forward for software engineering.
 
 
-##About the presenter
+## About the presenter
+
 Robert C. Martin has been a software professional since 1970. In the last 35 years, he has worked in various capacities on literally hundreds of software projects. He has authored "landmark" books on Agile Programming, Extreme Programming, UML, Object-Oriented Programming, and C++ Programming. He has published dozens of articles in various trade journals. Today, He is one of the software industry's leading authorities on Agile software development and is a regular speaker at international conferences and trade shows. He is a former editor of the C++ Report and currently writes a monthly Craftsman column for Software Development magazine.

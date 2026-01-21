@@ -3,7 +3,7 @@ layout: post
 title: Get 'er done...
 ---
 
-"I had that idea years before they did it."
+	"I had that idea years before they did it."
 
 It's a common statement amongst developers.  The problem is that they either failed to execute or just never acted up on the idea in the first place.  Working alone can be a very daunting task.  A sole developer can cut a very lonely figure and often as a result failed startups are a dime a dozen.  My advice: just fucking do it.  Words to live by though often words words to regret.  Work on your idea one line of code at a time, one meeting at a time, one night at a time.
 

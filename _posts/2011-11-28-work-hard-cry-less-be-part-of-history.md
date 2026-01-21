@@ -9,7 +9,7 @@ The article gave a number of examples of people talking about how hard they work
 
 At the end of the article he writes:
 
-> "Work hard. Cry less. And realize you’re part of history."
+	"Work hard. Cry less. And realize you’re part of history."
 
 What a great phrase for any startup entrepreneur.
 
@@ -26,6 +26,3 @@ This time last year I admit that I was depressed. I had thrown myself head first
 These days I work on projects in a much more methodical manner.  I question why a certain feature is needed much more often.  I take each day as it comes with a goal to be performed every single day.  Win small, win often and above all ship regularly.  Your health and satisfaction will improve.
 
 While being a part of history is great, make sure that enjoy your life.  You only get one.
-
-
-

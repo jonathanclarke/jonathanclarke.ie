@@ -5,7 +5,8 @@ title: Kids can change the world as entrepreneurs
 
 <iframe src="http://embed.ted.com/talks/cameron_herold_let_s_raise_kids_to_be_entrepreneurs.html" width="560" height="315" frameborder="0" scrolling="no" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 
-##Presentation Overview:
+## Presentation Overview:
+
 * I was raised to be an entrepreneur
 
 * We miss opportunities to find these kids with entrepreneurial traits
@@ -60,7 +61,8 @@ title: Kids can change the world as entrepreneurs
 
 * Do not medicate your kids for ADD unless it is impossible to live with!
 
-##Teach your kids: 
+## Teach your kids: 
+
 * Problem solving
 
 * To ask questions
@@ -87,9 +89,10 @@ title: Kids can change the world as entrepreneurs
 
 * Rank entrepreneurship right up with Law and Medicine!
 
-##My view
+## My view
+
 Very inspiring stuff, When I do have kids I'll be instilling these values at a very early age. Love the idea of negotiating with my kid, everything is negotiable - it's something they should learn at a very early age.
 
 
-##About the presenter
+## About the presenter
 Business Mentor. Business Coach. CEO Coach. Cameron Herold has taken 20 years experience operating some of the biggest business success stories in North America and turned it into a flourishing career as both a motivational speaker and management consultant. Cameron is a business coach and mentor to several small businesses, and a CEO coach to large corporations throughout Canada and the United States. There's no secret to his business success; Cameron loves helping entrepreneurs make their dreams come true.

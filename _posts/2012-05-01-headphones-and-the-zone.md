@@ -8,7 +8,6 @@ My office has a variety of other departments, many are on the phone chasing new 
 
 When I'm zoned in I really don't like to be disturbed, when I get sidetracked by a colleague then I lose my focus on the problem and it takes me some time to get back to where I was.  Lately I've been a fan of [Digitally Imported](http://di.fm/ "Digitally Imported").  Streaming music that is just ideal for getting me to that point of utmost concentration.
 
-![The importance of the zone in the workplace](https://s3.amazonaws.com/blog.beilabs.com/images/2012-04-02-the-importance-of-the-zone-in-the-workplace.jpg "The importance of the zone in the workplace")
 
 It's hard to explain the zone, it's a place where I'm devoting 100% of my concentration to a problem.  I often find myself completely detached, fixated on the problem and its various solutions, typing furiously on the keyboard trying to get my thoughts out before they vanish.  It takes time to reach this place, concentration is vital.  Facebook, twitter and email clients are shut off so I'm not being constantly interrupted.  It's my form of meditation, it leaves me completely relaxed and focused.
 

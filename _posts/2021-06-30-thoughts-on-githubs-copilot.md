@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Some thoughts on GitHub Copilot - Your AI pair programmer"
-excerpt: "Today marked the technical preview of [GitHub Copilot - Your AI pair programmer](https://copilot.github.com/).  It's something I've long been expecting ever since Microsoft acquired GitHub for $7.5 billion."
+excerpt: "Today marked the technical preview of GitHub Copilot.  It's something I've long been expecting ever since Microsoft acquired GitHub for $7.5 billion."
 date:   "2021-06-30"
 cover_image: "https://www.jonathanclarke.ie/public/article_images/2021-06-30-copilot/how-it-works.png"
 ---

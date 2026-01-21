@@ -6,7 +6,7 @@ image: https://www.beilabs.com/public/article_images/2015-09-16-nepal-bandha/201
 excerpt: Bandh usually translates directly to 'general strike'. Bandh is originally a Hindi word meaning 'closed', is a form of protest used by political activists in some countries in South Asia like India and Nepal. During a Bandh, a major political party or a large chunk of a community declares a general strike, usually lasting one day.
 ---
 
-So, let me first describe what a banda actually is in Nepal.  
+So, let me first describe what a banda actually is in Nepal.
 
 Bandh usually translates directly to 'general strike'.   Bandh is originally a Hindi word meaning 'closed', is a form of protest used by political activists in some countries in South Asia like India and Nepal. During a Bandh, a major political party or a large chunk of a community declares a general strike, usually lasting one day.
 
@@ -22,46 +22,13 @@ The video below depicts my area of Kathmandu during a bandh, fast-forward to aro
 
 Bandhs are widely criticized and denounced by people from all walks of life in Nepal however this has not prevented political parties from commencing bandhs throughout the country.  Transport halts, school and college closures and business shutdowns all occur during a bandh.  Drive your motorbike or car during a bandh and it will get damaged by those enforcing it.  Rickshaws + bicycles are normally not bothered.
 
-<table>
-    <tr>
-        <th>Year</th>
-        <th>Transport strikes</th>
-        <th>Total Strikes</th>
-    </tr>
+| Year      | Transport strikes | Total Strikes |
+|:----------|:------------------|:--------------|
+| 2010-2011 | 73                | 221           |
+| 2011-2012 | 106               | 257           |
+| 2012-2013 | 134               | 183           |
+| 2013-2014 | 72                | 201           |
+| 2014-2015 | 22                | 185           |
+| **Total** | 407               | 847           |
 
-    <tr>
-        <td>2010-2011</td>
-        <td>73</td>
-        <td>221</td>
-    </tr>
-    <tr>
-        <td>2011-2012</td>
-        <td>106</td>
-        <td>257</td>
-    </tr>
-    <tr>
-        <td>2012-2013</td>
-        <td>134</td>
-        <td>183</td>
-    </tr>
-
-    <tr>
-        <td>2013-2014</td>
-        <td>72</td>
-        <td>201</td>
-    </tr>
-
-    <tr>
-        <td>2014-2015</td>
-        <td>22</td>
-        <td>185</td>
-    </tr>
-    <tr>
-        <td><strong>Total<strong></td>
-        <td>407</td>
-        <td>847</td>
-    </tr>
-</table>
-
-
-For a total of 5 years (1825 days), the country has endured 847 days of strikes.  In 5 years the country has been on general strike 46% of the time.  Imagine the GDP that has been lost as a result.  Phenomenal.  
+For a total of 5 years (1825 days), the country has endured 847 days of strikes.  In 5 years the country has been on general strike 46% of the time.  Imagine the GDP that has been lost as a result.  Phenomenal.

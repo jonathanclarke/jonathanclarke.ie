@@ -46,8 +46,6 @@ My wishlist is a curated mix of books - some recommended by friends, others disc
 
 - [Dove – Robin Lee Graham](https://www.goodreads.com/book/show/152923.Dove)
 
-- [Stories of Your Life and Others – Ted Chiang](https://www.goodreads.com/book/show/1862689.Stories_of_Your_Life_and_Others)
-
 - [Exhalation – Ted Chiang](https://www.goodreads.com/book/show/41160292-exhalation)
 
 - [Quantum Computing Since Democritus – Scott Aaronson](https://www.goodreads.com/book/show/17471298-quantum-computing-since-democritus)

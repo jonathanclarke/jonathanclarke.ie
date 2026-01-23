@@ -76,3 +76,4 @@ My wishlist is a curated mix of books - some recommended by friends, others disc
 
 - [Hope is not a Strategy - Rick Page]()
 
+[Maintenance: Of Everything, Part One - Stewart Brand](https://press.stripe.com/maintenance-part-one)

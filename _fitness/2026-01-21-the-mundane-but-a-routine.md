@@ -2,7 +2,7 @@
 layout: fitness_post
 title: "Day 17 of 300 - The mundane, but a routine"
 excerpt: "Day 17 of 300 - Often the mundane and the routine usually feels like a cage, but lately, it feels like a key.  The run, the dog walk, the daily sweat - it's beginning to stop feeling like a tax I have to pay and started feeling like a source I get to tap into.  I'm finding joy in the simple ability to move, and for the first time in a long time, my body is responding."
-date: 2026-01-20
+date: 2026-01-21
 ---
 
 I clicked the wrong button today. Instead of my standard 1:1 intervals (1 min run, 1 min walk), I accidentally selected a 1:1.30 ratio. I unknowingly gave myself 50% more rest.

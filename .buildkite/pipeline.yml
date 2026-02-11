@@ -9,7 +9,9 @@ steps:
     depends_on: docker-login
     timeout_in_minutes: 20
     command:
-      - bundle install --with ci --without development
+      - bundle config set with 'ci'
+      - bundle config set without 'development'
+      - bundle install
       - bundle audit check --update
       - bundle exec jekyll build
       - tar czf _site.tar.gz _site/

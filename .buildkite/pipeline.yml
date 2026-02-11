@@ -11,7 +11,7 @@ steps:
       - _site.tar.gz
     plugins:
       - docker-login#v3.0.0:
-          username: vayu
+          username-env: DOCKERHUB_VAYU_USERNAME
           password-env: DOCKERHUB_VAYU_TOKEN
       - docker#v5.11.0:
           image: "ruby:4.0.1"
@@ -27,7 +27,7 @@ steps:
       - htmlproofer _site --ignore-urls "/^http:/" --no-enforce-https --allow-missing-href
     plugins:
       - docker-login#v3.0.0:
-          username: vayu
+          username-env: DOCKERHUB_VAYU_USERNAME
           password-env: DOCKERHUB_VAYU_TOKEN
       - docker#v5.11.0:
           image: "ruby:4.0.1"

@@ -19,3 +19,4 @@ steps:
     plugins:
       - docker#v5.11.0:
           image: "ruby:4.0.1-alpine"
+          propagate-uid-gid: true

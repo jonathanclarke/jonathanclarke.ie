@@ -9,7 +9,7 @@ steps:
     depends_on: docker-login
     timeout_in_minutes: 20
     command:
-      - apk add --no-cache git build-base
+      - apk add --no-cache git build-base libffi-dev
       - bundle config set with 'ci'
       - bundle config set without 'development'
       - bundle install

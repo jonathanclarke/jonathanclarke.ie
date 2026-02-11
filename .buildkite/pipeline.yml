@@ -4,7 +4,7 @@ steps:
     command:
       - buildkite-agent secret get DOCKERHUB_VAYU_TOKEN | docker login -u $$(buildkite-agent secret get DOCKERHUB_VAYU_USERNAME) --password-stdin
 
-  - label: ":jekyll: Build & Audit"
+  - label: ":jekyll: Build, Validate & Audit"
     key: build
     depends_on: docker-login
     timeout_in_minutes: 20
@@ -15,18 +15,7 @@ steps:
       - bundle install
       - bundle audit check --update
       - bundle exec jekyll build
-      - tar czf _site.tar.gz _site/
-    artifact_paths:
-      - _site.tar.gz
+      - bundle exec htmlproofer _site --ignore-urls "/^http:/" --no-enforce-https --allow-missing-href
     plugins:
       - docker#v5.11.0:
           image: "ruby:4.0.1-alpine"
-
-  - label: ":mag: HTML Validation"
-    key: html-validation
-    depends_on: build
-    timeout_in_minutes: 20
-    command:
-      - buildkite-agent artifact download _site.tar.gz .
-      - tar xzf _site.tar.gz
-      - docker run --rm -v "$$PWD/_site:/site" ruby:4.0.1-alpine sh -c "gem install html-proofer && htmlproofer /site --ignore-urls '/^http:/' --no-enforce-https --allow-missing-href"

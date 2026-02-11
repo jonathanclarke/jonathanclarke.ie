@@ -10,6 +10,9 @@ steps:
     artifact_paths:
       - _site.tar.gz
     plugins:
+      - docker-login#v3.0.0:
+          username: vayu
+          password-env: DOCKERHUB_VAYU_TOKEN
       - docker#v5.11.0:
           image: "ruby:4.0.1"
 
@@ -23,5 +26,8 @@ steps:
       - gem install html-proofer
       - htmlproofer _site --ignore-urls "/^http:/" --no-enforce-https --allow-missing-href
     plugins:
+      - docker-login#v3.0.0:
+          username: vayu
+          password-env: DOCKERHUB_VAYU_TOKEN
       - docker#v5.11.0:
           image: "ruby:4.0.1"

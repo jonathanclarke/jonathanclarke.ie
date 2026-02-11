@@ -29,8 +29,4 @@ steps:
     command:
       - buildkite-agent artifact download _site.tar.gz .
       - tar xzf _site.tar.gz
-      - gem install html-proofer
-      - htmlproofer _site --ignore-urls "/^http:/" --no-enforce-https --allow-missing-href
-    plugins:
-      - docker#v5.11.0:
-          image: "ruby:4.0.1-alpine"
+      - docker run --rm -v "$$PWD/_site:/site" ruby:4.0.1-alpine sh -c "gem install html-proofer && htmlproofer /site --ignore-urls '/^http:/' --no-enforce-https --allow-missing-href"

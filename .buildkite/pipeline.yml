@@ -1,8 +1,9 @@
 steps:
-  - label: ":jekyll: Build"
+  - label: ":jekyll: Build & Audit"
     key: build
     command:
       - bundle install --with ci --without development
+      - bundle audit check --update
       - bundle exec jekyll build
       - tar czf _site.tar.gz _site/
     artifact_paths:
@@ -19,15 +20,6 @@ steps:
       - tar xzf _site.tar.gz
       - gem install html-proofer
       - htmlproofer _site --ignore-urls "/^http:/" --no-enforce-https --allow-missing-href
-    plugins:
-      - docker#v5.11.0:
-          image: "ruby:4.0.1"
-
-  - label: ":lock: Vulnerability Audit"
-    key: vulnerability-audit
-    command:
-      - gem install bundler-audit
-      - bundle audit check --update
     plugins:
       - docker#v5.11.0:
           image: "ruby:4.0.1"

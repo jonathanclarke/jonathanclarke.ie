@@ -17,7 +17,7 @@ steps:
       - _site.tar.gz
     plugins:
       - docker#v5.11.0:
-          image: "ruby:4.0.1"
+          image: "ruby:4.0.1-alpine"
 
   - label: ":mag: HTML Validation"
     key: html-validation
@@ -30,4 +30,4 @@ steps:
       - htmlproofer _site --ignore-urls "/^http:/" --no-enforce-https --allow-missing-href
     plugins:
       - docker#v5.11.0:
-          image: "ruby:4.0.1"
+          image: "ruby:4.0.1-alpine"

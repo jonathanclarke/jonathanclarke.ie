@@ -1,6 +1,12 @@
 steps:
+  - label: ":docker: Docker Login"
+    key: docker-login
+    command:
+      - buildkite-agent secret get DOCKERHUB_VAYU_TOKEN | docker login -u $$(buildkite-agent secret get DOCKERHUB_VAYU_USERNAME) --password-stdin
+
   - label: ":jekyll: Build & Audit"
     key: build
+    depends_on: docker-login
     timeout_in_minutes: 20
     command:
       - bundle install --with ci --without development
@@ -10,9 +16,6 @@ steps:
     artifact_paths:
       - _site.tar.gz
     plugins:
-      - docker-login#v3.0.0:
-          username-env: DOCKERHUB_VAYU_USERNAME
-          password-env: DOCKERHUB_VAYU_TOKEN
       - docker#v5.11.0:
           image: "ruby:4.0.1"
 
@@ -26,8 +29,5 @@ steps:
       - gem install html-proofer
       - htmlproofer _site --ignore-urls "/^http:/" --no-enforce-https --allow-missing-href
     plugins:
-      - docker-login#v3.0.0:
-          username-env: DOCKERHUB_VAYU_USERNAME
-          password-env: DOCKERHUB_VAYU_TOKEN
       - docker#v5.11.0:
           image: "ruby:4.0.1"

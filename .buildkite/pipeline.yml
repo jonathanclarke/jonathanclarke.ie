@@ -1,6 +1,7 @@
 steps:
   - label: ":jekyll: Build & Audit"
     key: build
+    timeout_in_minutes: 20
     command:
       - bundle install --with ci --without development
       - bundle audit check --update
@@ -15,6 +16,7 @@ steps:
   - label: ":mag: HTML Validation"
     key: html-validation
     depends_on: build
+    timeout_in_minutes: 20
     command:
       - buildkite-agent artifact download _site.tar.gz .
       - tar xzf _site.tar.gz

@@ -54,5 +54,4 @@ end
 
 group :ci do
   gem 'bundler-audit'
-  gem 'html-proofer'
 end

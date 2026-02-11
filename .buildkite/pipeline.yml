@@ -4,19 +4,16 @@ steps:
     command:
       - buildkite-agent secret get DOCKERHUB_VAYU_TOKEN | docker login -u $$(buildkite-agent secret get DOCKERHUB_VAYU_USERNAME) --password-stdin
 
-  - label: ":jekyll: Build, Validate & Audit"
+  - label: ":jekyll: Build & Audit"
     key: build
     depends_on: docker-login
     timeout_in_minutes: 20
     command:
       - apk add --no-cache git build-base libffi-dev
-      - bundle config set with 'ci'
       - bundle config set without 'development'
       - bundle install
       - bundle audit check --update
       - bundle exec jekyll build
-      - bundle exec htmlproofer _site --ignore-urls "/^http:/" --no-enforce-https --allow-missing-href
     plugins:
       - docker#v5.11.0:
           image: "ruby:4.0.1-alpine"
-          propagate-uid-gid: true

@@ -1,4 +1,4 @@
-ruby '3.3.6'
+ruby '4.0.1'
 source 'https://rubygems.org'
 
 # Hello! This is where you manage which Jekyll version is used to run.
@@ -9,6 +9,13 @@ source 'https://rubygems.org'
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
+# Gems extracted from stdlib in Ruby 4.0
+gem 'logger'
+gem 'ostruct'
+gem 'csv'
+gem 'base64'
+gem 'bigdecimal'
+
 gem 'jekyll', '4.3.3'
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.

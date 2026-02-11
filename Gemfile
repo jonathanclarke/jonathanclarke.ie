@@ -51,3 +51,7 @@ group :development do
   gem 'mastodon-api'
   gem 'openssl', '4.0.0'
 end
+
+group :ci do
+  gem 'bundler-audit'
+end

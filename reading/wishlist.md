@@ -4,7 +4,21 @@ title: My reading wishlist
 permalink: /reading/wishlist
 ---
 
-My wishlist is a curated mix of books - some recommended by friends, others discovered through podcasts, blogs, or favorite authors. A few continue stories I’ve already begun, while others open doors to entirely new topics. Each one is an invitation to learn, feel, and explore something new.
+My wishlist is a curated mix of books - some recommended by friends, others discovered through podcasts, blogs, or favorite authors. A few continue stories I've already begun, while others open doors to entirely new topics. Each one is an invitation to learn, feel, and explore something new.
+
+- [The Way of Kings - Brandon Sanderson](https://www.goodreads.com/book/show/7235533-the-way-of-kings)
+
+- [Mistborn: The Final Empire - Brandon Sanderson](https://www.goodreads.com/book/show/68428.Mistborn)
+
+- [Dungeon Crawler Carl - Matt Dinniman](https://www.goodreads.com/book/show/56791389-dungeon-crawler-carl)
+
+- [The Lies of Locke Lamora - Scott Lynch](https://www.goodreads.com/book/show/29588376-the-lies-of-locke-lamora)
+
+- [Red Rising - Pierce Brown](https://www.goodreads.com/book/show/15839976-red-rising)
+
+- [Kings of the Wyld - Nicholas Eames](https://www.goodreads.com/book/show/30841984-kings-of-the-wyld)
+
+- [Empire of Silence - Christopher Ruocchio](https://www.goodreads.com/book/show/36454667-empire-of-silence)
 
 - [The Devils - Joe Abercrombie](https://en.wikipedia.org/wiki/The_Devils_(Abercrombie_novel))
 

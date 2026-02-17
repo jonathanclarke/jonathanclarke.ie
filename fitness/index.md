@@ -9,7 +9,7 @@ pagination:
   permalink: '/fitness/page/:num/'
   sort_field: 'date'
   sort_reverse: true
-fitness_session_count_2026: 24
+fitness_session_count_2026: 25
 fitness_target_count_2026: 300
  
 ---
@@ -18,4 +18,4 @@ This is the index page for all fitness related posts.  I'm attempting to complet
 
 You can follow along with my fitness journey by subscribing to my [fitness rss feed](https://www.jonathanclarke.ie/feed/fitness.xml).
 
-I've managed to complete {{ page.fitness_session_count_2026 }} out of {{ page.fitness_target_count_2026 }} fitness sessions this year ({{ page.fitness_session_count_2026 | times: 100.0 | divided_by: page.fitness_target_count_2026 }}% of the way).
+I've managed to complete {{ page.fitness_session_count_2026 }} out of {{ page.fitness_target_count_2026 }} fitness sessions this year ({{ page.fitness_session_count_2026 | times: 100.0 | divided_by: page.fitness_target_count_2026 | round: 2 }}% of the way).

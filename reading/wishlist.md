@@ -28,8 +28,6 @@ My wishlist is a curated mix of books - some recommended by friends, others disc
 
 - [Berlin Noir - Philip Kerr](https://berniegunther.com/book/berlin_noir/)
 
-- [Before They Are Hanged - The First Law #2 - Joe Abercrombie](https://www.goodreads.com/book/show/902715.Before_They_Are_Hanged)
-
 - [Last Arguments of Kings - The First Law #3 - Joe Abercrombie](https://www.goodreads.com/book/show/944076.Last_Argument_of_Kings)
 
 - [The Stolen Queen - Fiona Davis](https://www.goodreads.com/book/show/211025454-the-stolen-queen)

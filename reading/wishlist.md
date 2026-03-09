@@ -88,4 +88,26 @@ My wishlist is a curated mix of books - some recommended by friends, others disc
 
 - [Hope is not a Strategy - Rick Page]()
 
-[Maintenance: Of Everything, Part One - Stewart Brand](https://press.stripe.com/maintenance-part-one)
+- [Maintenance: Of Everything, Part One - Stewart Brand](https://press.stripe.com/maintenance-part-one)
+
+* [King Leopold's Ghost](https://openlibrary.org/works/OL1955677W) – Adam Hochschild
+
+* [Killing Thatcher](https://openlibrary.org/works/OL29618588W) – Rory Carroll
+
+* [Mao: The Unknown Story](https://openlibrary.org/works/OL1615555W) – Jung Chang & Jon Halliday
+
+* [Fifth Sun: A New History of the Aztecs](https://openlibrary.org/works/OL20603700W) – Camilla Townsend
+
+* [Putin's People](https://openlibrary.org/works/OL21035048W) – Catherine Belton
+
+* [Say Nothing](https://openlibrary.org/works/OL20150917W) – Patrick Radden Keefe
+
+* [Bury My Heart at Wounded Knee](https://openlibrary.org/works/OL1521408W) – Dee Brown
+
+* [Stalin: The Court of the Red Tsar](https://openlibrary.org/works/OL1865942W) – Simon Sebag Montefiore
+
+* [Wild Swans](https://openlibrary.org/works/OL1615554W) – Jung Chang
+
+* [Stalingrad](https://openlibrary.org/works/OL23920W) – Antony Beevor
+
+* [Founder vs Investor]()

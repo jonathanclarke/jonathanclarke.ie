@@ -9,7 +9,7 @@ pagination:
   permalink: '/fitness/page/:num/'
   sort_field: 'date'
   sort_reverse: true
-fitness_session_count_2026: 25
+fitness_session_count_2026: 26
 fitness_target_count_2026: 300
  
 ---

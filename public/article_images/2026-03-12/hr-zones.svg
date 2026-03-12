@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif">
   <rect width="640" height="320" fill="#1a1d27" rx="8"/>
 
-  <text x="320" y="28" text-anchor="middle" fill="#e4e4e7" font-size="14" font-weight="600">Heart Rate Zone Distribution &mdash; Base Run, March 12</text>
+  <text x="320" y="28" text-anchor="middle" fill="#e4e4e7" font-size="14" font-weight="600">Heart Rate Zone Distribution &#x2014; Base Run, March 12</text>
 
   <!-- Y-axis label -->
   <text x="30" y="170" text-anchor="middle" fill="#9ca3af" font-size="11" transform="rotate(-90,30,170)">Minutes</text>

@@ -17,7 +17,7 @@ Three 1km intervals with a short cooldown. Heart rate climbed steadily from 126 
 
 The Garmin classed it as "Aerobic Base" with a training load of 67. No anaerobic contribution at all. Zero time in Zone 5. 81% of the session sat squarely in Zone 3. This is exactly the kind of boring, unglamorous work that compounds over weeks.
 
-![Heart Rate Zone Distribution](https://www.jonathanclarke.ie/public/article_images/2026-03-12/hr-zones.svg)
+![Heart Rate Zone Distribution](/public/article_images/2026-03-12/hr-zones.svg)
 
 ### The overreaching problem
 

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif">
+  <rect width="640" height="320" fill="#1a1d27" rx="8"/>
+
+  <text x="320" y="28" text-anchor="middle" fill="#e4e4e7" font-size="14" font-weight="600">Heart Rate Zone Distribution &mdash; Base Run, March 12</text>
+
+  <!-- Y-axis label -->
+  <text x="30" y="170" text-anchor="middle" fill="#9ca3af" font-size="11" transform="rotate(-90,30,170)">Minutes</text>
+
+  <!-- Y-axis ticks -->
+  <text x="60" y="60" text-anchor="end" fill="#9ca3af" font-size="10">20</text>
+  <line x1="65" y1="56" x2="590" y2="56" stroke="#2a2d3a" stroke-width="1"/>
+  <text x="60" y="106" text-anchor="end" fill="#9ca3af" font-size="10">15</text>
+  <line x1="65" y1="102" x2="590" y2="102" stroke="#2a2d3a" stroke-width="1"/>
+  <text x="60" y="152" text-anchor="end" fill="#9ca3af" font-size="10">10</text>
+  <line x1="65" y1="148" x2="590" y2="148" stroke="#2a2d3a" stroke-width="1"/>
+  <text x="60" y="198" text-anchor="end" fill="#9ca3af" font-size="10">5</text>
+  <line x1="65" y1="194" x2="590" y2="194" stroke="#2a2d3a" stroke-width="1"/>
+  <text x="60" y="244" text-anchor="end" fill="#9ca3af" font-size="10">0</text>
+  <line x1="65" y1="240" x2="590" y2="240" stroke="#2a2d3a" stroke-width="1"/>
+
+  <!-- Bars: scale = 9.2px per minute (240-56 = 184px for 20 min) -->
+
+  <!-- Zone 1: 0.5 min -->
+  <rect x="100" y="235" width="70" height="5" fill="#6b7280" rx="3"/>
+  <text x="135" y="230" text-anchor="middle" fill="#9ca3af" font-size="10">0.5m</text>
+
+  <!-- Zone 2: 2.8 min -->
+  <rect x="200" y="214" width="70" height="26" fill="#3b82f6" rx="3"/>
+  <text x="235" y="209" text-anchor="middle" fill="#93c5fd" font-size="10">2.8m</text>
+
+  <!-- Zone 3: 20.3 min - THIS IS THE BIG ONE -->
+  <rect x="300" y="53" width="70" height="187" fill="#22c55e" rx="3"/>
+  <text x="335" y="48" text-anchor="middle" fill="#4ade80" font-size="11" font-weight="600">20.3m</text>
+
+  <!-- Zone 4: 1.3 min -->
+  <rect x="400" y="228" width="70" height="12" fill="#f59e0b" rx="3"/>
+  <text x="435" y="223" text-anchor="middle" fill="#fbbf24" font-size="10">1.3m</text>
+
+  <!-- Zone 5: 0 min -->
+  <rect x="500" y="240" width="70" height="0" fill="#ef4444" rx="3"/>
+  <text x="535" y="235" text-anchor="middle" fill="#9ca3af" font-size="10">0m</text>
+
+  <!-- X-axis labels -->
+  <text x="135" y="260" text-anchor="middle" fill="#9ca3af" font-size="11">Zone 1</text>
+  <text x="135" y="273" text-anchor="middle" fill="#6b7280" font-size="9">91-108</text>
+  <text x="235" y="260" text-anchor="middle" fill="#9ca3af" font-size="11">Zone 2</text>
+  <text x="235" y="273" text-anchor="middle" fill="#6b7280" font-size="9">109-126</text>
+  <text x="335" y="260" text-anchor="middle" fill="#9ca3af" font-size="11">Zone 3</text>
+  <text x="335" y="273" text-anchor="middle" fill="#6b7280" font-size="9">127-144</text>
+  <text x="435" y="260" text-anchor="middle" fill="#9ca3af" font-size="11">Zone 4</text>
+  <text x="435" y="273" text-anchor="middle" fill="#6b7280" font-size="9">145-162</text>
+  <text x="535" y="260" text-anchor="middle" fill="#9ca3af" font-size="11">Zone 5</text>
+  <text x="535" y="273" text-anchor="middle" fill="#6b7280" font-size="9">163+</text>
+
+  <!-- Percentage callout -->
+  <rect x="370" y="290" width="250" height="22" fill="#22c55e" fill-opacity="0.15" rx="4"/>
+  <text x="495" y="305" text-anchor="middle" fill="#4ade80" font-size="11" font-weight="600">81% of session in Zone 3 (Aerobic)</text>
+</svg>

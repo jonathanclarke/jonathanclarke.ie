@@ -1,7 +1,7 @@
 ---
 layout: fitness_post
-title: "Day 33 of 300: Sunday League and the Load Ratio Bomb"
-excerpt: "Day 33 of 300: Sunday football.  Won 5-4.  Burned 1,210 calories, maxed the training effect at 5.0/5.0, and blew the load ratio from optimal back to 2.8x overreaching in a single session.  Body battery hit 5.  Worth it."
+title: "Day 32 of 300: Sunday League and the Load Ratio Bomb"
+excerpt: "Day 32 of 300: Sunday football.  Won 5-4.  Burned 1,210 calories, maxed the training effect at 5.0/5.0, and blew the load ratio from optimal back to 2.8x overreaching in a single session.  Body battery hit 5.  Worth it."
 date: 2026-03-22
 ---
 

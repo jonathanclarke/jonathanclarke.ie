@@ -24,8 +24,6 @@ My wishlist is a curated mix of books - some recommended by friends, others disc
 
 - [The Broken Shore - Peter Temple](https://en.wikipedia.org/wiki/The_Broken_Shore_(novel))
 
-- [Touching the void - Joe Simpson](https://en.wikipedia.org/wiki/Touching_the_Void_(book))
-
 - [Berlin Noir - Philip Kerr](https://berniegunther.com/book/berlin_noir/)
 
 - [Last Arguments of Kings - The First Law #3 - Joe Abercrombie](https://www.goodreads.com/book/show/944076.Last_Argument_of_Kings)

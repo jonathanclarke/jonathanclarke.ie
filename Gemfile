@@ -50,6 +50,7 @@ gem 'jekyll-seo-tag'
 group :development do
   gem 'mastodon-api'
   gem 'openssl', '4.0.0'
+  gem 'posthog-ruby'
 end
 
 group :ci do

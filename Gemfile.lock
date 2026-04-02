@@ -102,6 +102,8 @@ GEM
     ostruct (0.6.3)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
+    posthog-ruby (3.6.1)
+      concurrent-ruby (~> 1)
     public_suffix (7.0.5)
     puma (7.2.0)
       nio4r (~> 2.0)
@@ -143,6 +145,7 @@ DEPENDENCIES
   minima!
   openssl (= 4.0.0)
   ostruct
+  posthog-ruby
   puma
   rack-jekyll!
   rack-ssl-enforcer

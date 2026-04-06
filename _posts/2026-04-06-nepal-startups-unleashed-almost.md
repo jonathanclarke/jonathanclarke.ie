@@ -49,3 +49,7 @@ If this is what the first 30 days look like, the question is what the next 5 yea
 For the freelancers and Silicon Peaks startups who have been rationing their dollar allocation across twelve months, the ceiling just got a lot higher.
 
 Now do Stripe.
+
+---
+
+[Join the conversation on LinkedIn](https://www.linkedin.com/posts/activity-7446824657502244864-4yfX?utm_source=jonathanclarke.ie&utm_medium=blog&utm_campaign=nepal-startups-unleashed&utm_content=post-footer-cta)

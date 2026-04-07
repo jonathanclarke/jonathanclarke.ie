@@ -24,9 +24,6 @@ My wishlist is a curated mix of books - some recommended by friends, others disc
 
 - [The Broken Shore - Peter Temple](https://en.wikipedia.org/wiki/The_Broken_Shore_(novel))
 
-- [Berlin Noir - Philip Kerr](https://berniegunther.com/book/berlin_noir/)
-
-- [Last Arguments of Kings - The First Law #3 - Joe Abercrombie](https://www.goodreads.com/book/show/944076.Last_Argument_of_Kings)
 
 - [The Stolen Queen - Fiona Davis](https://www.goodreads.com/book/show/211025454-the-stolen-queen)
 
@@ -108,4 +105,10 @@ My wishlist is a curated mix of books - some recommended by friends, others disc
 
 * [Stalingrad](https://openlibrary.org/works/OL23920W) – Antony Beevor
 
-* [Founder vs Investor]()
+* [Made in Nepal - Binod Chaudhary]()
+
+* [Nepal 2043 Sujeev Shakya]()
+
+* [The Apocalypse - Deva Prakash Tripathi]()
+
+* [Timmur cookbook]()

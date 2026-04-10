@@ -58,4 +58,8 @@ layout: base
 
   {%- endif -%}
 
+  {% if paginator.page == 1 or paginator == nil %}
+    {% include currently_reading.html %}
+  {% endif %}
+
 </div>

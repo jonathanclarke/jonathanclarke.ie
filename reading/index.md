@@ -8,6 +8,10 @@ Reading expands our knowledge and vocabulary, enhances critical thinking and ana
 
 This year and every single year I'm determined to incorporate reading into my daily routine to lead a fulfilling life. So grab a book and start reading today.
 
+{% include currently_reading.html %}
+
+## By year
+
 [2026](/reading/2026) (10),
 [2025](/reading/2025) (26),
 [2024](/reading/2024) (11),

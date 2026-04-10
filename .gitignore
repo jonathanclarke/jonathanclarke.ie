@@ -6,5 +6,6 @@ _site
 .sass-cache
 .DS_Store
 reading/#*#
+#*#
 /.env
 .env

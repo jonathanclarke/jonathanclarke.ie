@@ -4,5 +4,5 @@ steps:
     timeout_in_minutes: 10
     command:
       - mise install
-      - bundle install
-      - bundle exec jekyll build
+      - mise exec -- bundle install
+      - mise exec -- bundle exec jekyll build

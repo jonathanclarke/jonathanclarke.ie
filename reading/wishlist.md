@@ -363,3 +363,5 @@ Sorted from what to pick up next down to what can wait. Short, high-signal wins 
     <p>Selling to VITO<br>Anthony Parinello</p>
   </a>
 </div>
+
+The Wizard of the Kremlin - Giuliano da Empoli

@@ -12,7 +12,7 @@ This year and every single year I'm determined to incorporate reading into my da
 
 ## By year
 
-[2026](/reading/2026) (10),
+[2026](/reading/2026) (12),
 [2025](/reading/2025) (26),
 [2024](/reading/2024) (11),
 [2023](/reading/2023) (11),

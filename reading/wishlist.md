@@ -66,10 +66,6 @@ Sorted from what to pick up next down to what can wait. Short, high-signal wins 
     <img src="/public/images/books/lies-of-locke-lamora.webp" alt="The Lies of Locke Lamora - Scott Lynch" title="The Lies of Locke Lamora - Scott Lynch">
     <p>The Lies of Locke Lamora<br>Scott Lynch</p>
   </a>
-  <a href="https://openlibrary.org/works/OL23020966W" class="book-card" target="_blank" rel="noopener noreferrer">
-    <img src="/public/images/books/small-things-like-these.webp" alt="Small Things Like These - Claire Keegan" title="Small Things Like These - Claire Keegan">
-    <p>Small Things Like These<br>Claire Keegan</p>
-  </a>
   <a href="https://openlibrary.org/works/OL20153382W" class="book-card" target="_blank" rel="noopener noreferrer">
     <img src="/public/images/books/say-nothing.webp" alt="Say Nothing - Patrick Radden Keefe" title="Say Nothing - Patrick Radden Keefe">
     <p>Say Nothing<br>Patrick Radden Keefe</p>

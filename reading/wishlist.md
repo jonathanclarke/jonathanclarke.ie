@@ -214,10 +214,6 @@ Sorted from what to pick up next down to what can wait. Short, high-signal wins 
     <img src="/public/images/books/the-broken-shore.webp" alt="The Broken Shore - Peter Temple" title="The Broken Shore - Peter Temple">
     <p>The Broken Shore<br>Peter Temple</p>
   </a>
-  <a href="https://openlibrary.org/works/OL42401064W" class="book-card" target="_blank" rel="noopener noreferrer">
-    <img src="/public/images/books/everything-is-tuberculosis.webp" alt="Everything Is Tuberculosis - John Green" title="Everything Is Tuberculosis - John Green">
-    <p>Everything Is Tuberculosis<br>John Green</p>
-  </a>
   <a href="https://openlibrary.org/works/OL5095956W" class="book-card" target="_blank" rel="noopener noreferrer">
     <img src="/public/images/books/dove.webp" alt="Dove - Robin Lee Graham" title="Dove - Robin Lee Graham">
     <p>Dove<br>Robin Lee Graham</p>

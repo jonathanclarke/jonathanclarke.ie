@@ -88,3 +88,7 @@ This product gives them an official path. That is worth something. But "official
 Someone from Khalti: publish the fee breakdown. Full numbers, worked example, exchange rate methodology. Do it this week. The freelancers asking are not looking for a reason to complain. They are trying to decide whether to change how they run their business. Everything else is noise.
 
 And Stripe: if this is a product you are standing behind, say so publicly. A payment infrastructure for a billion-dollar IT export economy probably deserves more than silence.
+
+---
+
+[Continue the conversation on LinkedIn.](https://www.linkedin.com/pulse/khalti-says-stripe-nothing-nobody-knows-fees-jonathan-clarke-3wz6c/)

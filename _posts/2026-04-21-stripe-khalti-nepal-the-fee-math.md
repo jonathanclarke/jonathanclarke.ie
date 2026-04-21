@@ -8,7 +8,7 @@ image: https://www.jonathanclarke.ie/public/article_images/2026-04-21/khalti-str
 
 ![Khalti and Stripe in Nepal](https://www.jonathanclarke.ie/public/article_images/2026-04-21/khalti-stripe-nepal.webp)
 
-A few weeks ago I ended a post about Nepal's payment infrastructure with three words: "Now do Stripe."
+A few weeks ago I ended [a post about Nepal's payment infrastructure](/2026/04/06/nepal-startups-unleashed-almost/) with three words: "Now do Stripe."
 
 Consider that wish granted. Kind of.
 

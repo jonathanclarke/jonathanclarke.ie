@@ -5,7 +5,7 @@ excerpt: "Facebook locked me out on November 18 2025. Their appeals process said
 date: "2026-03-09"
 ---
 
-![Locked out of Facebook](https://www.jonathanclarke.ie/public/article_images/2026-03-09/facebook.jpg)
+![Locked out of Facebook](https://www.jonathanclarke.ie/public/article_images/2026-03-09/facebook.webp)
 
 On November 18, 2025, Facebook locked me out of my account.
 

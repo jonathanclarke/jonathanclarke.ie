@@ -3,7 +3,7 @@ layout: post
 title: "Some thoughts on GitHub Copilot - Your AI pair programmer"
 excerpt: "Today marked the technical preview of GitHub Copilot.  It's something I've long been expecting ever since Microsoft acquired GitHub for $7.5 billion."
 date:   "2021-06-30"
-cover_image: "https://www.jonathanclarke.ie/public/article_images/2021-06-30-copilot/how-it-works.png"
+cover_image: "https://www.jonathanclarke.ie/public/article_images/2021-06-30-copilot/how-it-works.webp"
 ---
 
 Today marked the technical preview of [GitHub Copilot - Your AI pair programmer](https://copilot.github.com/).  It's something I've long been expecting ever since Microsoft acquired GitHub for $7.5 billion.
@@ -14,7 +14,7 @@ Microsoft has always been a tools company, operating systems and spreadsheets be
 
 GitHub partnered with OpenAI to build Copilot.  OpenAI published GPT-3, the largest language model ever trained. GPT-3 has 175 billion parameters and would require 355 years and $4,600,000 to train.  Copilot is the next iteration of GPT-3 focused on code rather than natural language.
 
-![How Co-pilot works](/public/article_images/2021-06-30-copilot/how-it-works.png)
+![How Co-pilot works](/public/article_images/2021-06-30-copilot/how-it-works.webp)
 
 The features of Copilot are really impressive.
 

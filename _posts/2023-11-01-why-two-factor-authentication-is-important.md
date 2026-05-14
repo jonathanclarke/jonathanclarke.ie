@@ -3,7 +3,7 @@ layout: post
 title: "Hey Facebook, Two factor authentication is still important"
 excerpt: "In the latest swing of the 'convenience versus security' pendulum, Facebook seems poised to let users disable two-factor authentication (2FA) on certain devices, potentially undermining the bedrock of account security. What are they thinking?"
 date:   "2023-11-01"
-cover_image: "https://www.jonathanclarke.ie/public/article_images/2023-11-01/2023-11-01-thief-paper-door.png"
+cover_image: "https://www.jonathanclarke.ie/public/article_images/2023-11-01/2023-11-01-thief-paper-door.webp"
 ---
 
 I rarely use Facebook.  On the 5th July 2019 I removed all of my friends from my account and became officially friendless.  I maintain a presence however to manage apps for some hobby projects as well as a point of contact for distant family relatives who seem to have no idea on how to use WhatsApp.

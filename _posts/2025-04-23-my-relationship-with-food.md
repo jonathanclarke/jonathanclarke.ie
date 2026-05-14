@@ -3,7 +3,7 @@ layout: post
 title: "Rewriting My Relationship with Food"
 excerpt: "Growing up, I was a skinny kid; wearing oversized t-shirts, and a metabolism that ran like a greyhound. That all changed when we moved villages, landing in a place where my family ran an Irish pub and restaurant. Food was everywhere. Chips with everything. Rich stock in the gravy. Deep-fried this and farmer-portioned that. Slowly but surely, I started gaining weight - not out of neglect, but out of proximity.  The food was often healthy but the portion sizes enormous. Ketchup on all the things, I ate everything at all times."
 date:   "2025-04-23"
-cover_image: "https://www.jonathanclarke.ie/public/article_images/2025-04-23/2025-04-23-my-relationship-with-food.png"
+cover_image: "https://www.jonathanclarke.ie/public/article_images/2025-04-23/2025-04-23-my-relationship-with-food.webp"
 ---
 
 
@@ -16,7 +16,7 @@ Then came the return to Ireland. And with it, depression. The comfort of home wa
 
 Australia was next. A new country, a new pace. I dropped 10kg in the first few months simply from walking everywhere. commuting across the city.  Alas convenience always finds a way, I found taxis, buses, and shortcuts. Weight crept back in; this time with vengeance topping out at 118kg.  Stress of working full time with a full time university commitment added to the pile.  A decade ago, I relocated to Nepal, where I developed a deep love for offal, simi, lentils, and mutton. That culinary enthusiasm led to a full-blown bout of gout; a painful reminder that even well-seasoned habits can come at a cost.
 
-![My relationship with food](https://www.jonathanclarke.ie/public/article_images/2025-04-23/2025-04-23-my-relationship-with-food.png "My relationship with food")
+![My relationship with food](https://www.jonathanclarke.ie/public/article_images/2025-04-23/2025-04-23-my-relationship-with-food.webp "My relationship with food")
 
 Last year, something shifted. I discovered intermittent fasting. At first, it was curiosity, then commitment. I tried 16:8, then 18:6. One Meal a Day (OMAD) became an occasional friend. I even completed 2-day and 3-day fasts. And then a 5-day one. I dropped 14kg in a few months. I felt sharper, lighter - not just in body, but in mind.  All of my old suits were loose dramatically so.
 

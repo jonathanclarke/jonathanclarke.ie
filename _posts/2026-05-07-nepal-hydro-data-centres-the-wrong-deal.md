@@ -61,6 +61,7 @@ Rumours of further investment interest are circulating as I write this.  The fir
 8. [Microsoft denies the UN Special Rapporteur access to their data centre facility in Dublin](https://www.friendsoftheearth.ie/news/microsoft-denies-the-un-special-rapporteur-access-to-their-d/) - Friends of the Earth Ireland
 
 9. [Nepal's IT exports near $1 billion. Can the momentum be sustained?](https://kathmandupost.com/national/2026/02/25/nepal-s-it-exports-near-1-billion-can-the-momentum-be-sustained) - Kathmandu Post, February 2026
+
 ---
 
 [Continue the conversation on LinkedIn.](https://www.linkedin.com/pulse/who-actually-benefits-when-nepal-sells-hydro-silicon-valley-clarke-4jync/)

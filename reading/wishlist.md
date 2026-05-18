@@ -194,10 +194,6 @@ Sorted from what to pick up next down to what can wait. Short, high-signal wins 
     <img src="/public/images/books/how-to-win-friends.webp" alt="How to Win Friends and Influence People - Dale Carnegie" title="How to Win Friends and Influence People - Dale Carnegie">
     <p>How to Win Friends and Influence People<br>Dale Carnegie</p>
   </a>
-  <a href="https://openlibrary.org/works/OL28521353W" class="book-card" target="_blank" rel="noopener noreferrer">
-    <img src="/public/images/books/meditations.webp" alt="Meditations - Marcus Aurelius" title="Meditations - Marcus Aurelius">
-    <p>Meditations<br>Marcus Aurelius</p>
-  </a>
   <a href="https://openlibrary.org/works/OL8514692W" class="book-card" target="_blank" rel="noopener noreferrer">
     <img src="/public/images/books/blindsight.webp" alt="Blindsight - Peter Watts" title="Blindsight - Peter Watts">
     <p>Blindsight<br>Peter Watts</p>

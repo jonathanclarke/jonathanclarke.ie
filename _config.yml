@@ -63,6 +63,13 @@ collections:
     output: true
     permalink: /fitness/:year/:month/:day/:title.html
 
+defaults:
+  - scope:
+      path: ""
+      type: "fitness"
+    values:
+      image: https://www.jonathanclarke.ie/public/article_images/fitness-post.webp
+
 feed:
   author: Jonathan Clarke
   collections:

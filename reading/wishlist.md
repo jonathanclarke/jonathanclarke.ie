@@ -66,6 +66,10 @@ Sorted from what to pick up next down to what can wait. Short, high-signal wins 
     <img src="/public/images/books/lies-of-locke-lamora.webp" alt="The Lies of Locke Lamora - Scott Lynch" title="The Lies of Locke Lamora - Scott Lynch">
     <p>The Lies of Locke Lamora<br>Scott Lynch</p>
   </a>
+  <a href="https://openlibrary.org/works/OL1019598W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/my-name-is-red.webp" alt="My Name Is Red - Orhan Pamuk" title="My Name Is Red - Orhan Pamuk">
+    <p>My Name Is Red<br>Orhan Pamuk</p>
+  </a>
   <a href="https://openlibrary.org/works/OL20153382W" class="book-card" target="_blank" rel="noopener noreferrer">
     <img src="/public/images/books/say-nothing.webp" alt="Say Nothing - Patrick Radden Keefe" title="Say Nothing - Patrick Radden Keefe">
     <p>Say Nothing<br>Patrick Radden Keefe</p>
@@ -177,6 +181,10 @@ Sorted from what to pick up next down to what can wait. Short, high-signal wins 
   <a href="https://openlibrary.org/works/OL20125074W" class="book-card" target="_blank" rel="noopener noreferrer">
     <img src="/public/images/books/super-pumped.webp" alt="Super Pumped - Mike Isaac" title="Super Pumped - Mike Isaac">
     <p>Super Pumped<br>Mike Isaac</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL3741565W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/the-cuckoos-egg.webp" alt="The Cuckoo's Egg - Cliff Stoll" title="The Cuckoo's Egg - Cliff Stoll">
+    <p>The Cuckoo's Egg<br>Cliff Stoll</p>
   </a>
   <a href="https://openlibrary.org/works/OL16149072W" class="book-card" target="_blank" rel="noopener noreferrer">
     <img src="/public/images/books/good-strategy-bad-strategy.webp" alt="Good Strategy Bad Strategy - Richard Rumelt" title="Good Strategy Bad Strategy - Richard Rumelt">

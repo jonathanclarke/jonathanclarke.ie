@@ -358,6 +358,14 @@ Sorted from what to pick up next down to what can wait. Short, high-signal wins 
     <img src="/public/images/books/selling-to-vito.webp" alt="Selling to VITO - Anthony Parinello" title="Selling to VITO - Anthony Parinello">
     <p>Selling to VITO<br>Anthony Parinello</p>
   </a>
+  <a href="https://openlibrary.org/works/OL5756579W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/how-to-get-rich.webp" alt="How to Get Rich - Felix Dennis" title="How to Get Rich - Felix Dennis">
+    <p>How to Get Rich<br>Felix Dennis</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL11962371W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/personal-development-smart-people.webp" alt="Personal Development for Smart People - Steve Pavlina" title="Personal Development for Smart People - Steve Pavlina">
+    <p>Personal Development for Smart People<br>Steve Pavlina</p>
+  </a>
 </div>
 
 The Wizard of the Kremlin - Giuliano da Empoli

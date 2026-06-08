@@ -423,6 +423,8 @@ Sorted from what to pick up next down to what can wait. Short, high-signal wins 
     <div class="cover-placeholder">21 Lessons</div>
     <p>21 Lessons<br>Gigi</p>
   </a>
+  <a href="https://openlibrary.org/works/OL27769936W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <div class="cover-placeholder">The Wizard of the Kremlin</div>
+    <p>The Wizard of the Kremlin<br>Giuliano da Empoli</p>
+  </a>
 </div>
-
-The Wizard of the Kremlin - Giuliano da Empoli

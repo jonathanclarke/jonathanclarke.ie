@@ -230,10 +230,7 @@ Sorted from what to pick up next down to what can wait. Short, high-signal wins 
     <img src="/public/images/books/bury-my-heart.webp" alt="Bury My Heart at Wounded Knee - Dee Brown" title="Bury My Heart at Wounded Knee - Dee Brown">
     <p>Bury My Heart at Wounded Knee<br>Dee Brown</p>
   </a>
-  <a href="https://openlibrary.org/works/OL42397860W" class="book-card" target="_blank" rel="noopener noreferrer">
-    <img src="/public/images/books/katabasis.webp" alt="Katabasis - R.F. Kuang" title="Katabasis - R.F. Kuang">
-    <p>Katabasis<br>R.F. Kuang</p>
-  </a>
+
   <a href="https://openlibrary.org/works/OL17192599W" class="book-card" target="_blank" rel="noopener noreferrer">
     <img src="/public/images/books/astonish-me.webp" alt="Astonish Me - Maggie Shipstead" title="Astonish Me - Maggie Shipstead">
     <p>Astonish Me<br>Maggie Shipstead</p>
@@ -365,6 +362,66 @@ Sorted from what to pick up next down to what can wait. Short, high-signal wins 
   <a href="https://openlibrary.org/works/OL11962371W" class="book-card" target="_blank" rel="noopener noreferrer">
     <img src="/public/images/books/personal-development-smart-people.webp" alt="Personal Development for Smart People - Steve Pavlina" title="Personal Development for Smart People - Steve Pavlina">
     <p>Personal Development for Smart People<br>Steve Pavlina</p>
+  </a>
+  <a href="https://www.cypherpunkbooks.com/collection" class="book-card" target="_blank" rel="noopener noreferrer">
+    <div class="cover-placeholder">A Cypherpunk's Manifesto</div>
+    <p>A Cypherpunk's Manifesto<br>Eric Hughes</p>
+  </a>
+  <a href="https://www.cypherpunkbooks.com/collection" class="book-card" target="_blank" rel="noopener noreferrer">
+    <div class="cover-placeholder">The Crypto Anarchist Manifesto</div>
+    <p>The Crypto Anarchist Manifesto<br>Timothy C. May</p>
+  </a>
+  <a href="https://www.cypherpunkbooks.com/collection" class="book-card" target="_blank" rel="noopener noreferrer">
+    <div class="cover-placeholder">A Declaration of the Independence of Cyberspace</div>
+    <p>A Declaration of the Independence of Cyberspace<br>John Perry Barlow</p>
+  </a>
+  <a href="https://www.cypherpunkbooks.com/collection" class="book-card" target="_blank" rel="noopener noreferrer">
+    <div class="cover-placeholder">Your Secret Right to Cash</div>
+    <p>Your Secret Right to Cash<br>Peter Van Valkenburgh</p>
+  </a>
+  <a href="https://www.cypherpunkbooks.com/collection" class="book-card" target="_blank" rel="noopener noreferrer">
+    <div class="cover-placeholder">The Praxeology of Privacy</div>
+    <p>The Praxeology of Privacy<br>Max Hildebrand</p>
+  </a>
+  <a href="https://www.cypherpunkbooks.com/collection" class="book-card" target="_blank" rel="noopener noreferrer">
+    <div class="cover-placeholder">Of Cypherpunks and Sousveillance</div>
+    <p>Of Cypherpunks and Sousveillance<br>Patrick Anderson</p>
+  </a>
+  <a href="https://www.cypherpunkbooks.com/collection" class="book-card" target="_blank" rel="noopener noreferrer">
+    <div class="cover-placeholder">Protecting Privacy with Electronic Cash</div>
+    <p>Protecting Privacy with Electronic Cash<br>Hal Finney</p>
+  </a>
+  <a href="https://www.cypherpunkbooks.com/collection" class="book-card" target="_blank" rel="noopener noreferrer">
+    <div class="cover-placeholder">Why I Wrote PGP</div>
+    <p>Why I Wrote PGP<br>Philip Zimmermann</p>
+  </a>
+  <a href="https://www.cypherpunkbooks.com/collection" class="book-card" target="_blank" rel="noopener noreferrer">
+    <div class="cover-placeholder">Definition of Democratic Civilization</div>
+    <p>Definition of Democratic Civilization<br>Abdullah &Ouml;calan</p>
+  </a>
+  <a href="https://www.cypherpunkbooks.com/collection" class="book-card" target="_blank" rel="noopener noreferrer">
+    <div class="cover-placeholder">The Conscience of a Hacker</div>
+    <p>The Conscience of a Hacker<br>Loyd Blankenship</p>
+  </a>
+  <a href="https://www.cypherpunkbooks.com/collection" class="book-card" target="_blank" rel="noopener noreferrer">
+    <div class="cover-placeholder">The Cyphernomicon</div>
+    <p>The Cyphernomicon<br>Timothy C. May</p>
+  </a>
+  <a href="https://www.cypherpunkbooks.com/collection" class="book-card" target="_blank" rel="noopener noreferrer">
+    <div class="cover-placeholder">Meditations on Cypherpunk Nightmares</div>
+    <p>Meditations on Cypherpunk Nightmares<br>Michael Goldstein</p>
+  </a>
+  <a href="https://www.cypherpunkbooks.com/collection" class="book-card" target="_blank" rel="noopener noreferrer">
+    <div class="cover-placeholder">T.A.Z.</div>
+    <p>T.A.Z.<br>Hakim Bey</p>
+  </a>
+  <a href="https://www.cypherpunkbooks.com/collection" class="book-card" target="_blank" rel="noopener noreferrer">
+    <div class="cover-placeholder">The Beauty of eCash</div>
+    <p>The Beauty of eCash<br>Hal Finney</p>
+  </a>
+  <a href="https://www.cypherpunkbooks.com/collection" class="book-card" target="_blank" rel="noopener noreferrer">
+    <div class="cover-placeholder">21 Lessons</div>
+    <p>21 Lessons<br>Gigi</p>
   </a>
 </div>
 

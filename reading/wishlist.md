@@ -427,4 +427,114 @@ Sorted from what to pick up next down to what can wait. Short, high-signal wins 
     <div class="cover-placeholder">The Wizard of the Kremlin</div>
     <p>The Wizard of the Kremlin<br>Giuliano da Empoli</p>
   </a>
+
+  <!-- Irish history (historychronicler.com) -->
+  <a href="https://openlibrary.org/works/OL2947167W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/modern-ireland.webp" alt="Modern Ireland: 1600-1972 - R. F. Foster" title="Modern Ireland: 1600-1972 - R. F. Foster">
+    <p>Modern Ireland: 1600-1972<br>R. F. Foster</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL15536357W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/ireland-a-history.webp" alt="Ireland: A History - Thomas Bartlett" title="Ireland: A History - Thomas Bartlett">
+    <p>Ireland: A History<br>Thomas Bartlett</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL1986759W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/transformation-of-ireland.webp" alt="The Transformation of Ireland - Diarmaid Ferriter" title="The Transformation of Ireland - Diarmaid Ferriter">
+    <p>The Transformation of Ireland<br>Diarmaid Ferriter</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL22318349W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/nation-not-a-rabble.webp" alt="A Nation and Not a Rabble - Diarmaid Ferriter" title="A Nation and Not a Rabble - Diarmaid Ferriter">
+    <p>A Nation and Not a Rabble<br>Diarmaid Ferriter</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL27634W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/angelas-ashes.webp" alt="Angela's Ashes - Frank McCourt" title="Angela's Ashes - Frank McCourt">
+    <p>Angela's Ashes<br>Frank McCourt</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL273141W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/great-hunger.webp" alt="The Great Hunger - Cecil Woodham-Smith" title="The Great Hunger - Cecil Woodham-Smith">
+    <p>The Great Hunger<br>Cecil Woodham-Smith</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL16585607W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/graves-are-walking.webp" alt="The Graves Are Walking - John Kelly" title="The Graves Are Walking - John Kelly">
+    <p>The Graves Are Walking<br>John Kelly</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL17767855W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/the-wonder.webp" alt="The Wonder - Emma Donoghue" title="The Wonder - Emma Donoghue">
+    <p>The Wonder<br>Emma Donoghue</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL918901W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/making-sense-troubles.webp" alt="Making Sense of the Troubles - McKittrick & McVea" title="Making Sense of the Troubles - McKittrick & McVea">
+    <p>Making Sense of the Troubles<br>McKittrick &amp; McVea</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL1915532W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/great-irish-famine.webp" alt="The Great Irish Famine - Cormac Ó Gráda" title="The Great Irish Famine - Cormac Ó Gráda">
+    <p>The Great Irish Famine<br>Cormac Ó Gráda</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL2227933W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/armed-struggle.webp" alt="Armed Struggle: The History of the IRA - Richard English" title="Armed Struggle: The History of the IRA - Richard English">
+    <p>Armed Struggle: The History of the IRA<br>Richard English</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL12069365W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/the-ira.webp" alt="The IRA: A History - Tim Pat Coogan" title="The IRA: A History - Tim Pat Coogan">
+    <p>The IRA: A History<br>Tim Pat Coogan</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL13658987W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/easter-1916.webp" alt="Easter 1916: The Irish Rebellion - Charles Townshend" title="Easter 1916: The Irish Rebellion - Charles Townshend">
+    <p>Easter 1916: The Irish Rebellion<br>Charles Townshend</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL261903W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/star-of-the-sea.webp" alt="Star of the Sea - Joseph O'Connor" title="Star of the Sea - Joseph O'Connor">
+    <p>Star of the Sea<br>Joseph O'Connor</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL7970770W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/irish-story.webp" alt="The Irish Story - R. F. Foster" title="The Irish Story - R. F. Foster">
+    <p>The Irish Story<br>R. F. Foster</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL3264872W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/easter-rising-guide.webp" alt="The Easter Rising: A Guide to Dublin in 1916 - Kostick & Collins" title="The Easter Rising: A Guide to Dublin in 1916 - Kostick & Collins">
+    <p>The Easter Rising: A Guide to Dublin in 1916<br>Kostick &amp; Collins</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL20674315W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/good-people.webp" alt="The Good People - Hannah Kent" title="The Good People - Hannah Kent">
+    <p>The Good People<br>Hannah Kent</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL3045871W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/michael-collins.webp" alt="Michael Collins: A Biography - Tim Pat Coogan" title="Michael Collins: A Biography - Tim Pat Coogan">
+    <p>Michael Collins: A Biography<br>Tim Pat Coogan</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL21074127W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <div class="cover-placeholder">The Republic</div>
+    <p>The Republic<br>Charles Townshend</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL2647292W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/princes-of-ireland.webp" alt="The Princes of Ireland - Edward Rutherfurd" title="The Princes of Ireland - Edward Rutherfurd">
+    <p>The Princes of Ireland<br>Edward Rutherfurd</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL14847880W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/trinity.webp" alt="Trinity - Leon Uris" title="Trinity - Leon Uris">
+    <p>Trinity<br>Leon Uris</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL2694533W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/troubles.webp" alt="Troubles - J. G. Farrell" title="Troubles - J. G. Farrell">
+    <p>Troubles<br>J. G. Farrell</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL20167677W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/twelve-apostles.webp" alt="The Twelve Apostles - Tim Pat Coogan" title="The Twelve Apostles - Tim Pat Coogan">
+    <p>The Twelve Apostles<br>Tim Pat Coogan</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL2647294W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/rebels-of-ireland.webp" alt="The Rebels of Ireland - Edward Rutherfurd" title="The Rebels of Ireland - Edward Rutherfurd">
+    <p>The Rebels of Ireland<br>Edward Rutherfurd</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL21156025W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/short-history-ireland.webp" alt="A Short History of Ireland, 1500-2000 - John Gibney" title="A Short History of Ireland, 1500-2000 - John Gibney">
+    <p>A Short History of Ireland, 1500-2000<br>John Gibney</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL5466269W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/irish-civil-war.webp" alt="Ireland's Civil War - Calton Younger" title="Ireland's Civil War - Calton Younger">
+    <p>Ireland's Civil War<br>Calton Younger</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL3617042W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/green-flag.webp" alt="The Green Flag - Robert Kee" title="The Green Flag - Robert Kee">
+    <p>The Green Flag<br>Robert Kee</p>
+  </a>
 </div>

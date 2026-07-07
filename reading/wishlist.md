@@ -259,10 +259,6 @@ Sorted from what to pick up next down to what can wait. Short, high-signal wins 
     <img src="/public/images/books/gambling-man.webp" alt="Gambling Man - Lionel Barber" title="Gambling Man - Lionel Barber">
     <p>Gambling Man<br>Lionel Barber</p>
   </a>
-  <a href="https://openlibrary.org/works/OL1079359W" class="book-card" target="_blank" rel="noopener noreferrer">
-    <img src="/public/images/books/banker-to-the-poor.webp" alt="Banker to the Poor - Muhammad Yunus" title="Banker to the Poor - Muhammad Yunus">
-    <p>Banker to the Poor<br>Muhammad Yunus</p>
-  </a>
   <a href="https://openlibrary.org/works/OL42417467W" class="book-card" target="_blank" rel="noopener noreferrer">
     <img src="/public/images/books/dissolution.webp" alt="Dissolution - Nicholas Binge" title="Dissolution - Nicholas Binge">
     <p>Dissolution<br>Nicholas Binge</p>

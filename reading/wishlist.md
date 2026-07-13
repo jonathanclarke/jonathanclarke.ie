@@ -186,6 +186,10 @@ Sorted from what to pick up next down to what can wait. Short, high-signal wins 
     <img src="/public/images/books/the-cuckoos-egg.webp" alt="The Cuckoo's Egg - Cliff Stoll" title="The Cuckoo's Egg - Cliff Stoll">
     <p>The Cuckoo's Egg<br>Cliff Stoll</p>
   </a>
+  <a href="https://collinhoguespears.ai/" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/from-lab-to-life.webp" alt="From Lab to Life: How AI Works in China - Collin Hogue-Spears" title="From Lab to Life: How AI Works in China - Collin Hogue-Spears">
+    <p>From Lab to Life<br>Collin Hogue-Spears</p>
+  </a>
   <a href="https://openlibrary.org/works/OL16149072W" class="book-card" target="_blank" rel="noopener noreferrer">
     <img src="/public/images/books/good-strategy-bad-strategy.webp" alt="Good Strategy Bad Strategy - Richard Rumelt" title="Good Strategy Bad Strategy - Richard Rumelt">
     <p>Good Strategy Bad Strategy<br>Richard Rumelt</p>

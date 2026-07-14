@@ -1,0 +1,54 @@
+---
+layout: post
+title: "Dead on the Fourth of July"
+excerpt: "DOGE shut down on July 4, exactly as scheduled.  Musk's efficiency department promised two trillion dollars in savings, delivered a rounding error, and destroyed USAID on the way through.  The projected bill is 14 million lives by 2030.  Five weeks before the fireworks, the man with the chainsaw became the world's first trillionaire."
+date: "2026-07-13"
+image: /public/article_images/2026-07-13/dead-on-the-fourth.webp
+author: "Jonathan Clarke"
+---
+
+![Dead on the Fourth of July](/public/article_images/2026-07-13/dead-on-the-fourth.webp "Dead on the Fourth of July")
+
+In January 2025, in the far north-eastern corner of Nepal where the road climbs toward Kanchenjunga, [thirty-nine schools in Taplejung](https://globalvoices.org/2025/03/06/usaid-suspension-has-far-reaching-impacts-in-south-asia/) had just started an early-grade reading programme.  The drive from Kathmandu takes the better part of two days.  The stop-work orders from Washington reached even there, within days of Donald Trump's inauguration.
+
+Eighteen months later, on the Fourth of July, the Department of Government Efficiency went dark.  No scandal, no vote, no resignation letter: the executive order that created DOGE had [a self-destruct date built in](https://thehill.com/homenews/administration/5955468-doge-shuts-down-operations/), chosen to coincide with America's 250th birthday, and the date duly arrived.  The [website was switched off](https://www.foxbusiness.com/politics/doge-website-deactivates-after-reaching-self-termination-deadline-come-end), still claiming $215 billion in savings.  Then the fireworks went up.
+
+## The receipts
+
+Start with the number, because the number is the easy part.  Musk campaigned on cutting $2 trillion from the federal budget.  By March 2025 that had become $1 trillion, "unless we're stopped."  By April it was [$150 billion](https://fortune.com/2025/04/11/elon-musk-drastically-drops-doge-savings-goal-2-trillion-150-billion-year/), a 92% markdown on the promise in under six months.
+
+The final claim of $215 billion rests on DOGE's own "wall of receipts," and the receipts do not survive contact with anyone who checks them.  [CBS News found](https://www.cbsnews.com/news/doge-cuts-cost-135-billion-analysis-elon-musk-department-of-government-efficiency/) savings overstated by as much as 97% on some of the largest claimed cuts, including "savings" booked against contracts that had expired years earlier.  Meanwhile the Partnership for Public Service estimated that DOGE's actions [cost taxpayers $135 billion](https://www.cbsnews.com/news/doge-cuts-cost-135-billion-analysis-elon-musk-department-of-government-efficiency/) in fiscal 2025 alone, in paid leave, in rehiring people who were fired by mistake, in lost productivity.  That figure excludes the lawsuits and the lost tax collection.  Dismantling USAID by itself carried [around $6 billion in administrative costs](https://www.developmentaid.org/news-stream/post/206934/what-the-collapse-of-usaid-has-cost-the-world).
+
+Net it all out and the loudest efficiency drive in the history of the American government [saved approximately nothing](https://www.newsweek.com/doge-is-dead-what-did-it-actually-save-11097551).  It quite plausibly cost money.  If that were the whole story, DOGE would be a punchline: the efficiency department that was itself the waste.  The money was the alibi.
+
+## The wood chipper
+
+On 3 February 2025, two weeks into the job, Musk [tweeted](https://x.com/elonmusk/status/1886307316804263979): "We spent the weekend feeding USAID into the wood chipper. Could gone to some great parties. Did that instead."  (The missing 'have' is his.)  Seventeen days later he was [on stage at CPAC waving a chainsaw](https://www.yahoo.com/news/articles/elon-wild-ride-white-house-215636052.html) over his head, a gift from Javier Milei, to a cheering hall.  By 1 July 2025 USAID [had ceased to exist](https://www.developmentaid.org/news-stream/post/206934/what-the-collapse-of-usaid-has-cost-the-world), absorbed into the State Department with 83% of its programmes cancelled, a figure that comes from Marco Rubio's own announcement rather than from any critic.
+
+What went into the chipper: a [study in The Lancet](https://www.thelancet.com/article/S0140-6736(25)01186-9/fulltext) estimated that USAID-funded programmes prevented 91 million deaths across 133 countries between 2001 and 2021, cutting deaths from HIV/AIDS by 65% and from malaria by half in the places it worked.  The same models project that the cuts, if sustained, will produce more than 14 million additional deaths by 2030.  About 4.5 million of them will be children under five.  Tracking of 2025 alone puts the excess deaths already [between 500,000 and a million](https://www.developmentaid.org/news-stream/post/206934/what-the-collapse-of-usaid-has-cost-the-world).  Musk's position is that [nobody has died](https://baptistnews.com/article/as-worldwide-deaths-mount-musk-insists-doge-cuts-didnt-kill-anyone/).
+
+July 4 restored none of this.  A cancelled contract stayed cancelled on July 5, and the people fired stayed fired.  For scale: USAID's budget ran to about $40 billion a year, well under one percent of federal spending, while [KFF's polling](https://www.kff.org/global-health-policy/kff-health-tracking-poll-february-2025-the-publics-views-on-global-health-and-usaid/) finds Americans believe, on average, that foreign aid takes up 26% of the federal budget.  The gap between those two numbers is the space this entire stunt lived in.
+
+## What it looked like from here
+
+I have lived in Nepal since 2015, long enough to stop noticing how visible aid money is here: the INGO offices clustered around Jhamsikhel, the white Land Cruisers, the fancy workshop banners outside hotel conference halls.  In early 2025 that whole layer of the country went quiet at once.  [Around 300 organisations](https://globalvoices.org/2025/03/06/usaid-suspension-has-far-reaching-impacts-in-south-asia/) were hit within weeks of the freeze, and by March the US had [pulled the plug on 34 projects worth Rs 46.12 billion](https://kathmandupost.com/national/2025/03/12/in-nepal-us-pulls-the-plug-on-aid-projects-worth-rs46-12-billion), about $330 million.  Before the collapse, the US had committed [$695 million to Nepal over five years](https://nepalitimes.com/news/how-usaid-cut-affects-nepal), roughly a third of all development funding in the country.
+
+In Washington, "foreign aid" is a line item.  Here, it has addresses.  The [national demographic and health survey and the micronutrient survey](https://kathmandupost.com/health/2025/02/28/us-aid-suspension-under-trump-disrupts-key-health-surveys-in-nepal), the instruments that tell the health system where the sick people actually are: halted.  [Fifteen years of progress against HIV](https://www.thinkglobalhealth.org/article/usaid-lost-stories-colombia-kenya-and-nepal): at risk as services shuttered.  The [child nutrition programme](https://helenkellerintl.org/newsroom/devex-nepals-nutrition-gains-at-risk-after-funding-cuts/) Helen Keller Intl ran in a country where stunting has been the quiet emergency for decades.  Thirty-six staff nurses cut from federal and provincial hospitals.  The reading classes in Taplejung.  And people in my own family.  Friends of ours had spent years on these programmes; they lost their jobs overnight, without warning, heartbroken and stunned.
+
+Nobody who has watched donor-funded development up close believes all of it is efficient.  There are workshops that accomplish nothing, per-diem cultures, reports nobody reads, Land Cruisers.  If DOGE had audited USAID it would have found real waste, because auditors always do, and I would have cheered.  The remedy for a wasteful programme is an audit.  What Nepal got instead was a wood chipper, and the difference between the two is measured in dead children.
+
+Eighteen months on, the question is who fills a hole the size of a third of the country's development budget.  From here the honest answer is nobody.  China finances [airports and hydropower, on commercial terms]({% post_url 2026-05-07-nepal-hydro-data-centres-the-wrong-deal %}), and nobody in Beijing is queuing to fund demographic health surveys or first-grade reading classes.  The gap simply persists, and everyone here is learning to call it normal.
+
+## Musk, the trillionaire
+
+On 12 June 2026, when SpaceX listed on the Nasdaq, Musk became [the first trillionaire in human history](https://www.cnbc.com/2026/06/12/elon-musk-trillionaire-spacex.html), worth nearly four times the second richest person alive.  He [held the line for twelve days](https://fortune.com/2026/06/24/elon-musk-no-longer-trillionaire-spacex-valuation/) before the share price sagged, and he will cross it again soon enough.
+
+Put the two numbers next to each other.  A full year of the agency he destroyed cost about $40 billion, or 4% of his net worth at the IPO-day peak.  He could have personally funded everything USAID did, everywhere on earth, for two decades, and still ended up one of the richest people alive.  I wrote in May about what a single billionaire could do to [crash the price of saving lives]({% post_url 2026-05-14-the-price-of-saving-lives %}).  The arithmetic runs in both directions.  One rich man could collapse the price of staying alive for millions of people.  This one raised it beyond reach.
+
+And he fucking enjoyed it.
+
+Grim technocrats making hard trade-offs do not tweet about wood chippers.  He joked about skipping great parties for the work.  You have already seen the chainsaw.  Adam Serwer spent Trump's first term explaining that [the cruelty is the point](https://en.wikipedia.org/wiki/The_cruelty_is_the_point).  DOGE's contribution was to turn the cruelty into a stage show, with a prop and a live audience.
+
+The closest thing to a consequence Musk has faced was a loud, brief [falling-out](https://www.yahoo.com/news/articles/elon-wild-ride-white-house-215636052.html) with the president who signed DOGE into existence, and whatever that cost him, the Nasdaq refunded it with interest a year later.  The richest man who has ever lived spent his weekends shredding the machinery that kept some of the poorest people on the planet alive, and had visible fun doing it.  That is absolutely dystopian shit.  The face of American conservatism in this decade is not a preacher or a farmer or a general.  It is the world's first trillionaire on a stage, laughing, holding a chainsaw.
+
+DOGE is dead.  The people it killed are still dying, on a schedule that runs to 2030.

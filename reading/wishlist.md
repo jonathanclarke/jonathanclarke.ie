@@ -70,10 +70,6 @@ Sorted from what to pick up next down to what can wait. Short, high-signal wins 
     <img src="/public/images/books/my-name-is-red.webp" alt="My Name Is Red - Orhan Pamuk" title="My Name Is Red - Orhan Pamuk">
     <p>My Name Is Red<br>Orhan Pamuk</p>
   </a>
-  <a href="https://openlibrary.org/works/OL20153382W" class="book-card" target="_blank" rel="noopener noreferrer">
-    <img src="/public/images/books/say-nothing.webp" alt="Say Nothing - Patrick Radden Keefe" title="Say Nothing - Patrick Radden Keefe">
-    <p>Say Nothing<br>Patrick Radden Keefe</p>
-  </a>
   <a href="https://openlibrary.org/works/OL24218388W" class="book-card" target="_blank" rel="noopener noreferrer">
     <img src="/public/images/books/empire-of-pain.webp" alt="Empire of Pain - Patrick Radden Keefe" title="Empire of Pain - Patrick Radden Keefe">
     <p>Empire of Pain<br>Patrick Radden Keefe</p>

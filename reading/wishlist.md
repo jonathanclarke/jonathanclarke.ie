@@ -319,6 +319,14 @@ Sorted from what to pick up next down to what can wait. Short, high-signal wins 
     <img src="/public/images/books/lean-startup.webp" alt="The Lean Startup - Eric Ries" title="The Lean Startup - Eric Ries">
     <p>The Lean Startup<br>Eric Ries</p>
   </a>
+  <a href="https://openlibrary.org/works/OL45345769W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/incorruptible.webp" alt="Incorruptible - Eric Ries" title="Incorruptible - Eric Ries">
+    <p>Incorruptible<br>Eric Ries</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL19668504W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/how-to-raise-an-adult.webp" alt="How to Raise an Adult - Julie Lythcott-Haims" title="How to Raise an Adult - Julie Lythcott-Haims">
+    <p>How to Raise an Adult<br>Julie Lythcott-Haims</p>
+  </a>
   <a href="https://openlibrary.org/works/OL20043285W" class="book-card" target="_blank" rel="noopener noreferrer">
     <img src="/public/images/books/science-of-selling.webp" alt="The Science of Selling - David Hoffeld" title="The Science of Selling - David Hoffeld">
     <p>The Science of Selling<br>David Hoffeld</p>

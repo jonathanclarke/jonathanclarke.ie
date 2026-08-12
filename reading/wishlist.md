@@ -106,6 +106,10 @@ Sorted by reader rating, best first.  The scores come from Open Library, weighte
     <img src="/public/images/books/cod.webp" alt="Cod - Mark Kurlansky" title="Cod - Mark Kurlansky">
     <p>Cod<br>Mark Kurlansky</p>
   </a>
+  <a href="https://openlibrary.org/works/OL31111W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/all-about-love.webp" alt="All About Love - bell hooks" title="All About Love - bell hooks">
+    <p>All About Love<br>bell hooks</p>
+  </a>
   <a href="https://openlibrary.org/works/OL29328006W" class="book-card" target="_blank" rel="noopener noreferrer">
     <img src="/public/images/books/killing-thatcher.webp" alt="Killing Thatcher - Rory Carroll" title="Killing Thatcher - Rory Carroll">
     <p>Killing Thatcher<br>Rory Carroll</p>
@@ -193,6 +197,14 @@ Sorted by reader rating, best first.  The scores come from Open Library, weighte
   <a href="https://openlibrary.org/works/OL8514692W" class="book-card" target="_blank" rel="noopener noreferrer">
     <img src="/public/images/books/blindsight.webp" alt="Blindsight - Peter Watts" title="Blindsight - Peter Watts">
     <p>Blindsight<br>Peter Watts</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL31123W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/aint-i-a-woman.webp" alt="Ain't I a Woman - bell hooks" title="Ain't I a Woman - bell hooks">
+    <p>Ain't I a Woman<br>bell hooks</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL277280W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/feminism-is-for-everybody.webp" alt="Feminism Is for Everybody - bell hooks" title="Feminism Is for Everybody - bell hooks">
+    <p>Feminism Is for Everybody<br>bell hooks</p>
   </a>
   <a href="https://openlibrary.org/works/OL24182444W" class="book-card" target="_blank" rel="noopener noreferrer">
     <img src="/public/images/books/cold-start-problem.webp" alt="The Cold Start Problem - Andrew Chen" title="The Cold Start Problem - Andrew Chen">

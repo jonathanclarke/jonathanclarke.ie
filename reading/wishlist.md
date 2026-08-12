@@ -78,6 +78,10 @@ Sorted by reader rating, best first.  The scores come from Open Library, weighte
     <img src="/public/images/books/bright-shining-lie.webp" alt="A Bright Shining Lie - Neil Sheehan" title="A Bright Shining Lie - Neil Sheehan">
     <p>A Bright Shining Lie<br>Neil Sheehan</p>
   </a>
+  <a href="https://openlibrary.org/works/OL25468525W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/how-to-be-perfect.webp" alt="How to Be Perfect - Michael Schur" title="How to Be Perfect - Michael Schur">
+    <p>How to Be Perfect<br>Michael Schur</p>
+  </a>
   <a href="https://openlibrary.org/works/OL5738148W" class="book-card" target="_blank" rel="noopener noreferrer">
     <img src="/public/images/books/mistborn.webp" alt="Mistborn: The Final Empire - Brandon Sanderson" title="Mistborn: The Final Empire - Brandon Sanderson">
     <p>Mistborn: The Final Empire<br>Brandon Sanderson</p>

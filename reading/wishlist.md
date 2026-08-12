@@ -338,10 +338,6 @@ Sorted by reader rating, best first.  The scores come from Open Library, weighte
     <img src="/public/images/books/influence.webp" alt="Influence - Robert Cialdini" title="Influence - Robert Cialdini">
     <p>Influence<br>Robert Cialdini</p>
   </a>
-  <a href="https://openlibrary.org/works/OL86320W" class="book-card" target="_blank" rel="noopener noreferrer">
-    <img src="/public/images/books/dubliners.webp" alt="Dubliners - James Joyce" title="Dubliners - James Joyce">
-    <p>Dubliners<br>James Joyce</p>
-  </a>
   <a href="https://openlibrary.org/works/OL74115W" class="book-card" target="_blank" rel="noopener noreferrer">
     <img src="/public/images/books/in-a-sunburned-country.webp" alt="In a Sunburned Country - Bill Bryson" title="In a Sunburned Country - Bill Bryson">
     <p>In a Sunburned Country<br>Bill Bryson</p>

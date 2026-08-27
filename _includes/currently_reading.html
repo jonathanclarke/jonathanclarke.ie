@@ -1,20 +1,19 @@
 <style>
 .currently-reading {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.25rem;
   margin-bottom: 2rem;
 }
 .currently-reading .book-card {
-  width: 140px;
   text-align: center;
   text-decoration: none;
   color: inherit;
   display: block;
 }
 .currently-reading .book-card img {
-  width: 140px;
-  height: 210px;
+  width: 100%;
+  aspect-ratio: 2 / 3;
   object-fit: cover;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -45,5 +44,9 @@
   <a href="https://openlibrary.org/works/OL7924199W" class="book-card" target="_blank" rel="noopener noreferrer">
     <img src="/public/images/books/shadow-rising.webp" alt="The Shadow Rising - Robert Jordan" title="The Shadow Rising - Robert Jordan">
     <p>The Shadow Rising<br>Robert Jordan</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL21041983W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="https://covers.openlibrary.org/b/id/10326437-L.jpg" alt="A Man With One of Those Faces - Caimh McDonnell" title="A Man With One of Those Faces - Caimh McDonnell">
+    <p>A Man With One of Those Faces<br>Caimh McDonnell</p>
   </a>
 </div>

@@ -50,6 +50,38 @@ Sorted by reader rating, best first.  The scores come from Open Library, weighte
 </style>
 
 <div class="book-shelf">
+  <a href="https://openlibrary.org/works/OL36287W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/count-of-monte-cristo.webp" alt="The Count of Monte Cristo - Alexandre Dumas" title="The Count of Monte Cristo - Alexandre Dumas">
+    <p>The Count of Monte Cristo<br>Alexandre Dumas</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL134601W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/lonesome-dove.webp" alt="Lonesome Dove - Larry McMurtry" title="Lonesome Dove - Larry McMurtry">
+    <p>Lonesome Dove<br>Larry McMurtry</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL1974548W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/into-thin-air.webp" alt="Into Thin Air - Jon Krakauer" title="Into Thin Air - Jon Krakauer">
+    <p>Into Thin Air<br>Jon Krakauer</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL81616W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/drawing-of-the-three.webp" alt="The Drawing of the Three - Stephen King" title="The Drawing of the Three - Stephen King">
+    <p>The Drawing of the Three<br>Stephen King</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL81625W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/waste-lands.webp" alt="The Waste Lands - Stephen King" title="The Waste Lands - Stephen King">
+    <p>The Waste Lands<br>Stephen King</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL81594W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/wolves-of-the-calla.webp" alt="Wolves of the Calla - Stephen King" title="Wolves of the Calla - Stephen King">
+    <p>Wolves of the Calla<br>Stephen King</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL149200W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/song-of-susannah.webp" alt="Song of Susannah - Stephen King" title="Song of Susannah - Stephen King">
+    <p>Song of Susannah<br>Stephen King</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL16002468W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/11-22-63.webp" alt="11/22/63 - Stephen King" title="11/22/63 - Stephen King">
+    <p>11/22/63<br>Stephen King</p>
+  </a>
   <a href="https://openlibrary.org/works/OL20149336W" class="book-card" target="_blank" rel="noopener noreferrer">
     <img src="/public/images/books/exhalation.webp" alt="Exhalation - Ted Chiang" title="Exhalation - Ted Chiang">
     <p>Exhalation<br>Ted Chiang</p>
@@ -57,6 +89,14 @@ Sorted by reader rating, best first.  The scores come from Open Library, weighte
   <a href="https://openlibrary.org/works/OL17825802W" class="book-card" target="_blank" rel="noopener noreferrer">
     <img src="/public/images/books/shoe-dog.webp" alt="Shoe Dog - Phil Knight" title="Shoe Dog - Phil Knight">
     <p>Shoe Dog<br>Phil Knight</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL81615W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/wizard-and-glass.webp" alt="Wizard and Glass - Stephen King" title="Wizard and Glass - Stephen King">
+    <p>Wizard and Glass<br>Stephen King</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL81628W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/dark-tower-gunslinger.webp" alt="The Dark Tower: The Gunslinger - Stephen King" title="The Dark Tower: The Gunslinger - Stephen King">
+    <p>The Dark Tower: The Gunslinger<br>Stephen King</p>
   </a>
   <a href="https://openlibrary.org/works/OL24593432W" class="book-card" target="_blank" rel="noopener noreferrer">
     <img src="/public/images/books/dungeon-crawler-carl.webp" alt="Dungeon Crawler Carl - Matt Dinniman" title="Dungeon Crawler Carl - Matt Dinniman">
@@ -69,6 +109,22 @@ Sorted by reader rating, best first.  The scores come from Open Library, weighte
   <a href="https://openlibrary.org/works/OL874159W" class="book-card" target="_blank" rel="noopener noreferrer">
     <img src="/public/images/books/endurance.webp" alt="Endurance - Alfred Lansing" title="Endurance - Alfred Lansing">
     <p>Endurance<br>Alfred Lansing</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL761342W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/hot-zone.webp" alt="The Hot Zone - Richard Preston" title="The Hot Zone - Richard Preston">
+    <p>The Hot Zone<br>Richard Preston</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL16239762W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/gone-girl.webp" alt="Gone Girl - Gillian Flynn" title="Gone Girl - Gillian Flynn">
+    <p>Gone Girl<br>Gillian Flynn</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL81600W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/dark-tower-vii.webp" alt="The Dark Tower - Stephen King" title="The Dark Tower - Stephen King">
+    <p>The Dark Tower<br>Stephen King</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL16451416W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/wind-through-the-keyhole.webp" alt="The Wind Through the Keyhole - Stephen King" title="The Wind Through the Keyhole - Stephen King">
+    <p>The Wind Through the Keyhole<br>Stephen King</p>
   </a>
   <a href="https://openlibrary.org/works/OL1962001W" class="book-card" target="_blank" rel="noopener noreferrer">
     <img src="/public/images/books/rise-of-theodore-roosevelt.webp" alt="The Rise of Theodore Roosevelt - Edmund Morris" title="The Rise of Theodore Roosevelt - Edmund Morris">

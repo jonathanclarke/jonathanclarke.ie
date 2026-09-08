@@ -138,10 +138,6 @@ Sorted by reader rating, best first.  The scores come from Open Library, weighte
     <img src="/public/images/books/how-to-be-perfect.webp" alt="How to Be Perfect - Michael Schur" title="How to Be Perfect - Michael Schur">
     <p>How to Be Perfect<br>Michael Schur</p>
   </a>
-  <a href="https://openlibrary.org/works/OL5738148W" class="book-card" target="_blank" rel="noopener noreferrer">
-    <img src="/public/images/books/mistborn.webp" alt="Mistborn: The Final Empire - Brandon Sanderson" title="Mistborn: The Final Empire - Brandon Sanderson">
-    <p>Mistborn: The Final Empire<br>Brandon Sanderson</p>
-  </a>
   <a href="https://openlibrary.org/works/OL15845961W" class="book-card" target="_blank" rel="noopener noreferrer">
     <img src="/public/images/books/wild-swans.webp" alt="Wild Swans - Jung Chang" title="Wild Swans - Jung Chang">
     <p>Wild Swans<br>Jung Chang</p>

@@ -338,6 +338,10 @@ Sorted by reader rating, best first.  The scores come from Open Library, weighte
     <img src="/public/images/books/one-good-turn.webp" alt="One Good Turn - Witold Rybczynski" title="One Good Turn - Witold Rybczynski">
     <p>One Good Turn<br>Witold Rybczynski</p>
   </a>
+  <a href="https://openlibrary.org/works/OL20015117W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/fanatical-prospecting.webp" alt="Fanatical Prospecting - Jeb Blount" title="Fanatical Prospecting - Jeb Blount">
+    <p>Fanatical Prospecting<br>Jeb Blount</p>
+  </a>
   <a href="https://openlibrary.org/works/OL3741565W" class="book-card" target="_blank" rel="noopener noreferrer">
     <img src="/public/images/books/the-cuckoos-egg.webp" alt="The Cuckoo's Egg - Cliff Stoll" title="The Cuckoo's Egg - Cliff Stoll">
     <p>The Cuckoo's Egg<br>Cliff Stoll</p>
@@ -457,6 +461,10 @@ Sorted by reader rating, best first.  The scores come from Open Library, weighte
   <a href="https://openlibrary.org/works/OL7989979W" class="book-card" target="_blank" rel="noopener noreferrer">
     <img src="/public/images/books/in-the-woods.webp" alt="In the Woods - Tana French" title="In the Woods - Tana French">
     <p>In the Woods<br>Tana French</p>
+  </a>
+  <a href="https://openlibrary.org/works/OL17363382W" class="book-card" target="_blank" rel="noopener noreferrer">
+    <img src="/public/images/books/predictable-revenue.webp" alt="Predictable Revenue - Aaron Ross &amp; Marylou Tyler" title="Predictable Revenue - Aaron Ross &amp; Marylou Tyler">
+    <p>Predictable Revenue<br>Aaron Ross &amp; Marylou Tyler</p>
   </a>
   <a href="https://openlibrary.org/works/OL4296086W" class="book-card" target="_blank" rel="noopener noreferrer">
     <img src="/public/images/books/blood-and-thunder.webp" alt="Blood and Thunder - Hampton Sides" title="Blood and Thunder - Hampton Sides">
